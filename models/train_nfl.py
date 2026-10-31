@@ -94,6 +94,34 @@ def market_analysis(pred, res, line_col, positive_odds, negative_odds, real, is_
     return {"book_coverage":int(ok.sum()),"selected":int(picks.sum()),"wins":int((picks&outcome&~push).sum()),"losses":int((picks&~outcome&~push).sum()),"pushes":int((picks&push).sum()),"profit_per_1_unit_risked":float(realized[picks].sum()),"roi_on_risk":float(realized[picks].mean()) if picks.any() else None,"warning":"Exploratory 2025 holdout evaluation, not validated for live staking. Book quote timestamps and calibration uncertainty unresolved."}
 report["spread_market"]=market_analysis(pred_m,res_m,"spread_line","home_spread_odds","away_spread_odds",margin[test])
 report["total_market"]=market_analysis(pred_t,res_t,"total_line","over_odds","under_odds",total[test],True)
+# Robust chronological folds: train through y-2, calibrate on y-1, test y.
+folds=[]
+for yr in [2022,2023,2024,2025]:
+    tr=season <= yr-2; va=season == yr-1; te=season == yr
+    if min(tr.sum(),va.sum(),te.sum())<200: continue
+    m=Ridge(alpha=1000).fit(X[tr],margin[tr]); t=Ridge(alpha=1000).fit(X[tr],total[tr])
+    mp=m.predict(X[te]); tp=t.predict(X[te])
+    mr=margin[va]-m.predict(X[va]); trr=total[va]-t.predict(X[va])
+    win=(margin[te]>0).astype(int)
+    prob=distp(mp,mr,np.zeros(te.sum()))
+    test_df=d.loc[te].reset_index(drop=True)
+    spread=market_analysis(mp,mr,"spread_line","home_spread_odds","away_spread_odds",margin[te])
+    totals=market_analysis(tp,trr,"total_line","over_odds","under_odds",total[te],True)
+    # Compare forecast probability to contemporaneous market no-vig moneyline (no quote timestamps).
+    hm=pd.to_numeric(test_df.home_moneyline,errors="coerce").to_numpy()
+    am=pd.to_numeric(test_df.away_moneyline,errors="coerce").to_numpy()
+    implied=lambda z: np.where(z<0,-z/(100-z),100/(100+z))
+    ok=np.isfinite(hm)&np.isfinite(am)&(hm!=0)&(am!=0)
+    ph=implied(hm[ok]);pa=implied(am[ok]); marketp=ph/(ph+pa)
+    fold={"year":yr,"n":int(te.sum()),"margin_MAE":float(mean_absolute_error(margin[te],mp)),
+      "total_MAE":float(mean_absolute_error(total[te],tp)),
+      "homewin_brier":float(brier_score_loss(win,prob)),
+      "market_moneyline_brier":float(brier_score_loss(win[ok],marketp)) if ok.any() else None,
+      "model_same_market_games_brier":float(brier_score_loss(win[ok],prob[ok])) if ok.any() else None,
+      "market_coverage":int(ok.sum()),"spread":spread,"totals":totals}
+    folds.append(fold)
+report["forward_chaining_folds"]=folds
+report["research_warning"]="No preregistered selection gate, book timestamp guarantee, verified CLV, uncertainty interval, or external forward performance. Multi-fold analysis is research-only."
 with open("results/nfl_report.json","w") as f:json.dump(report,f,indent=2)
 with open("results/nfl_parameters.json","w") as f:json.dump({"features":["home_attack","home_defense","away_attack","away_defense","elo_diff","home_games","away_games","home_rest","away_rest"],"margin_coefs":pm.coef_.tolist(),"margin_intercept":float(pm.intercept_),"total_coefs":pt.coef_.tolist(),"total_intercept":float(pt.intercept_),"validation_residual_margin":res_m.tolist(),"validation_residual_total":res_t.tolist(),"training_cutoff":"2023-12-31","note":"Research only; needs 2026 rolling updates and validation before any live probability"},f)
 print(json.dumps(report,indent=2))
