@@ -1,0 +1,83 @@
+name: NCAA football historical validation
+on:
+  push:
+    paths:
+      - '.github/workflows/ncaa-train.yml'
+  workflow_dispatch:
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests
+      - name: Fetch NCAA schedules and execute chronological benchmark
+        run: |
+          mkdir -p results
+          cat > /tmp/train.py <<'PY'
+          import io,json,requests,numpy as np,pandas as pd
+          from sklearn.linear_model import Ridge
+          from sklearn.metrics import mean_absolute_error,brier_score_loss,log_loss
+          rows=[]
+          for year in range(2016,2026):
+              url=f'https://raw.githubusercontent.com/sportsdataverse/cfbfastR-data/main/schedules/csv/cfb_schedules_{year}.csv'
+              r=requests.get(url,timeout=90);r.raise_for_status()
+              d=pd.read_csv(io.BytesIO(r.content),low_memory=False)
+              needed=['season','start_date','home_team','away_team','home_points','away_points']
+              missing=[c for c in needed if c not in d.columns]
+              if missing: raise RuntimeError(f'{year}: missing {missing}')
+              d=d.dropna(subset=needed).copy()
+              d=d[d.season.astype(int).eq(year)]
+              d['date']=pd.to_datetime(d.start_date,utc=True,errors='coerce')
+              d=d.dropna(subset=['date'])
+              rows.append(d[['date','season','home_team','away_team','home_points','away_points']])
+              print(year,len(d),flush=True)
+          games=pd.concat(rows).sort_values('date').drop_duplicates(['date','home_team','away_team'])
+          games=games[(games.season>=2016)&(games.season<=2025)].copy()
+          if len(games)<5000: raise RuntimeError(f'Insufficient real historical games {len(games)}')
+          # Causal rolling opponent-adjusted points and Elo, updated after each game date.
+          state={}; feats=[]
+          def s(team):
+              return state.setdefault(team,{'for':24.,'against':24.,'n':0,'elo':1500.})
+          for day,part in games.groupby(games.date.dt.date,sort=True):
+              changes=[]
+              for idx,g in part.iterrows():
+                  h=str(g.home_team);a=str(g.away_team);hs=s(h).copy();as_=s(a).copy()
+                  feats.append((idx,[hs['for'],hs['against'],as_['for'],as_['against'],hs['elo']-as_['elo'],hs['n'],as_['n']]))
+                  changes.append((h,a,float(g.home_points),float(g.away_points)))
+              for h,a,hp,ap in changes:
+                  sh=s(h);sa=s(a)
+                  expected=1/(1+10**((sa['elo']-sh['elo'])/400))
+                  delta=20*((1 if hp>ap else 0 if hp<ap else .5)-expected)
+                  sh['elo']+=delta;sa['elo']-=delta
+                  for t,sc,al in ((h,hp,ap),(a,ap,hp)):
+                      q=s(t);q['for']=.85*q['for']+.15*(sc-(24-s(t)['against'])*.1)
+                      q['against']=.85*q['against']+.15*al;q['n']+=1
+          X=pd.DataFrame([v for _,v in feats],index=[i for i,_ in feats]).loc[games.index].to_numpy()
+          y=(games.home_points-games.away_points).to_numpy(float)
+          train=(games.season<=2023).to_numpy()
+          valid=(games.season==2024).to_numpy()
+          test=(games.season==2025).to_numpy()
+          if min(train.sum(),valid.sum(),test.sum())<500:raise RuntimeError('Season splits insufficient')
+          model=Ridge(alpha=1500).fit(X[train],y[train])
+          # Evaluate test with residual distribution fitted ONLY on validation season
+          vres=y[valid]-model.predict(X[valid])
+          pred=model.predict(X[test]); actual=y[test]
+          homewin=np.array([(vres > -p).mean() for p in pred])
+          homewin=np.clip(homewin,.005,.995)
+          result=(actual>0).astype(int)
+          report={'source':'cfbfastR-data historical schedules','n_train':int(train.sum()),'n_validation':int(valid.sum()),'n_test':int(test.sum()),'test_season':2025,'margin_MAE':float(mean_absolute_error(actual,pred)),'home_win_brier':float(brier_score_loss(result,homewin)),'home_win_logloss':float(log_loss(result,homewin)),'baseline_brier':float(brier_score_loss(result,np.full(len(result),result[valid[:0]].mean() if False else .5))),'warning':'Research baseline only: no historical sportsbook prices, advanced EPA injury data or profitability validation. Not approved for wagering.'}
+          with open('results/report.json','w') as f:json.dump(report,f,indent=2)
+          print(json.dumps(report,indent=2))
+          PY
+          python /tmp/train.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ncaa-backtest-report
+          path: results/
+          if-no-files-found: warn
