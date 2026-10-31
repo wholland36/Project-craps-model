@@ -57,7 +57,8 @@ jobs:
                   for t,sc,al in ((h,hp,ap),(a,ap,hp)):
                       q=s(t);q['for']=.85*q['for']+.15*(sc-(24-s(t)['against'])*.1)
                       q['against']=.85*q['against']+.15*al;q['n']+=1
-          X=pd.DataFrame([v for _,v in feats],index=[i for i,_ in feats]).loc[games.index].to_numpy()
+          X=np.asarray([v for _,v in feats],dtype=float)
+          assert X.shape[0]==len(games), (X.shape,len(games))
           y=(games.home_points-games.away_points).to_numpy(float)
           train=(games.season<=2023).to_numpy()
           valid=(games.season==2024).to_numpy()
