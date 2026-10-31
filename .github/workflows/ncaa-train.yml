@@ -27,18 +27,19 @@ jobs:
               url=f'https://raw.githubusercontent.com/sportsdataverse/cfbfastR-data/main/schedules/csv/cfb_schedules_{year}.csv'
               r=requests.get(url,timeout=90);r.raise_for_status()
               d=pd.read_csv(io.BytesIO(r.content),low_memory=False)
-              needed=['season','start_date','home_team','away_team','home_points','away_points']
+              needed=['season','start_date','home_team','away_team','home_points','away_points','home_division','away_division','home_pregame_elo','away_pregame_elo']
               missing=[c for c in needed if c not in d.columns]
               if missing: raise RuntimeError(f'{year}: missing {missing}')
-              d=d.dropna(subset=needed).copy()
+              d=d.dropna(subset=['season','start_date','home_team','away_team','home_points','away_points']).copy()
+              d=d[d.home_division.eq('fbs') & d.away_division.eq('fbs')].copy()
               d=d[d.season.astype(int).eq(year)]
               d['date']=pd.to_datetime(d.start_date,utc=True,errors='coerce')
               d=d.dropna(subset=['date'])
-              rows.append(d[['date','season','home_team','away_team','home_points','away_points']])
+              rows.append(d[['date','season','home_team','away_team','home_points','away_points','home_pregame_elo','away_pregame_elo']])
               print(year,len(d),flush=True)
           games=pd.concat(rows).sort_values('date').drop_duplicates(['date','home_team','away_team'])
           games=games[(games.season>=2016)&(games.season<=2025)].copy()
-          if len(games)<5000: raise RuntimeError(f'Insufficient real historical games {len(games)}')
+          if len(games)<3000: raise RuntimeError(f'Insufficient real FBS-v-FBS historical games {len(games)}')
           # Causal rolling opponent-adjusted points and Elo, updated after each game date.
           state={}; feats=[]
           def s(team):
@@ -63,7 +64,7 @@ jobs:
           train=(games.season<=2023).to_numpy()
           valid=(games.season==2024).to_numpy()
           test=(games.season==2025).to_numpy()
-          if min(train.sum(),valid.sum(),test.sum())<500:raise RuntimeError('Season splits insufficient')
+          if min(train.sum(),valid.sum(),test.sum())<400:raise RuntimeError('FBS season splits insufficient')
           model=Ridge(alpha=1500).fit(X[train],y[train])
           # Evaluate test with residual distribution fitted ONLY on validation season
           vres=y[valid]-model.predict(X[valid])
@@ -72,6 +73,16 @@ jobs:
           homewin=np.clip(homewin,.005,.995)
           result=(actual>0).astype(int)
           report={'source':'cfbfastR-data historical schedules','n_train':int(train.sum()),'n_validation':int(valid.sum()),'n_test':int(test.sum()),'test_season':2025,'margin_MAE':float(mean_absolute_error(actual,pred)),'home_win_brier':float(brier_score_loss(result,homewin)),'home_win_logloss':float(log_loss(result,homewin)),'baseline_brier':float(brier_score_loss(result,np.full(len(result),result[valid[:0]].mean() if False else .5))),'warning':'Research baseline only: no historical sportsbook prices, advanced EPA injury data or profitability validation. Not approved for wagering.'}
+          # External pregame Elo baseline, completely independent of sportsbook lines.
+          elo_h=pd.to_numeric(games.home_pregame_elo,errors='coerce').to_numpy()
+          elo_a=pd.to_numeric(games.away_pregame_elo,errors='coerce').to_numpy()
+          elo_mask=test & np.isfinite(elo_h) & np.isfinite(elo_a)
+          if elo_mask.sum()>100:
+              elo_p=1/(1+10**((elo_a[elo_mask]-elo_h[elo_mask])/400))
+              elo_truth=(y[elo_mask]>0).astype(int)
+              report['pregame_elo_comparison']={'n':int(elo_mask.sum()),'brier':float(brier_score_loss(elo_truth,elo_p)),
+                 'model_brier_same_games':float(brier_score_loss(elo_truth,homewin[np.where(test)[0].searchsorted(np.where(elo_mask)[0])]))}
+          report['population']='FBS vs FBS only, including postseason where present'
           # Additional honest 2025 benchmarks; no bookmaker or market lines involved.
           from sklearn.metrics import mean_squared_error
           home_rate=float(((y[train])>0).mean())
