@@ -1,0 +1,25 @@
+name: NFL historical model research
+on:
+  push:
+    paths:
+      - 'models/train_nfl.py'
+      - '.github/workflows/nfl-train.yml'
+  workflow_dispatch:
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests
+      - run: mkdir -p results && python models/train_nfl.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nfl-historical-model
+          path: results/
+          if-no-files-found: warn
