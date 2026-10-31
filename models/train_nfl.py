@@ -71,7 +71,16 @@ def market_analysis(pred, res, line_col, positive_odds, negative_odds, real, is_
     ok=np.isfinite(line)&np.isfinite(o1)&np.isfinite(o2)&(o1!=0)&(o2!=0)
     if not ok.any():return {"coverage":0}
     # For spread: home wins if home margin > -spread_line; for total: Over wins if total > total_line
-    threshold=line.copy() if is_total else -line.copy()
+    # nflverse spread_line stores the favored team's negative point spread.
+    # Infer which team is favored from paired pregame moneylines, not from results.
+    if not is_total:
+        hm=pd.to_numeric(test_df["home_moneyline"],errors="coerce").to_numpy()
+        am=pd.to_numeric(test_df["away_moneyline"],errors="coerce").to_numpy()
+        ok=ok & np.isfinite(hm) & np.isfinite(am) & (hm!=am)
+        home_line=np.where(hm<am,-np.abs(line),np.abs(line))
+        threshold=-home_line
+    else:
+        threshold=line.copy()
     prob=np.clip(np.array([(res>q-m).mean() for m,q in zip(pred,threshold)]),.005,.995)
     # o1 = home spread odds or Over odds; o2 = away spread or Under odds.
     ratio1=american_profit(o1);ratio2=american_profit(o2)
