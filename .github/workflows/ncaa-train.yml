@@ -72,6 +72,22 @@ jobs:
           homewin=np.clip(homewin,.005,.995)
           result=(actual>0).astype(int)
           report={'source':'cfbfastR-data historical schedules','n_train':int(train.sum()),'n_validation':int(valid.sum()),'n_test':int(test.sum()),'test_season':2025,'margin_MAE':float(mean_absolute_error(actual,pred)),'home_win_brier':float(brier_score_loss(result,homewin)),'home_win_logloss':float(log_loss(result,homewin)),'baseline_brier':float(brier_score_loss(result,np.full(len(result),result[valid[:0]].mean() if False else .5))),'warning':'Research baseline only: no historical sportsbook prices, advanced EPA injury data or profitability validation. Not approved for wagering.'}
+          # Additional honest 2025 benchmarks; no bookmaker or market lines involved.
+          from sklearn.metrics import mean_squared_error
+          home_rate=float(((y[train])>0).mean())
+          constp=np.full(test.sum(),home_rate)
+          report['train_home_win_rate']=home_rate
+          report['home_rate_baseline_brier']=float(brier_score_loss(result,constp))
+          report['home_rate_baseline_logloss']=float(log_loss(result,constp))
+          report['zero_margin_MAE']=float(mean_absolute_error(actual,np.zeros(len(actual))))
+          # Spread/total forecasts require point distributions. Current model predicts margin only;
+          # do not confuse home-win discrimination with actual spread/total calibration.
+          report['spread_total_status']='NOT_VALIDATED: no contemporaneous odds, totals distribution or betting prices'
+          report['test_home_win_rate']=float(result.mean())
+          report['calibration_buckets']=[]
+          for lo,hi in [(0,.2),(.2,.4),(.4,.6),(.6,.8),(.8,1.01)]:
+              mask=(homewin>=lo)&(homewin<hi)
+              if mask.any(): report['calibration_buckets'].append({'range':[lo,hi],'n':int(mask.sum()),'mean_p':float(homewin[mask].mean()),'observed':float(result[mask].mean())})
           with open('results/report.json','w') as f:json.dump(report,f,indent=2)
           print(json.dumps(report,indent=2))
           PY
