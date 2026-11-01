@@ -174,10 +174,11 @@ def run(rows,output,protocol_receipt,source_hashes,minimum=200):
             predictions=predict_records(model,test);combined[variant]+=predictions
             fold['variants'][variant]=metrics(predictions)
             create(output/(str(year)+'-'+variant+'-predictions.json'),predictions)
+            model.update(built_at=stamp(now()),implementation_sha256=fingerprint(),source_hashes=source_hashes,
+                         protocol_sha256=digest(PROTOCOL),version='football-efficiency-challenger-v1',
+                         history_start_season=min(r['game']['season'] for r in rows))
+            create(output/'fold_models'/(str(year)+'-'+variant+'.json'),envelope(model))
             if year==max(PROTOCOL['evaluation_seasons']):
-                model.update(built_at=stamp(now()),implementation_sha256=fingerprint(),source_hashes=source_hashes,
-                             protocol_sha256=digest(PROTOCOL),version='football-efficiency-challenger-v1',
-                             history_start_season=min(r['game']['season'] for r in rows))
                 create(output/(variant+'-model.json'),envelope(model))
         for variant in VARIANTS[1:]:
             a=[r for r in combined['original'] if r['season']==year];b=[r for r in combined[variant] if r['season']==year]

@@ -169,3 +169,65 @@ class ShadowTests(unittest.TestCase):
         self.store.db.execute('DROP TRIGGER records_no_update')
         self.store.db.execute("UPDATE records SET payload='{}'")
         with self.assertRaises((ValueError,KeyError)):self.store.verify()
+
+
+def _multiprocess_write(args):
+    path,record=args
+    from project_craps.common import instant
+    store=ShadowStore(path,clock=lambda:instant(record['issued_at']))
+    try:
+        for i in range(10):store.append(dict(record,key='multi-'+str(i)))
+        return store.verify()['count']
+    finally:store.close()
+
+
+class ShadowRecoveryTests(unittest.TestCase):
+    setUp=ShadowTests.setUp
+    tearDown=ShadowTests.tearDown
+
+    def test_two_process_writers_preserve_one_immutable_cohort(self):
+        from concurrent.futures import ProcessPoolExecutor
+        from multiprocessing import get_context
+        with ProcessPoolExecutor(max_workers=2,mp_context=get_context('spawn')) as pool:
+            results=list(pool.map(_multiprocess_write,[(str(Path(self.temp.name)/'shadow.sqlite'),self.record)]*2))
+        self.assertEqual(self.store.verify()['count'],10)
+        self.assertEqual(max(results),10)
+
+    def test_uncertain_commit_is_not_masked_and_retry_preserves_original(self):
+        original=self.store.db
+        class UncertainCommit:
+            def __init__(self,connection):self.connection=connection;self.fail=True
+            @property
+            def in_transaction(self):return self.connection.in_transaction
+            def execute(self,sql,*args):
+                result=self.connection.execute(sql,*args)
+                if sql=='COMMIT' and self.fail:
+                    self.fail=False
+                    raise sqlite3.OperationalError('simulated response lost after commit')
+                return result
+            def close(self):self.connection.close()
+        self.store.db=UncertainCommit(original)
+        with self.assertRaisesRegex(sqlite3.OperationalError,'simulated response lost'):
+            self.store.append(self.record)
+        saved=self.store.append(self.record)
+        self.assertEqual(saved['issued_at'],self.record['issued_at'])
+        self.assertEqual(self.store.verify()['count'],1)
+
+
+class ContextIdentityTests(unittest.TestCase):
+    def test_provider_aliases_are_explicit_and_mismatches_quarantine(self):
+        from unittest.mock import patch
+        from research.context import collect
+        issued=now();kickoff=stamp(issued+timedelta(hours=3))
+        event={'sport':'NFL','event_id':'game','kickoff':kickoff,'status':'SCHEDULED','home_id':'LA','away_id':'WAS'}
+        summary={'header':{'id':'provider-game','competitions':[{'date':kickoff,'status':{'type':{'state':'pre'}},
+                  'competitors':[{'homeAway':'home','team':{'abbreviation':'LAR'}},{'homeAway':'away','team':{'abbreviation':'WSH'}}]}]}}
+        receipt={'sha256':'fixture','observed_at':stamp(issued)}
+        with tempfile.TemporaryDirectory() as temp:
+            with patch('research.context.observe',side_effect=[({},receipt),(summary,receipt)]):
+                result=collect([event],{'game':{'espn_event_id':'provider-game'}},Path(temp)/'correct')
+            self.assertTrue(result['events'][0]['pregame_status_verified'])
+            summary['header']['competitions'][0]['competitors'][0]['team']['abbreviation']='NYJ'
+            with patch('research.context.observe',side_effect=[({},receipt),(summary,receipt)]):
+                result=collect([event],{'game':{'espn_event_id':'provider-game'}},Path(temp)/'wrong')
+            self.assertTrue(result['events'][0]['integrity_failure'])

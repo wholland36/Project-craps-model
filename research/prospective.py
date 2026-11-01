@@ -17,7 +17,9 @@ def observe(snapshot,manifest,nfl,cfb,sacks,metadata,deadlines,hashes,models,reg
                     and issued<instant(g['kickoff'])<=issued+timedelta(days=days)),key=lambda g:g['kickoff'])[:max_events]
     context=collect(events,metadata,output/'context')
     # Fetching context takes time; recompute issuance and exclude games that started during retrieval.
-    issued=now();events=[g for g in events if instant(g['kickoff'])>issued]
+    issued=now()
+    quarantine={r['event_id'] for r in context['events'] if r.get('integrity_failure')}
+    events=[g for g in events if instant(g['kickoff'])>issued and g['event_id'] not in quarantine]
     rows=build(snapshot['payload']['games'],metadata,deadlines,nfl,cfb,sacks,events,issued)
     by_id={r['game']['event_id']:r for r in rows}
     artifacts={v:read(Path(models)/(v+'-model.json')) for v in VARIANTS}
@@ -53,7 +55,7 @@ def observe(snapshot,manifest,nfl,cfb,sacks,metadata,deadlines,hashes,models,reg
             saved=store.append(record);ids.append(saved['key'])
         receipt={'issued_at':stamp(now()),'sport':snapshot['payload']['sport'],'records':len(ids),'keys':ids,
             'anchor':store.verify(),'public_probability_released':False,'approved_risk':0,
-            'context_sources':len(context['sources']),'context_failures':context['failures'],
+            'context_sources':len(context['sources']),'context_failures':context['failures'],'quarantined_events':sorted(quarantine),
             'canonical_forecast_or_wager_mutations':0}
         create(output/'receipt.json',receipt)
         return receipt

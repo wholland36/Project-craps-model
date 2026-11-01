@@ -56,7 +56,7 @@ def collect(events,metadata,output):
                 team=matching[0].get('team',{})
                 # NFL canonical names are abbreviations; FBS team IDs are provider-native ESPN IDs.
                 if sport=='NCAAF' and str(team.get('id'))!=event[role+'_id']:raise ValueError('summary team ID mismatch')
-                if sport=='NFL' and team.get('abbreviation')!=event[role+'_id']:raise ValueError('summary team abbreviation mismatch')
+                if sport=='NFL' and {'LAR':'LA','WSH':'WAS'}.get(team.get('abbreviation'),team.get('abbreviation'))!=event[role+'_id']:raise ValueError('summary team abbreviation mismatch')
             weather=summary.get('gameInfo',{}).get('weather')
             row['weather_observation']=weather
             row['weather']='OBSERVED_FORECAST_NOT_ADJUSTED' if weather else 'UNRESOLVED'
@@ -67,6 +67,8 @@ def collect(events,metadata,output):
             row['team_injury_payload_present']=bool(injuries.get(sport))
         except (requests.RequestException,ValueError,KeyError) as error:
             row['error_type']=type(error).__name__
+            row['integrity_failure']=isinstance(error,(ValueError,KeyError))
+            row['failure_reason']=str(error) if isinstance(error,(ValueError,KeyError)) else type(error).__name__
             row['pregame_status_verified']=False
         row['observed_at']=stamp(now())
         result['events'].append(row)

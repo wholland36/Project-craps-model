@@ -1,17 +1,40 @@
 """Private zero-risk shadow cohorts. These are not canonical approved forecasts."""
 import json
 import math
+import fcntl
+from functools import wraps
 import sqlite3
 from pathlib import Path
 from project_craps.common import canonical,digest,instant,now,stamp
 
 
+def serialized(method):
+    @wraps(method)
+    def call(self,*args,**kwargs):
+        if self._lock_depth:
+            return method(self,*args,**kwargs)
+        with self._lock_path.open('a') as lock:
+            fcntl.flock(lock,fcntl.LOCK_EX)
+            self._lock_depth=1
+            try:return method(self,*args,**kwargs)
+            finally:
+                self._lock_depth=0
+                fcntl.flock(lock,fcntl.LOCK_UN)
+    return call
+
+
 class ShadowStore:
     def __init__(self,path,clock=now):
         Path(path).parent.mkdir(parents=True,exist_ok=True)
+        self._lock_path=Path(str(path)+'.writer.lock');self._lock_depth=0
         self.db=sqlite3.connect(path,timeout=30,isolation_level=None);self.clock=clock
+        self.initialize()
+
+    @serialized
+    def initialize(self):
         self.db.executescript('''
-        PRAGMA journal_mode=WAL;
+        PRAGMA journal_mode=DELETE;
+        PRAGMA synchronous=FULL;
         CREATE TABLE IF NOT EXISTS records (seq INTEGER PRIMARY KEY, key TEXT UNIQUE, payload TEXT, prev TEXT, sha TEXT);
         CREATE TABLE IF NOT EXISTS results (key TEXT PRIMARY KEY REFERENCES records(key), payload TEXT, sha TEXT);
         CREATE TRIGGER IF NOT EXISTS records_no_update BEFORE UPDATE ON records BEGIN SELECT RAISE(ABORT,'append only');END;
@@ -20,6 +43,7 @@ class ShadowStore:
         CREATE TRIGGER IF NOT EXISTS results_no_delete BEFORE DELETE ON results BEGIN SELECT RAISE(ABORT,'append only');END;
         ''');self.db.execute('PRAGMA foreign_keys=ON');self.verify()
 
+    @serialized
     def verify(self):
         previous='GENESIS';count=0
         for seq,key,payload,prev,sha in self.db.execute('SELECT * FROM records ORDER BY seq'):
@@ -33,6 +57,7 @@ class ShadowStore:
             results.append(sha)
         return {'count':count,'head_sha256':previous,'results_count':len(results),'results_sha256':digest(results)}
 
+    @serialized
     def append(self,payload):
         self.db.execute('BEGIN IMMEDIATE')
         try:
@@ -61,11 +86,14 @@ class ShadowStore:
             self.db.execute('INSERT INTO records VALUES (?,?,?,?,?)',(anchor['count']+1,payload['key'],canonical(payload),anchor['head_sha256'],sha))
             self.db.execute('COMMIT');return payload
         except BaseException:
-            self.db.execute('ROLLBACK');raise
+            if self.db.in_transaction:self.db.execute('ROLLBACK')
+            raise
 
+    @serialized
     def records(self):
         self.verify();return [json.loads(x[0]) for x in self.db.execute('SELECT payload FROM records ORDER BY seq')]
 
+    @serialized
     def settle(self,games,observed_at):
         from math import log
         by_id={g['event_id']:g for g in games};count=0
