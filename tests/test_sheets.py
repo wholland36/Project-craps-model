@@ -113,3 +113,18 @@ class SheetsTests(unittest.TestCase):
         self.assertTrue(row[8].startswith('='))
         # StringValue is used for all text; never formulaValue.
         self.assertNotIn('formulaValue', str(sheets.plan(self.reg, self.server.read())['requests']))
+
+
+    def test_acknowledged_rows_are_still_checked_for_tampering(self):
+        sheets.sync(self.reg, self.server)
+        self.server.state['rows'][1][18] = .99
+        with self.assertRaises(ValueError):
+            sheets.sync(self.reg, self.server)
+        self.assertEqual(self.server.calls, 1)
+
+    def test_acknowledged_remote_deletion_is_not_silently_recreated(self):
+        sheets.sync(self.reg, self.server)
+        self.server.state['rows'].pop()
+        with self.assertRaises(ValueError):
+            sheets.sync(self.reg, self.server)
+        self.assertEqual(self.server.calls, 1)

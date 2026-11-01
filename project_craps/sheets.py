@@ -79,6 +79,15 @@ def plan(registry, remote):
     for row in remote['rows'][1:]:
         if len(row) > 1 and row[1]:
             existing.setdefault(row[1], []).append(row)
+    pending_ids = {r['forecast_id'] for r in pending}
+    for record in registry.rows():
+        matches = existing.get(record['forecast_id'], [])
+        if len(matches) > 1:
+            raise ValueError('duplicate remote forecast IDs')
+        if matches and clean_row(projection(record, matches[0][0])) != clean_row(matches[0]):
+            raise ValueError('remote registered forecast changed after delivery')
+        if not matches and record['forecast_id'] not in pending_ids:
+            raise ValueError('acknowledged remote forecast was removed; investigate')
     append, reconciled = [], []
     indices = [int(float(r[0])) for r in remote['rows'][1:] if r and str(r[0]).replace('.', '', 1).isdigit()]
     index = max(indices, default=-1) + 1

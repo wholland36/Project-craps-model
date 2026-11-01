@@ -1,7 +1,7 @@
 import argparse
 import json
 from pathlib import Path
-from .common import canonical, create, now, read, stamp
+from .common import canonical, code_fingerprint, create, now, read, stamp
 from .data import capture, load_snapshot
 from .pipeline import forecast
 from .registry import Registry
@@ -70,7 +70,9 @@ def main():
         create(output / 'model.json', model)
         create(output / 'evaluation.json', report)
         import platform, sys, importlib.metadata
-        create(output / 'build_receipt.json', {'code_sha': __import__('subprocess').check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
+        create(output / 'build_receipt.json', {'git_head_sha': __import__('subprocess').check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
+             'worktree_dirty': bool(__import__('subprocess').check_output(['git', 'status', '--porcelain'], text=True).strip()),
+             'implementation_sha256': code_fingerprint(),
              'python': sys.version, 'platform': platform.platform(), 'built_at': stamp(now()),
              'model_sha256': model['sha256'], 'snapshot_sha256': snapshot['sha256'],
              'dependencies': {p: importlib.metadata.version(p) for p in ['numpy', 'scipy', 'scikit-learn']}})
