@@ -1,0 +1,21 @@
+{
+  "protocol": "football-improvement-20261101-v1",
+  "sports": ["NFL", "NCAAF"],
+  "development_note": "Historical 2022-2025 outcomes were inspected in earlier audits. These are retrospective rolling-origin diagnostics, not a newly untouched test or proof of profit.",
+  "evaluation_seasons": [2022, 2023, 2024, 2025],
+  "train_rule": "season <= test year - 2",
+  "calibration_rule": "season == test year - 1",
+  "variants": ["original", "scaled", "opponent_score", "efficiency", "score_kernel"],
+  "controlled_changes": {"scaled": "training-only standardization, ridge alpha 100", "opponent_score": "scaled plus opponent-adjusted scoring ratings", "efficiency": "opponent_score plus prior observed efficiency/volume/takeaway/sack-or-havoc/explosive measures", "score_kernel": "same efficiency fit, plus 20 percent validation empirical score-kernel mixture"},
+  "scaled_ridge_alpha": 100,
+  "opponent_score_ewma": 0.15,
+  "efficiency_ewma": 0.20,
+  "kernel_fraction": 0.20,
+  "kernel_margin_bandwidth": 13.0,
+  "kernel_total_bandwidth": 14.0,
+  "synthetic_home_handicaps": [-7.5, -7.0, -3.5, -3.0, 0.0, 3.0, 3.5, 7.0, 7.5],
+  "synthetic_total_lines": [40.0, 40.5, 45.0, 45.5, 50.0, 50.5, 60.0, 60.5],
+  "bootstrap": {"unit": "ISO year/week", "paired_replicates": 1000, "seed": 1907},
+  "promotion": "NONE. All variants remain research-only regardless of retrospective scores.",
+  "prospective_policy": "Freeze artifacts and protocol before issuance. Register unstarted exact events, original observations, all candidate W/P/L and quote identity. Numerical output must not be called approved betting probability. Never reconstruct missing original p after outcomes."
+}

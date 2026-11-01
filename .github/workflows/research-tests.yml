@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'project_craps/**'
+      - 'research/**'
       - 'models/**'
       - 'tests/**'
       - 'requirements*.txt'
@@ -24,5 +25,5 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
           cache: pip
-      - run: pip install -r requirements.txt
+      - run: pip install -r requirements-research.txt
       - run: python -m unittest discover -s tests -v

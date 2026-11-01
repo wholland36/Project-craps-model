@@ -224,3 +224,9 @@ must not become the canonical first-forecast store.
 Archived pre-audit programs under `legacy/` are comparison evidence with known bugs.
 Current workflows never execute them. The new reports supersede their arithmetic
 for research; they do not alter any original forecast or official wager record.
+
+## Model improvement experiments
+
+See [research/README.md](research/README.md) for versioned opponent-adjusted/efficiency
+challengers, controlled comparisons, failure analysis and private prospective cohorts.
+They preserve the frozen runner and never approve wagers.
