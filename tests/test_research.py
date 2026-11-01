@@ -262,3 +262,38 @@ class ShadowSettlementTests(unittest.TestCase):
               'kickoff':self.record['kickoff'],'home_score':21,'away_score':17,
               'observed_at':stamp(self.issued)}
         with self.assertRaises(ValueError):self.store.settle([game],stamp(final_time))
+
+
+class AnalysisTests(unittest.TestCase):
+    def test_book_benchmark_excludes_ties_and_conditions_model_probability(self):
+        from project_craps.common import bytes_hash,create
+        from research.analysis.benchmarks import benchmark_report
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            raw=b'game_id,home_moneyline,away_moneyline\none,-110,100\ntie,-110,100\n'
+            sha=bytes_hash(raw);(root/(sha+'.csv')).write_bytes(raw)
+            create(root/'snapshot.json',{'payload':{'sport':'NFL','games':[],'sources':[{'sha256':sha}]}})
+            create(root/'report.json',{'protocol':{'variants':['original'],'evaluation_seasons':[2025]}})
+            rows=[{'event_id':'one','actual_margin':3,'actual_home_win':1,'pred_tie':.1,'p_home_win':.6,'cluster':'2025-1'},
+                  {'event_id':'tie','actual_margin':0,'actual_home_win':0,'pred_tie':.1,'p_home_win':.6,'cluster':'2025-1'}]
+            create(root/'2025-original-predictions.json',rows)
+            report=benchmark_report(root,root/'snapshot.json',root/'benchmark.json')
+        actual=report['variants']['original']['seasons']['2025']
+        self.assertEqual(actual['matched_n'],1)
+        self.assertAlmostEqual(actual['model']['brier'],(2/3-1)**2)
+        self.assertFalse(report['original_publication_times_verified'])
+
+    def test_forward_report_counts_only_first_event_records(self):
+        from research.analysis.forward import report
+        issued=now()
+        with tempfile.TemporaryDirectory() as temp:
+            path=Path(temp)/'shadow.sqlite';store=ShadowStore(path,clock=lambda:issued)
+            record={'key':'first','event_id':'one','sport':'NFL','identity':{'home_id':'A'},
+                'kickoff':stamp(issued+timedelta(hours=2)),'issued_at':stamp(issued),
+                'protocol_sha256':'p','model_approved':False,'approved_risk':0,
+                'predictions':{'test':{'home_win':.6,'home_tie':0}}}
+            store.append(record);store.append(dict(record,key='revision'));store.close()
+            result=report(path,Path(temp)/'forward.json')
+        self.assertEqual(result['all_records'],2)
+        self.assertEqual(result['unique_first_event_records'],1)
+        self.assertEqual(result['settled_first_event_records'],0)

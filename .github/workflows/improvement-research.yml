@@ -1,0 +1,49 @@
+name: Football challenger research
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  experiment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - sport: NFL
+            start: 2010
+          - sport: NCAAF
+            start: 2016
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -r requirements-research.txt
+      - run: python -m unittest discover -s tests -v
+      - name: Register fixed research protocol before experiments
+        run: |
+          python - <<'PY'
+          from project_craps.common import create,envelope,read,stamp,now
+          create('runtime/protocol.json',envelope({'registered_at':stamp(now()),'protocol':read('research/protocol.json')}))
+          PY
+      - run: python -m project_craps capture --sport ${{ matrix.sport }} --start-year ${{ matrix.start }} --end-year 2025 --output runtime/schedules
+      - run: python -m research.ingest --sport ${{ matrix.sport }} --start-year ${{ matrix.start }} --end-year 2025 --output runtime/efficiency
+      - name: Execute preregistered comparisons
+        run: |
+          if [ "${{ matrix.sport }}" = "NCAAF" ]; then
+            python -m research experiment --snapshot runtime/schedules/snapshot.json --metrics runtime/efficiency/NCAAF/manifest.json --player-metrics runtime/efficiency/NCAAF-player-plays/manifest.json --protocol-registration runtime/protocol.json --output runtime/results
+            python -m research.analysis.failure --results runtime/results --player-metrics runtime/efficiency/NCAAF-player-plays/manifest.json --output runtime/results/failure-analysis.json
+          else
+            python -m research experiment --snapshot runtime/schedules/snapshot.json --metrics runtime/efficiency/NFL/manifest.json --protocol-registration runtime/protocol.json --output runtime/results
+            python -m research.analysis.failure --results runtime/results --output runtime/results/failure-analysis.json
+          fi
+          python -m research.analysis.benchmarks --results runtime/results --snapshot runtime/schedules/snapshot.json --output runtime/results/benchmark-diagnostic.json
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: challenger-${{ matrix.sport }}-${{ github.sha }}-${{ github.run_id }}
+          path: runtime/
+          if-no-files-found: error
