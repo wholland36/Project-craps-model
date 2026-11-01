@@ -155,3 +155,30 @@ improvement. Full denominators and uncertainty are in the saved reports. Favorab
 historical metrics still require timestamped future evidence, strong benchmarks,
 material roster/weather handling and risk-adjusted quote-level validation under
 `VALIDATION_RULES.md` before any wagering approval.
+
+## Separately versioned key-margin experiment
+
+`research/lattice/protocol.json` records a second, diagnostic-driven experiment.
+It reweights the efficiency parent's feasible integer-score draws by absolute
+margin category, including ties, three and seven. Weights use only the previous
+calibration season, exclude each calibration game's own residual draw, and shrink
+toward the parent distribution. Point forecasts and the frozen parent stay fixed.
+The design was motivated by the already-examined historical failures; these
+results are not a newly untouched test. This correction has not been promoted
+or retroactively inserted into the first prospective cohort.
+
+Register its protocol in a new receipt before fitting, using the same registration
+command above with `research/lattice/protocol.json`. Then run:
+
+```sh
+.venv/bin/python -m research.lattice --results runtime/improvement-final/NFL --output runtime/lattice-NFL-UNIQUE --protocol-registration runtime/lattice-protocol-registered.json
+.venv/bin/python -m research.lattice --results runtime/improvement-final/NCAAF --output runtime/lattice-FBS-UNIQUE --protocol-registration runtime/lattice-protocol-registered.json
+```
+
+The complete Actions workflow registers and evaluates this protocol separately.
+Exports include each fold's parent hash, weights, calibration target, convergence
+error, corrected W/P/L threshold forecasts and paired historical comparisons.
+Aggregate key-margin calibration improved; incremental home-win Brier intervals
+include zero for both sports. Future corrected-model observations require a new
+protocol cohort with actual new issuance times. Existing first forecasts remain
+immutable and continue to provide the original five-way prospective comparison.

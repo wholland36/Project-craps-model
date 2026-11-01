@@ -1,0 +1,14 @@
+{
+  "protocol": "football-key-margin-calibration-20261101-v2",
+  "design_note": "Motivated by the already-examined retrospective diagnostics from v1. Historical tests are not newly untouched. No automatic promotion.",
+  "parent_variant": "efficiency",
+  "calibration_data": "Parent validation scores and residuals from season test_year-1 only; exclude own residual draw when fitting category weights",
+  "absolute_margin_bins": [[0,0],[1,2],[3,3],[4,6],[7,7],[8,10],[11,14],[15,null]],
+  "prior_strength_games": 20,
+  "maximum_iterations": 100,
+  "learning_rate": 0.5,
+  "weight_clip": [0.0001,10000],
+  "convergence_tolerance": 0.00001,
+  "promotion": "NONE; prospective evidence and release policy still required",
+  "approved_risk": 0
+}

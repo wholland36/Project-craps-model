@@ -297,3 +297,56 @@ class AnalysisTests(unittest.TestCase):
         self.assertEqual(result['all_records'],2)
         self.assertEqual(result['unique_first_event_records'],1)
         self.assertEqual(result['settled_first_event_records'],0)
+
+
+class LatticeTests(unittest.TestCase):
+    def parent(self,sport='NFL'):
+        from project_craps.common import envelope
+        scores=[[24,21],[21,14],[17,17],[31,20],[20,24],[28,21],[10,13],[35,21]]
+        if sport=='NCAAF':scores[2]=[20,17]
+        residual=[[h-a-2,h+a-44] for h,a in scores]
+        return envelope({'variant':'efficiency','approval':'RESEARCH_ONLY','sport':sport,
+            'validation_scores':scores,'residual_pairs':residual,'calibration_season':2024,
+            'calibration_last_kickoff':'2025-01-01T00:00:00+00:00'})
+
+    def test_category_boundaries_and_sign_symmetry(self):
+        from research.lattice.model import category
+        margins=np.array([0,1,2,3,4,6,7,8,10,11,14,15,50])
+        np.testing.assert_array_equal(category(margins),[0,1,1,2,3,3,4,5,5,6,6,7,7])
+        np.testing.assert_array_equal(category(margins),category(-margins))
+
+    def test_calibration_excludes_own_residual_and_uses_only_parent_calibration(self):
+        from research.lattice.model import fit
+        parent=self.parent();result=fit(parent,minimum=2)['payload']
+        self.assertTrue(result['leave_one_out_residuals'])
+        self.assertEqual(result['calibration_n'],8)
+        self.assertEqual(result['calibration_season'],2024)
+        self.assertAlmostEqual(sum(result['fitted_margin_category_mass']),1)
+        # All validation means are identical. Removing each own draw leaves the aggregate unchanged.
+        self.assertAlmostEqual(result['base_margin_category_mass'][0],1/8)
+        self.assertEqual(result['approved_risk'],0)
+        with self.assertRaises(ValueError):fit(parent,minimum=200)
+
+    def test_corrected_support_is_feasible_and_normalized(self):
+        from research.lattice.model import fit,distribution
+        for sport in ('NFL','NCAAF'):
+            parent=self.parent(sport);calibrator=fit(parent,minimum=2)
+            scores,w=distribution(parent,calibrator,[2,44])
+            self.assertAlmostEqual(float(w.sum()),1)
+            self.assertTrue(np.all(w>0));self.assertTrue(np.all(scores>=0))
+            np.testing.assert_array_equal(scores,np.floor(scores))
+            if sport=='NCAAF':self.assertTrue(np.all(scores[:,0]!=scores[:,1]))
+
+    def test_different_parent_is_rejected(self):
+        from project_craps.common import envelope
+        from research.lattice.model import fit,distribution
+        parent=self.parent();calibrator=fit(parent,minimum=2)
+        changed=dict(parent['payload'],calibration_season=2023)
+        with self.assertRaises(ValueError):distribution(envelope(changed),calibrator,[2,44])
+
+    def test_code_mismatch_is_rejected(self):
+        from project_craps.common import envelope
+        from research.lattice.model import fit,distribution
+        parent=self.parent();calibrator=fit(parent,minimum=2)
+        changed=dict(calibrator['payload'],implementation_sha256='other')
+        with self.assertRaises(ValueError):distribution(parent,envelope(changed),[2,44])

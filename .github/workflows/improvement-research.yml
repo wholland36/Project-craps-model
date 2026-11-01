@@ -33,6 +33,7 @@ jobs:
           python - <<'PY'
           from project_craps.common import create,envelope,read,stamp,now
           create('runtime/protocol.json',envelope({'registered_at':stamp(now()),'protocol':read('research/protocol.json')}))
+          create('runtime/lattice-protocol.json',envelope({'registered_at':stamp(now()),'protocol':read('research/lattice/protocol.json')}))
           PY
       - run: python -m project_craps capture --sport ${{ matrix.sport }} --start-year ${{ matrix.start }} --end-year 2025 --output runtime/schedules
       - run: python -m research.ingest --sport ${{ matrix.sport }} --start-year ${{ matrix.start }} --end-year 2025 --output runtime/efficiency
@@ -46,6 +47,8 @@ jobs:
             python -m research.analysis.failure --results runtime/results --output runtime/results/failure-analysis.json
           fi
           python -m research.analysis.benchmarks --results runtime/results --snapshot runtime/schedules/snapshot.json --output runtime/results/benchmark-diagnostic.json
+      - name: Evaluate separately registered key-margin correction
+        run: python -m research.lattice --results runtime/results --output runtime/lattice --protocol-registration runtime/lattice-protocol.json
       - uses: actions/upload-artifact@v4
         if: success()
         with:
