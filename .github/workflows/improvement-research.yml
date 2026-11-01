@@ -1,5 +1,10 @@
 name: Football challenger research
 on:
+  push:
+    paths:
+      - 'research/**'
+      - 'requirements-research.txt'
+      - '.github/workflows/improvement-research.yml'
   workflow_dispatch:
 permissions:
   contents: read

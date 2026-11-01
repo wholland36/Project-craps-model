@@ -143,7 +143,8 @@ execution offers or infer a starting QB from the absence of an injury tag.
 
 ## Execution and release
 
-The manual `Football challenger research` Actions workflow reproduces both sport
+The `Football challenger research` Actions workflow runs manually or on research
+code changes and reproduces both sport
 experiments on public historical data. PR tests run Python 3.11 and 3.12. The
 historical NFL/FBS workflows install the research test dependencies too. No live
 shadow probabilities, private target bindings or official wagers go into public
