@@ -1,25 +1,35 @@
-name: NFL historical model research
+name: NFL historical research pipeline
 on:
+  workflow_dispatch:
   push:
     paths:
-      - 'models/train_nfl.py'
+      - 'project_craps/**'
+      - 'models/**'
+      - 'VALIDATION_RULES.md'
+      - 'requirements.txt'
       - '.github/workflows/nfl-train.yml'
-  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: nfl-research-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
-  train:
+  research:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install pandas numpy scikit-learn requests
-      - run: mkdir -p results && python models/train_nfl.py
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python -m unittest discover -s tests -v
+      - run: python -m project_craps capture --sport NFL --start-year 2010 --end-year 2025 --output runtime/source
+      - run: python -m project_craps train --snapshot runtime/source/snapshot.json --output runtime/model
       - uses: actions/upload-artifact@v4
-        if: always()
+        if: success()
         with:
-          name: nfl-historical-model
-          path: results/
-          if-no-files-found: warn
+          name: nfl-research-${{ github.sha }}-${{ github.run_id }}
+          path: runtime/
+          if-no-files-found: error
