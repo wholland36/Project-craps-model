@@ -231,3 +231,34 @@ class ContextIdentityTests(unittest.TestCase):
             with patch('research.context.observe',side_effect=[({},receipt),(summary,receipt)]):
                 result=collect([event],{'game':{'espn_event_id':'provider-game'}},Path(temp)/'wrong')
             self.assertTrue(result['events'][0]['integrity_failure'])
+
+
+class ShadowSettlementTests(unittest.TestCase):
+    setUp=ShadowTests.setUp
+    tearDown=ShadowTests.tearDown
+
+    def test_settlement_requires_original_source_observation_and_preserves_first(self):
+        self.store.append(self.record)
+        self.store.append(dict(self.record,key='revision'))
+        final_time=self.issued+timedelta(hours=6)
+        self.store.clock=lambda:final_time
+        game={'event_id':'one','status':'FINAL','home_id':'A','away_id':'B',
+              'kickoff':self.record['kickoff'],'home_score':21,'away_score':17,
+              'observed_at':stamp(final_time),'source_sha256':'source'}
+        result=self.store.settle([game],stamp(final_time))
+        self.assertEqual(result['new_results'],2)
+        rows=[json.loads(r[0]) for r in self.store.db.execute('SELECT payload FROM results')]
+        self.assertEqual(sum(r['first_event_prediction'] for r in rows),1)
+        self.assertAlmostEqual(rows[0]['scores']['test']['home_win_brier'],.16)
+        self.assertTrue(all(r['official_pnl']==0 for r in rows))
+        self.assertEqual(self.store.settle([game],stamp(final_time))['new_results'],0)
+        game['home_score']=17
+        with self.assertRaises(ValueError):self.store.settle([game],stamp(final_time))
+
+    def test_source_captured_before_kickoff_cannot_be_relabelled_as_postgame(self):
+        self.store.append(self.record)
+        final_time=self.issued+timedelta(hours=6);self.store.clock=lambda:final_time
+        game={'event_id':'one','status':'FINAL','home_id':'A','away_id':'B',
+              'kickoff':self.record['kickoff'],'home_score':21,'away_score':17,
+              'observed_at':stamp(self.issued)}
+        with self.assertRaises(ValueError):self.store.settle([game],stamp(final_time))

@@ -102,10 +102,11 @@ class ShadowStore:
             if not event or event['status']!='FINAL':continue
             identity={k:event[k] for k in record['identity']}
             if identity!=record['identity']:raise ValueError('shadow settlement identity revision')
-            if not (instant(record['issued_at'])<instant(event['kickoff'])<instant(observed_at)<=self.clock()):
+            result_observed=event['observed_at']
+            if not (instant(record['issued_at'])<instant(event['kickoff'])<instant(result_observed)<=instant(observed_at)<=self.clock()):
                 raise ValueError('invalid outcome observation time')
             result={'key':record['key'],'identity':identity,'home_score':event['home_score'],'away_score':event['away_score'],
-                    'observed_at':observed_at,'scores':{},'first_event_prediction':record['first_shadow_key']==record['key'],'official_pnl':0,'approved_risk':0}
+                    'observed_at':result_observed,'source_sha256':event.get('source_sha256'),'scores':{},'first_event_prediction':record['first_shadow_key']==record['key'],'official_pnl':0,'approved_risk':0}
             for variant,p in record['predictions'].items():
                 y=int(event['home_score']>event['away_score']);prob=p['home_win']
                 result['scores'][variant]={'home_win_brier':(prob-y)**2,'home_win_logloss':-log(max(1e-9,prob if y else 1-prob))}

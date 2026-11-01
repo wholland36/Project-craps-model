@@ -47,7 +47,10 @@ def main():
         from .store import ShadowStore
         store=ShadowStore(args.registry)
         try:
-            result=store.verify() if args.command=='verify' else store.settle(load_snapshot(args.snapshot)['payload']['games'],now().isoformat())
+            if args.command=='verify':result=store.verify()
+            else:
+                source=load_snapshot(args.snapshot)['payload']
+                result=store.settle(source['games'],source['captured_at'])
             print(canonical(result))
         finally:store.close()
         return
