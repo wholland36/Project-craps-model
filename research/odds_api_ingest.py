@@ -58,7 +58,9 @@ def normalize(payload, sport, *, historical=True):
                     if market_time >= start:
                         continue
                     if historical and market_time > snapshot:
-                        raise ValueError("book quote newer than historic snapshot")
+                        rejected.append({"event_id":gid,"book":book_id,"market":name,
+                                         "error":"book quote newer than historic snapshot"})
+                        continue
                     choices=market.get("outcomes",[])
                     if not isinstance(choices,list):
                         raise ValueError("Bad market outcomes")
