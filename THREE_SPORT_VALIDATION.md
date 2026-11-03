@@ -93,3 +93,27 @@ source; the model report identifies the seasons and data URL template.
 The original NFL/FBS source manifests are retained under the existing
 football research pipelines. Market audit includes SHA-256 of its complete
 input, immutable event quote keys, rejected records and reason codes.
+
+## New: optional real timestamped odds capture
+
+Provider research confirms The Odds API offers historical American NFL, NCAA
+football and NCAA men's basketball sportsbook snapshots from 2020 onward; this
+**requires a paid plan**. A key is not present, and NO authenticated historical
+prices were fetched in this development run. Do not publish or commit the key.
+
+```sh
+export THE_ODDS_API_KEY='KEY_FROM_PRIVATE_PASSWORD_MANAGER'
+python -m research.odds_api_ingest --sport NFL --mode historical --at 2025-10-21T18:00:00Z --output-dir runtime/odds-NFL-unique
+python -m research.odds_api_ingest --sport NCAAF --mode historical --at 2025-10-21T18:00:00Z --output-dir runtime/odds-FBS-unique
+python -m research.odds_api_ingest --sport NCAAB --mode historical --at 2025-11-10T18:00:00Z --output-dir runtime/odds-MBB-unique
+```
+
+For current offers, use `--mode live` (without `--at`).
+The code validates paired opposing prices and aligned signed handicaps at a single
+book and market clock; retains source JSON bytes and SHA-256 in a **private runtime
+folder**; excludes odds after the published game start and malformed quarter
+lines. Never mix book identities or inferred timestamps. It produces **quote
+observations only**, not actual model forecasts or validated expected values.
+The private normalized quotes must be linked to immutable model forecasts and
+settled outcomes *without postgame leakage* before running the market audit.
+Current bookmaker eligibility and coverage must be established separately.
