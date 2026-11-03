@@ -38,7 +38,7 @@ and a **paired opposing-side price from the same sportsbook and exact same
 timestamped line**, frozen market-blind prediction and full-game official final.
 Each JSONL row must have a unique `event_id`, explicit sport and season,
 event kickoff and quote/model UTC timestamps, book, side, selected-side handicap,
-the two original American odds, three-way `p_win`, `p_push`, `p_loss`, actual
+the two original American odds, opposing_book, opposing_quote_time_utc and opposing_line (the opposite signed handicap for spreads, the identical threshold for totals), three-way `p_win`, `p_push`, `p_loss`, actual
 home/away points, source URLs and separate source-content SHA-256 hashes.
 `market_pair_verified` is required, but self-attestation alone is **not independent
 source authentication**; quote evidence must be audited externally before
