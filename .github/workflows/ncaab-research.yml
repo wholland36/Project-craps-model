@@ -1,0 +1,31 @@
+name: NCAA Men's Basketball Historical Research
+on:
+  push:
+    paths:
+      - 'models/train_ncaab.py'
+      - 'tests/test_ncaab.py'
+      - '.github/workflows/ncaab-research.yml'
+  pull_request:
+  workflow_dispatch:
+jobs:
+  historical-research:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install required packages
+        run: pip install pandas numpy scikit-learn requests pyarrow
+      - name: Test strict causality and market direction
+        run: python -m unittest discover -s tests -v
+      - name: Retrieve season schedules and run forward-chaining research
+        run: python -m models.train_ncaab --output results/ncaab_men_research.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ncaa-basketball-historical-research
+          path: results/
+          if-no-files-found: warn
