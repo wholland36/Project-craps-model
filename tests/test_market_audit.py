@@ -11,6 +11,9 @@ def fixture(sport="NFL",market="spread",selection="home",line=-3.5,
     return dict(event_id="E-1",season=2025,sport=sport,market=market,
                 selection=selection,line=line,american_odds=-110,
                 opposing_american_odds=-110, book="HISTORICAL_BOOK",
+                opposing_book="HISTORICAL_BOOK",
+                opposing_quote_time_utc="2025-10-21T16:00:00Z",
+                opposing_line=(-line if market=="spread" else line),
                 quote_time_utc="2025-10-21T16:00:00Z",
                 forecast_time_utc="2025-10-21T15:00:00Z",
                 start_time_utc="2025-10-21T20:00:00Z",
@@ -26,11 +29,11 @@ class MarketAuditTests(unittest.TestCase):
     def test_settlement_selected_side_spread_orientation(self):
         x=fixture()
         self.assertEqual(settlement(x),1)
-        x["selection"]="away";x["line"]=+3.5
+        x["selection"]="away";x["line"]=+3.5;x["opposing_line"]=-3.5
         self.assertEqual(settlement(x),-1)
-        x["line"]=+7.
+        x["line"]=+7.;x["opposing_line"]=-7.
         self.assertEqual(settlement(x),0)
-        x["line"]=+7.5
+        x["line"]=+7.5;x["opposing_line"]=-7.5
         self.assertEqual(settlement(x),1)
 
     def test_total_and_moneyline(self):
@@ -64,6 +67,14 @@ class MarketAuditTests(unittest.TestCase):
         r=fixture();del r["quote_provenance_sha256"]
         with self.assertRaises(ValueError):
             checked(r)
+
+    def test_different_opposing_book_time_or_line_rejected(self):
+        for field,value in (("opposing_book","OTHER"),
+                            ("opposing_quote_time_utc","2025-10-21T16:01:00Z"),
+                            ("opposing_line",+2.5)):
+            r=fixture();r[field]=value
+            with self.assertRaises(ValueError):
+                checked(r)
 
     def test_integer_line_push_and_conditional_probability(self):
         r=fixture(line=-7.);r.update(p_win=.5,p_push=.1,p_loss=.4)
