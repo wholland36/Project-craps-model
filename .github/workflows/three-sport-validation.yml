@@ -1,0 +1,59 @@
+name: Three-sport market audit and NCAA basketball research
+on:
+  push:
+    paths:
+      - 'research/market_audit.py'
+      - 'tests/test_market_audit.py'
+      - 'models/train_ncaab.py'
+      - 'tests/test_ncaab.py'
+      - '.github/workflows/three-sport-validation.yml'
+  pull_request:
+  workflow_dispatch:
+jobs:
+  safety-tests:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements-research.txt
+      - name: Full regression suite
+        run: python -m unittest discover -s tests -v
+      - name: Audit genuine historical data availability (no fake quotes)
+        run: |
+          mkdir -p results
+          : > results/actual_verified_market_quotes.jsonl
+          python -m research.market_audit --input results/actual_verified_market_quotes.jsonl --output results/three_sport_market_audit.json
+          python - <<'PY'
+          import json
+          report=json.load(open('results/three_sport_market_audit.json'))
+          assert report['approval']=='RESEARCH_ONLY'
+          assert report['accepted']==0
+          assert report['approved_live_risk_usd']==0
+          for sport in ('NFL','NCAAF','NCAAB'):
+              assert not report['sports'][sport]['production_approved']
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: three-sport-research-market-coverage
+          path: results/three_sport_market_audit.json
+          if-no-files-found: error
+  ncaab-research:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements-research.txt
+      - run: python -m models.train_ncaab --output results/ncaab_men_research.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ncaab-research-backtest
+          path: results/ncaab_men_research.json
+          if-no-files-found: error
