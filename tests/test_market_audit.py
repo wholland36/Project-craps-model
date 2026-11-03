@@ -66,7 +66,7 @@ class MarketAuditTests(unittest.TestCase):
             checked(r)
 
     def test_integer_line_push_and_conditional_probability(self):
-        r=fixture(line=-7.,p_win=.5,p_push=.1,p_loss=.4)
+        r=fixture(line=-7.);r.update(p_win=.5,p_push=.1,p_loss=.4)
         parsed=checked(r)
         self.assertEqual(parsed["outcome"],0)
         self.assertAlmostEqual(parsed["model_conditional_win"],.5/.9)
