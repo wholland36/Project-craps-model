@@ -37,6 +37,7 @@ class OddsIngestTests(unittest.TestCase):
         rows,_=normalize(x,"NFL")
         self.assertEqual(rows,[])
         x=self.provider()
+        x["timestamp"]="2025-11-10T19:00:00Z"
         x["data"][0]["bookmakers"][0]["markets"][0]["last_update"]="2025-11-10T19:30:00Z"
         rows,errors=normalize(x,"NFL")
         self.assertEqual(len(rows),4)
