@@ -21,6 +21,7 @@ MANDATORY = ("event_id", "season", "sport", "market", "selection", "line",
              "american_odds", "opposing_american_odds", "book", "quote_time_utc",
              "forecast_time_utc", "start_time_utc", "home_score", "away_score",
              "p_win", "p_push", "p_loss", "scope", "model_version",
+             "opposing_book", "opposing_quote_time_utc", "opposing_line",
              "model_provenance_sha256", "quote_provenance_sha256",
              "source_url", "quote_source_url")
 SCHEMA_VERSION = "market-holdout-audit-v1"
@@ -117,6 +118,18 @@ def checked(row):
     # 'market_pair_verified' is an evidence requirement, not an agent inference.
     if row.get("market_pair_verified") is not True:
         raise ValueError("same-book paired opposing quote not independently verified")
+    if str(row["opposing_book"]) != str(row["book"]):
+        raise ValueError("opposing offer is from a different bookmaker")
+    if instant(row["opposing_quote_time_utc"]) != q:
+        raise ValueError("opposing offer has a different original observation time")
+    if market == "moneyline":
+        if row["opposing_line"] not in ("", "NA", "N/A", 0):
+            raise ValueError("moneyline opposing offer has an invalid line")
+    elif market == "spread":
+        if abs(float(row["opposing_line"]) + float(row["line"])) > 1e-9:
+            raise ValueError("opposing spread is not a signed mirror of selected handicap")
+    elif abs(float(row["opposing_line"]) - float(row["line"])) > 1e-9:
+        raise ValueError("opposing total references a different threshold")
     # The conditional non-push market benchmark is meaningful at the SAME line.
     market_1=1/(1+payout)
     market_2=1/(1+opp_payout)
