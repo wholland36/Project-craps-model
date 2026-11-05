@@ -47,8 +47,8 @@ class ContextTests(unittest.TestCase):
     def test_incomplete_schedule_unknown(self):
         s=schedule();s['complete']=False
         self.assertIsNone(traps(event(),'H',s,[poll()],ASOF)['before_top25'])
-    def test_duplicate_poll_rank_rejected(self):
-        p=poll();p['ranks']['R']=24
+    def test_malformed_competition_poll_rank_rejected(self):
+        p=poll();p['ranks']['R']=23
         with self.assertRaises(ValueError):rank_at([p],'R',datetime.fromisoformat(ASOF))
     def history(self):
         gs=[]
@@ -134,3 +134,20 @@ class ContextTests(unittest.TestCase):
         self.assertEqual(r['injuries']['status'],'NOT_COMPUTED')
         self.assertEqual(r['trap_momentum_coefficients'],'NOT_FITTED')
         self.assertEqual(r['home']['momentum']['opponent_adjusted_margin_trend'],14.)
+
+
+class PollTieTests(unittest.TestCase):
+    def test_legitimate_tie_in_middle(self):
+        p=poll();p['ranks']['T15']=14
+        self.assertEqual(rank_at([p],'T15',datetime.fromisoformat(ASOF)),14)
+    def test_tie_at24_without25(self):
+        p=poll();p['ranks']['R']=24
+        self.assertEqual(rank_at([p],'R',datetime.fromisoformat(ASOF)),24)
+    def test_tie25_extends_ranked_teams(self):
+        p=poll();p['ranks']['extra']=25
+        self.assertEqual(rank_at([p],'extra',datetime.fromisoformat(ASOF)),25)
+    def test_truncated_poll_and_outside_top25_rejected(self):
+        p=poll();p['ranks'].pop('R')
+        with self.assertRaises(ValueError):rank_at([p],'R',datetime.fromisoformat(ASOF))
+        p=poll();p['ranks']['R']=26
+        with self.assertRaises(ValueError):rank_at([p],'R',datetime.fromisoformat(ASOF))

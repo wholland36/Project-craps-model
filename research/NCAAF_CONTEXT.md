@@ -6,7 +6,7 @@ This is an executable research feature layer on the November 5 validation branch
 
 AP Top 25 is the default poll. For each team, flag a game against an unranked opponent immediately before a game against a currently ranked opponent, or immediately after a completed game against an opponent ranked before that previous game. Record the two flags separately. A sandwich game may have both flags. A bye does not count as a game; adjacency stops at the season boundary. The team's own rank is irrelevant. Unknown poll coverage is unknown, not unranked.
 
-The next opponent uses the poll available at the forecast cutoff, never a future game-week ranking. The previous opponent uses its pregame poll. Require a complete 25-team poll, publication/observation times, validity interval and source hash. Schedule completeness and exact event identity are required. The flag describes a hypothesis; its sign and magnitude must be learned from training data. Do not automatically subtract points.
+The next opponent uses the poll available at the forecast cutoff, never a future game-week ranking. The previous opponent uses its pregame poll. Require a complete poll covering all top-25 slots (including legitimate competition ties), publication/observation times, validity interval and source hash. Schedule completeness and exact event identity are required. The flag describes a hypothesis; its sign and magnitude must be learned from training data. Do not automatically subtract points.
 
 ## Momentum
 
@@ -29,3 +29,5 @@ The six-point QB and three-point defender examples in tests are synthetic sensit
 Run `python -m research.ncaaf_context --input PRIVATE_INPUT.json --output NEW_PRIVATE_OUTPUT.json`. The input object supplies `event`, `schedule`, `polls`, `history`, `reports`, `asof` and optionally `roster_coverage_complete`. Functions and synthetic test fixtures define the required fields. Output creation refuses overwrite. Source hashes provide traceability, not independent authentication.
 
 The current branch implements feature construction and confirmed-availability injury sensitivity. It has no ranking/injury ingestion adapter, fitted trap/momentum coefficients, fitted player-value model, or live-runner connection. Historical AP/availability source vintages and replacement-value estimates remain missing. The next model study must acquire those inputs, fit the registered ablations on earlier data and evaluate on untouched prospective forecasts. No production approval or updated historical performance is claimed.
+
+November5quant review: the research poll validator now accepts legitimate competition ties, including tied25extending the ranked set. The previous unique-rank assumption rejected real preseasonAPdata. Original source-time guards and frozen official model remain unchanged. Retrospective trap results use a separate adapter with explicit unauthenticated publication/capture limitations.

@@ -23,6 +23,17 @@ def evidence(row, cutoff):
         raise ValueError('source was unavailable at cutoff')
 
 
+def validate_poll_ranks(ranks):
+    """Complete AP top-25 slots, allowing competition ties (including tied25)."""
+    values=list(ranks.values())
+    if len(values)<25 or any(type(x) is not int or not 1<=x<=25 for x in values):
+        raise ValueError('complete poll must cover all top25 slots')
+    values.sort()
+    for i,rank in enumerate(values):
+        if (i==0 or rank!=values[i-1]) and rank!=i+1:
+            raise ValueError('poll ranks must follow competition ranking with ties')
+
+
 def rank_at(polls, team, cutoff):
     """None = unknown; 0 = absent from a complete AP Top 25."""
     available=[]
@@ -32,9 +43,7 @@ def rank_at(polls, team, cutoff):
         if not instant(p['effective_from']) <= cutoff < instant(p['valid_until']):continue
         if p.get('complete') is not True:continue
         ranks=p['ranks']
-        if (len(ranks) != 25 or any(type(x) is not int for x in ranks.values()) or
-                set(ranks.values()) != set(range(1,26))):
-            raise ValueError('complete poll must contain unique ranks 1 through 25')
+        validate_poll_ranks(ranks)
         available.append(p)
     if not available:return None
     latest=max(available,key=lambda p:instant(p['published_at']))
