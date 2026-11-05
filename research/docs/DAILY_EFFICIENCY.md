@@ -1,0 +1,11 @@
+# Daily efficiency challenger
+
+`fit(rows, *, sport, cutoff, ridge=20., calibration_fraction=.2)` fits a fixed, untuned opponent-adjusted offense/defense/home model on the earliest80% of eligible completed games, with date-separated remaining20% used only for paired score residual calibration. Team effects/home coefficient are ridge penalized; intercept is free. Prior seasons receive fixed0.5 retention weights; these are research settings, not optimized values. Rows at/after cutoff and unfinished games are excluded. Sparse unseen teams return an unresolved prediction.
+
+`predict(model, event, *, expected_possessions_override=None)` returns point scores, paired score samples, distribution center, model mode and research status. Event requires home_id, away_id, kickoff, neutral. Predictions must follow the fitted cutoff. Root daily engine must supply verified sport/event identity, fresh inputs and original capture receipts; this module does not approve bets.
+
+NCAAB estimates possessions from actual historical box inputs using the standard FGA+0.44FTA−ORB+TO formula, averaging both teams. This is an estimate, not an observed exact count. PPP and possessions both include overtime, consistently with full final scores. Expected possessions average the two teams’ prior box estimates with season weights. Passing an override requires independently verified provenance from the caller. The released NCAAB model already uses efficiency and pace: this challenger tests incremental opponent adjustment, not a discovery of pace.
+
+NFL/NCAAF currently use explicitly named `full_score_opponent_adjusted_fallback`: no drive counts or possessions are fabricated; expected_possessions remains null. Regulation/drive PPP awaits verified drive data. Paired residual samples preserve joint home/away error dependence and discrete final scores, but key-number/tie treatment and independent market comparisons remain root validation duties.
+
+Fits and residual calibration are retrospective development artifacts; no source publication authentication, fresh holdout improvement, profitability or production approval is claimed. Calibration scores are diagnostics, not independent confirmation. Daily settlement must use actual full-game final scores and original forecasts.
