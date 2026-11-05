@@ -1,0 +1,16 @@
+{
+  "protocol": "ncaaf-context-v1-research-20261105",
+  "approval": "RESEARCH_ONLY",
+  "parent_commit": "05d6613ee97820bfd8a0e5ef832909c94b9c01f4",
+  "official_release_replaced": false,
+  "rank_source": "AP Top 25; explicit complete poll, published and observed before cutoff, valid poll interval",
+  "trap_definition": "Current opponent unranked. Separate flags when the immediately next scheduled same-season opponent is currently top 25, or immediately previous completed opponent was top 25 before that previous game. Both may be true. Byes do not count as games.",
+  "momentum": "Per team: latest 3 versus preceding 3 completed and observed same-season games. Win rate, mean margin, margin residual over independent frozen pregame expectation, and change between windows. Missing expectations remain null.",
+  "injuries": "Per-player expected scoring and points-prevented value over named replacement, relative to effective availability already embedded in baseline. External estimates require source/model hashes and training cutoff. No fixed star deduction.",
+  "uncertain_availability": "No automatic questionable probability. Uncertain statuses cannot produce probabilities from a mean-only adjustment; require separate coherent active/out scenarios.",
+  "planned_ablation_order": ["baseline", "baseline plus trap", "baseline plus momentum", "baseline plus player availability", "combined"],
+  "evaluation": "Train only earlier seasons, calibrate subsequent earlier season, then evaluate held-out season; untouched prospective cohort required. AP/schedule/result/player value source vintages must precede each target cutoff. Preserve original first forecasts. Previously examined 2022-2025 are retrospective diagnostics only.",
+  "comparators": "Frozen architecture and independent Elo winner baseline, exact same-book no-vig prices at matching markets/lines; report coverage, W/P/L Brier, calibration, hypothetical ROI and clustered confidence intervals.",
+  "fit_status": "NOT_FITTED: no authenticated historical AP/schedule/availability vintages and no fitted replacement-value model supplied to this extension",
+  "safety": "No official release/runner/ledger changes, probability backfill, invented source timestamps, paid API calls, or automatic promotion"
+}
