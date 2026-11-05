@@ -1,0 +1,28 @@
+{
+  "version": "v2-shadow-execution-policy",
+  "frozen_at": "2026-11-05T16:47:06.045486+00:00",
+  "status": "RESEARCH_ONLY",
+  "decision_horizon_minutes": 60,
+  "permitted_book": "Hard Rock Florida",
+  "reference_book_substitution": false,
+  "scope": "full_game_including_overtime",
+  "maximum_tickets_per_event": 1,
+  "selection": "highest positive expected return among qualified same-book pairs; deterministic market then selection tie-break",
+  "conditional_edge_thresholds": {
+    "moneyline": 0.03,
+    "spread": 0.025,
+    "total": 0.03
+  },
+  "maximum_hypothetical_event_risk_units": 1,
+  "approved_real_risk_usd": 0,
+  "requirements": [
+    "independently authenticated exact pregame paired line and prices",
+    "final available pregame role/availability context",
+    "validated calibrated probability distribution",
+    "source observed before cutoff",
+    "all excluded or unavailable offers recorded"
+  ],
+  "current_execution": "BLOCKED: authenticated offered prices and validated distributions unavailable",
+  "clv": "Only at identical book/market/line/scope, captured before kickoff; missing stays null",
+  "roi": "NOT_COMPUTED for this new policy; no retroactive application to claim prospective results"
+}

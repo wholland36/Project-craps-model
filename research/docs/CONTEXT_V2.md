@@ -1,0 +1,13 @@
+# Context v2 research upgrade
+
+`run_candidate(event, history, asof, *, contextual_inputs, training_rows=None, train_end=None, ridge=None, travel=None)` runs source-time checks, context preflight, measured features and optionally opponent-adjusted efficiency fitting/prediction. It returns blockers with every event retained. Malformed or future facts raise an error rather than silently influence a forecast.
+
+`fit_team_efficiency(rows, *, train_end, ridge)` fits caller-supplied completed regulation games only. The outcome is points per possession, with team offense, opponent defense and explicit home/neutral effects. Positive ridge identifies penalized effects while leaving the intercept unpenalized. No hyperparameter default is selected. `predict_team_efficiency(fitted, home_id, away_id, *, neutral)` flags unseen teams rather than inventing effects. This is a research point estimate, not a calibrated score distribution.
+
+`shrink_offseason(state, prior, retention)` requires an explicit fixed setting. It is tested at zero/full/partial retention and never changes official state. `fit_normalizer(rows, *, train_end)` rejects future rows and preserves missing values during `normalize`.
+
+`preflight_context(event, asof, inputs)` checks stadium/time-specific forecast vintage, roof status, wind/gust, precipitation probability and temperature; effective and announced coaching change dates; and prior sacks/dropbacks, pass plays/offensive plays, and returning OL starters/slots. Rates with zero denominators stay unresolved. Absence of a coaching-change row is unknown, not proof no change. Weather is a supplied forecast, not reconstructed observations. Caller source receipts do not prove independent source authentication.
+
+Momentum uses the difference between the latest three and previous three margin residuals against independent frozen pregame expectations. It is a candidate incremental feature; improvement beyond existing EWMA/Elo remains untested. Actual travel itineraries, verified stadium forecasts, regulation possession data and original pregame expectation vintages require collection. Geographic distance is explicitly a proxy. Full final scores remain settlement inputs; overtime is removed only from separately supplied regulation efficiency.
+
+The module freezes a small list of single-addition comparison arms. Choose transformations/hyperparameters on training folds only, then freeze a selected challenger before genuinely untouched prospective testing. Existing inspected 627-game analysis is exploratory. No fit has been run on those games by this module. No coefficients or betting thresholds are activated; official models, frozen research candidates, forecasts and wagers are untouched.

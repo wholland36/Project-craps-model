@@ -1,0 +1,27 @@
+{
+  "version": "context-v2-research",
+  "approval": "RESEARCH_ONLY",
+  "selection": "train-only chronological folds; existing inspected games exploratory",
+  "arms": [
+    "baseline",
+    "rest",
+    "travel",
+    "momentum_innovation",
+    "opponent_adjusted_efficiency",
+    "offseason_shrink",
+    "weather",
+    "coaching",
+    "matchup_continuity"
+  ],
+  "confirmation": "freeze one selected arm before untouched prospective evaluation",
+  "scoring": "event-balanced proper probability scores; push-aware settlement separate",
+  "coefficients": "NOT_FITTED",
+  "restriction": "one added arm at a time; hyperparameters and shrink retention fixed using training folds only",
+  "frozen_at": "2026-11-05T16:45:40.718674+00:00",
+  "primary_endpoint": "Event-balanced conditional Brier candidate-minus-bias baseline; market comparator separately",
+  "family_error_control": "Training-only selection of one challenger, then one untouched primary test; no post-outcome winner swapping",
+  "success_rule": "Upper95% paired block interval below zero; minimum effect/power design must be fixed before confirmatory registration",
+  "power_design_status": "UNRESOLVED: exposed loss variance, dependence and minimum practical effect not yet established",
+  "fit_status": "NO_NEW_COEFFICIENTS_FITTED",
+  "source_snapshot_sha256": "66534c38441dfc3787f6bd479a898e8e758865f9c55c76d2ea5f2b0616d72b71"
+}
