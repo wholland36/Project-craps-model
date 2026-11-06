@@ -1,0 +1,50 @@
+{
+  "version": "ncaaf-next-pilot-v1-20261106",
+  "status": "RESEARCH_ONLY",
+  "sport": "NCAAF FBS-FBS",
+  "parent_v1_manifest_sha256": "f5566af16faf73536f2ecdbe57a018271e38f65c42968c59cd6d3a35c96a529b",
+  "candidate": "frozen v1 calibration arm; line-specific betting capability not yet implemented/validated",
+  "comparison": "official frozen architecture; independent Elo winner; same-book no-vig at identical line/time/scope",
+  "historical_scope": "2022-2025 examined development only",
+  "pilot": "first 100 fully eligible new event identities per market after registration; exclude all existing forecast events and every pilot event from later confirmation",
+  "confirmation": "NOT_OPEN. After pilot, register fixed sample size, eligible games and model/algorithm hashes before observing confirmation outcomes. No automatic transition.",
+  "power": "80% target power at familywise alpha .05 across 3 markets (per-market .0166667); pilot week-cluster variance; practical Brier improvement .005; minimum 300 independent games per market and 12 game weeks, increase to power requirement; insufficient clusters stays blocked",
+  "primary_endpoint": "paired conditional Brier on nonpush; report push frequency, W/P/L proper scores and infinite logloss without clipping",
+  "pass_requirements": [
+    "paired week-cluster CI upper bound below -.005 versus contemporaneous no-vig",
+    "ROI multiplicity-adjusted lower bound above zero under preregistered event-capped portfolio",
+    "no unsupported/infinite logloss hidden",
+    "stable heldout seasons and all VALIDATION_RULES requirements",
+    "independent authentication and explicit user promotion permission"
+  ],
+  "market_tests": {
+    "moneyline": {
+      "conditional_edge": 0.03
+    },
+    "spread": {
+      "conditional_edge": 0.025
+    },
+    "total": {
+      "conditional_edge": 0.03
+    }
+  },
+  "decision_window_minutes_before_kickoff": [
+    45,
+    75
+  ],
+  "selection": "one exact authenticated Hard Rock Florida pair per event: highest positive W/P/L EV among qualifying candidates; ties market then selection lexicographic; no cross-book substitution",
+  "paper_risk": "one unit max per event, five units daily; no bankroll ledger edits; actual risk zero",
+  "required_inputs": [
+    "verified FBS eligibility",
+    "observed pregame roster/QB/injury roles and original report timing",
+    "feasible multi-injury workload allocation",
+    "weather and venue/roof",
+    "exact authenticated paired prices and scope",
+    "date-aware market-line inference and model hashes"
+  ],
+  "replacement_rule": "non-QB verified actual replacement first; otherwise mean highest-rated up to three available same-position players strictly below injured player; fewer uses available count; none unknown. QB needs verified starter/replacement. No EA rating-to-points coefficient assumed.",
+  "injury_model": "known contributions only; unknown omitted explicitly, full-game recommendations remain blocked by material uncertainty; comparator-bound coefficients and baseline-relative workload required",
+  "trap_momentum": "separate existing definitions/ablations, never fitted or applied without vintaged inputs",
+  "retraining": "none in this protocol",
+  "promotion": "never automatic"
+}
