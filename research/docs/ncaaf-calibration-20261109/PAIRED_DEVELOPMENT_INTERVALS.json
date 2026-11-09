@@ -1,0 +1,78 @@
+{
+  "model_sha256": "e0eb54686fef9e1086b0e2646dc4e6f63c43bd1401e71d4e862267b43c77eb1b",
+  "scope": "Already examined development; no untouched or powered confirmation; event CIs omit week dependence and multiplicity",
+  "results": [
+    {
+      "season": 2024,
+      "market": "moneyline",
+      "events": 754,
+      "paired_event_weighted_brier_delta_challenger_minus_parent": -0.0010382741133781498,
+      "descriptive_event_cluster_95pct": [
+        -0.003226438821205545,
+        0.0009142089684695681
+      ],
+      "replicates": 1000,
+      "seed": 20261109
+    },
+    {
+      "season": 2024,
+      "market": "spread",
+      "events": 770,
+      "paired_event_weighted_brier_delta_challenger_minus_parent": -0.030213501906535507,
+      "descriptive_event_cluster_95pct": [
+        -0.04038436456294578,
+        -0.01898543431895935
+      ],
+      "replicates": 1000,
+      "seed": 20261109
+    },
+    {
+      "season": 2024,
+      "market": "total",
+      "events": 770,
+      "paired_event_weighted_brier_delta_challenger_minus_parent": 0.000696769988301941,
+      "descriptive_event_cluster_95pct": [
+        -0.0058314056856122575,
+        0.006873609036583745
+      ],
+      "replicates": 1000,
+      "seed": 20261109
+    },
+    {
+      "season": 2025,
+      "market": "moneyline",
+      "events": 755,
+      "paired_event_weighted_brier_delta_challenger_minus_parent": 0.0021588067075746413,
+      "descriptive_event_cluster_95pct": [
+        0.00030346092419870755,
+        0.003952485276651578
+      ],
+      "replicates": 1000,
+      "seed": 20261109
+    },
+    {
+      "season": 2025,
+      "market": "spread",
+      "events": 776,
+      "paired_event_weighted_brier_delta_challenger_minus_parent": -0.014626737097820829,
+      "descriptive_event_cluster_95pct": [
+        -0.025448282161745224,
+        -0.004381207172635994
+      ],
+      "replicates": 1000,
+      "seed": 20261109
+    },
+    {
+      "season": 2025,
+      "market": "total",
+      "events": 776,
+      "paired_event_weighted_brier_delta_challenger_minus_parent": -0.003384467261600073,
+      "descriptive_event_cluster_95pct": [
+        -0.009069765443052916,
+        0.002558642734411021
+      ],
+      "replicates": 1000,
+      "seed": 20261109
+    }
+  ]
+}

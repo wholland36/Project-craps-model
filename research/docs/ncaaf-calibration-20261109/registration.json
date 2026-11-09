@@ -1,0 +1,13 @@
+{
+  "registered_at": "2026-11-09T20:01:47.252985+00:00",
+  "model_sha256": "e0eb54686fef9e1086b0e2646dc4e6f63c43bd1401e71d4e862267b43c77eb1b",
+  "protocol_sha256": "fc5acdf01aaade127ad8cc204e35632225aaff83d927cba2c92463f15f0c813c",
+  "code_sha256": {
+    "ncaaf_calibration.py": "1348dc472363222b3c18dfa00613315d1900980d84a84c12c6bb1e376c36f1fb",
+    "market_audit.py": "4a5d58e2832ce5a51ebae56494b3011121d38780686f286dd96b2cb9129b4aa3",
+    "public_market_validation.py": "e1ea6c5d205d63f65cac8968e000e3042b8fe0530773b933c411b8438903b0c6",
+    "beta_daily.py": "9106fd9a2d8ae2b0795edb7bb1d5fb35cf02d2af5899c155013eadc9eb1d9373"
+  },
+  "confirmation_open": false,
+  "approved_risk": 0
+}

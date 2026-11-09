@@ -1,0 +1,47 @@
+{
+  "version": "ncaaf-temperature-v1-20261109",
+  "coefficients": {
+    "moneyline": {
+      "slope": 0.8039466491742076,
+      "objective": 870.1936820201474,
+      "optimizer_success": true
+    },
+    "spread": {
+      "slope": 0.0,
+      "objective": 1029.1304159509586,
+      "optimizer_success": true
+    },
+    "total": {
+      "slope": 0.0,
+      "objective": 1029.8235631315185,
+      "optimizer_success": true
+    }
+  },
+  "fit_counts": {
+    "moneyline": {
+      "nonpush_rows": 22041,
+      "events": 1480,
+      "observed_push_rows": 0
+    },
+    "spread": {
+      "nonpush_rows": 23838,
+      "events": 1484,
+      "observed_push_rows": 412
+    },
+    "total": {
+      "nonpush_rows": 22303,
+      "events": 1485,
+      "observed_push_rows": 321
+    }
+  },
+  "source_sha256": "5cf5b1a5e78612aad8b78a76e0c8e66735c495324d46cb6fa78ea505d36404c2",
+  "parent_official_sha256": "f6a82b603d71c277b503cba9c47fd17ccf3b4025f75878a007f46ec1f5b46cf2",
+  "training_fold_sha256": {
+    "2022": "28e8daae42e15a96a8b7aa54371da5b29a2678becc9e0ac6469ecedd7e502e4e",
+    "2023": "16850d952774246f3af371562f76491225dad182630c1b3fc580b896b9f31a33",
+    "2024": "618ab5dece09add3306a1862b235a0ed56bc54112bf92a282482457c8d6e3cc5",
+    "2025": "ce93730b2de0858e99ee4f9296f3ef37ce878f7476f25ef0a3d71bf09092b7db"
+  },
+  "fit_completed_at": "2026-11-09T20:01:47.252269+00:00",
+  "approval": "RESEARCH_ONLY"
+}

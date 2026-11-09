@@ -1,0 +1,33 @@
+{
+  "version": "ncaaf-temperature-v1-20261109",
+  "model_sha256": "e0eb54686fef9e1086b0e2646dc4e6f63c43bd1401e71d4e862267b43c77eb1b",
+  "protocol_sha256": "fc5acdf01aaade127ad8cc204e35632225aaff83d927cba2c92463f15f0c813c",
+  "registration_sha256": "ee157fb151d9c588802feb043f4925ec32b89a2d2c4764bb24995a1c1dd5c4a2",
+  "source_archive_sha256": "5cf5b1a5e78612aad8b78a76e0c8e66735c495324d46cb6fa78ea505d36404c2",
+  "saved_fold_sha256": {
+    "2022": "28e8daae42e15a96a8b7aa54371da5b29a2678becc9e0ac6469ecedd7e502e4e",
+    "2023": "16850d952774246f3af371562f76491225dad182630c1b3fc580b896b9f31a33",
+    "2024": "618ab5dece09add3306a1862b235a0ed56bc54112bf92a282482457c8d6e3cc5",
+    "2025": "ce93730b2de0858e99ee4f9296f3ef37ce878f7476f25ef0a3d71bf09092b7db"
+  },
+  "official_parent_sha256": "f6a82b603d71c277b503cba9c47fd17ccf3b4025f75878a007f46ec1f5b46cf2",
+  "code_sha256": {
+    "research/ncaaf_calibration.py": "1348dc472363222b3c18dfa00613315d1900980d84a84c12c6bb1e376c36f1fb",
+    "research/ncaaf_calibration_report.py": "b516cbbf51ae0b2f4e740431f629ae332db4f79794e3c883bfde1fd3c7db55ca",
+    "tests/test_ncaaf_calibration.py": "3eee87f0d4095521ea16d20e8582d9573e97d080e40cbdfbecb0b6945680b1a7"
+  },
+  "files_sha256": {
+    "DEVELOPMENT_RESULTS.json": "2397f76f11460c9c53633802f01b4e0dfbca1b47beb05dec5e87e34db171c7f2",
+    "model.json": "e0eb54686fef9e1086b0e2646dc4e6f63c43bd1401e71d4e862267b43c77eb1b",
+    "Icon\r": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "REPORT.md": "449745ce236af64cd0ce005bad4e36d2bb307cf4e9650f4c9555418103541c7c",
+    "registration.json": "ee157fb151d9c588802feb043f4925ec32b89a2d2c4764bb24995a1c1dd5c4a2",
+    "PAIRED_DEVELOPMENT_INTERVALS.json": "6a2d268dee8d9078903e1c1f417fbf83dcc22d188a1e9494a70928fa8b920ad6",
+    "PROSPECTIVE_FIRST_RUN.json": "a30a230afa3ccc18beeab7459a66d4367bae60eaeb1f4ffb3ce30068e1046a9b",
+    "protocol.json": "fc5acdf01aaade127ad8cc204e35632225aaff83d927cba2c92463f15f0c813c",
+    "parent-capture-after-registration.json": "18ef4ce4363d76c949223352d650da7494b5206eac9e69e33d34ffd543248566"
+  },
+  "training_authorization": "Wade: lets do that, November 9 2026; separate calibration challenger, official unchanged",
+  "paid_requests": 0,
+  "approved_risk": 0
+}

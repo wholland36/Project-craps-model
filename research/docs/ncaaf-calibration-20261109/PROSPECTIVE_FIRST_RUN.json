@@ -1,0 +1,59 @@
+{
+  "asof": "2026-11-09T20:02:17.299406+00:00",
+  "version": "ncaaf-temperature-v1-20261109",
+  "new_rows": 9,
+  "registered_rows": 9,
+  "games": 3,
+  "new_grades": 0,
+  "total_grades": 0,
+  "refusals": {},
+  "paired_results": [
+    {
+      "market": "moneyline",
+      "settled_records": 0,
+      "settled_games": 0,
+      "parent_threeway_brier": null,
+      "challenger_threeway_brier": null,
+      "parent_infinite_logloss": 0,
+      "challenger_infinite_logloss": 0,
+      "elo_brier": null,
+      "parent_hypothetical_selected": 0,
+      "parent_hypothetical_roi": null,
+      "challenger_hypothetical_selected": 0,
+      "challenger_hypothetical_roi": null
+    },
+    {
+      "market": "spread",
+      "settled_records": 0,
+      "settled_games": 0,
+      "parent_threeway_brier": null,
+      "challenger_threeway_brier": null,
+      "parent_infinite_logloss": 0,
+      "challenger_infinite_logloss": 0,
+      "elo_brier": null,
+      "parent_hypothetical_selected": 0,
+      "parent_hypothetical_roi": null,
+      "challenger_hypothetical_selected": 0,
+      "challenger_hypothetical_roi": null
+    },
+    {
+      "market": "total",
+      "settled_records": 0,
+      "settled_games": 0,
+      "parent_threeway_brier": null,
+      "challenger_threeway_brier": null,
+      "parent_infinite_logloss": 0,
+      "challenger_infinite_logloss": 0,
+      "elo_brier": null,
+      "parent_hypothetical_selected": 0,
+      "parent_hypothetical_roi": null,
+      "challenger_hypothetical_selected": 0,
+      "challenger_hypothetical_roi": null
+    }
+  ],
+  "quarantines": [],
+  "quarantined_event_ids": [],
+  "source_failures": [],
+  "confirmation_open": false,
+  "approved_risk": 0
+}

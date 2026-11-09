@@ -1,0 +1,537 @@
+{
+  "version": "ncaaf-temperature-v1-20261109",
+  "scope": "EXAMINED_DEVELOPMENT_ONLY_NO_HOLDOUT",
+  "model": {
+    "version": "ncaaf-temperature-v1-20261109",
+    "coefficients": {
+      "moneyline": {
+        "slope": 0.8039466491742076,
+        "objective": 870.1936820201474,
+        "optimizer_success": true
+      },
+      "spread": {
+        "slope": 0.0,
+        "objective": 1029.1304159509586,
+        "optimizer_success": true
+      },
+      "total": {
+        "slope": 0.0,
+        "objective": 1029.8235631315185,
+        "optimizer_success": true
+      }
+    },
+    "fit_counts": {
+      "moneyline": {
+        "nonpush_rows": 22041,
+        "events": 1480,
+        "observed_push_rows": 0
+      },
+      "spread": {
+        "nonpush_rows": 23838,
+        "events": 1484,
+        "observed_push_rows": 412
+      },
+      "total": {
+        "nonpush_rows": 22303,
+        "events": 1485,
+        "observed_push_rows": 321
+      }
+    },
+    "source_sha256": "5cf5b1a5e78612aad8b78a76e0c8e66735c495324d46cb6fa78ea505d36404c2",
+    "parent_official_sha256": "f6a82b603d71c277b503cba9c47fd17ccf3b4025f75878a007f46ec1f5b46cf2",
+    "training_fold_sha256": {
+      "2022": "28e8daae42e15a96a8b7aa54371da5b29a2678becc9e0ac6469ecedd7e502e4e",
+      "2023": "16850d952774246f3af371562f76491225dad182630c1b3fc580b896b9f31a33",
+      "2024": "618ab5dece09add3306a1862b235a0ed56bc54112bf92a282482457c8d6e3cc5",
+      "2025": "ce93730b2de0858e99ee4f9296f3ef37ce878f7476f25ef0a3d71bf09092b7db"
+    },
+    "fit_completed_at": "2026-11-09T20:01:47.252269+00:00",
+    "approval": "RESEARCH_ONLY"
+  },
+  "registration": {
+    "registered_at": "2026-11-09T20:01:47.252985+00:00",
+    "model_sha256": "e0eb54686fef9e1086b0e2646dc4e6f63c43bd1401e71d4e862267b43c77eb1b",
+    "protocol_sha256": "fc5acdf01aaade127ad8cc204e35632225aaff83d927cba2c92463f15f0c813c",
+    "code_sha256": {
+      "ncaaf_calibration.py": "1348dc472363222b3c18dfa00613315d1900980d84a84c12c6bb1e376c36f1fb",
+      "market_audit.py": "4a5d58e2832ce5a51ebae56494b3011121d38780686f286dd96b2cb9129b4aa3",
+      "public_market_validation.py": "e1ea6c5d205d63f65cac8968e000e3042b8fe0530773b933c411b8438903b0c6",
+      "beta_daily.py": "9106fd9a2d8ae2b0795edb7bb1d5fb35cf02d2af5899c155013eadc9eb1d9373"
+    },
+    "confirmation_open": false,
+    "approved_risk": 0
+  },
+  "results": [
+    {
+      "season": 2024,
+      "market": "moneyline",
+      "events": 754,
+      "rows": 6655,
+      "event_weighted_conditional_brier": {
+        "parent": 0.20831987787308467,
+        "challenger": 0.20728160375970084,
+        "novig": 0.18812679383146194,
+        "elo": 0.22662632305479927
+      },
+      "event_weighted_threeway_brier": {
+        "parent": 0.41663975574616924,
+        "challenger": 0.4145632075194017
+      },
+      "infinite_logloss_rows": {
+        "parent": 0,
+        "challenger": 0
+      },
+      "event_weighted_logloss": {
+        "parent": 0.6021637457613158,
+        "challenger": 0.5998037608173279
+      },
+      "parent_quote_weighted": {
+        "quotes": 6655,
+        "nonpush": 6655,
+        "pushes": 0,
+        "model_conditional_brier": 0.20963350940181213,
+        "same_quote_novig_conditional_brier": 0.19019606891657634,
+        "hypothetical_selected": 2091,
+        "hypothetical_net_units_risked": 2091,
+        "hypothetical_profit_units": -199.38924664489298,
+        "hypothetical_roi": -0.09535592857240219,
+        "unique_events": 754,
+        "max_drawdown_units": 352.1265724087205,
+        "confidence_intervals": {
+          "paired_brier_delta_95pct": [
+            0.010570805166109594,
+            0.028006158506947168
+          ],
+          "roi_95pct": [
+            -0.2749568780757336,
+            0.09543633988605595
+          ],
+          "event_clusters": 754,
+          "replicates": 1000,
+          "seed": 20261109,
+          "interpretation": "descriptive event clusters; not week/season independent confirmation"
+        }
+      },
+      "challenger_quote_weighted": {
+        "quotes": 6655,
+        "nonpush": 6655,
+        "pushes": 0,
+        "model_conditional_brier": 0.20863133358151026,
+        "same_quote_novig_conditional_brier": 0.19019606891657634,
+        "hypothetical_selected": 2142,
+        "hypothetical_net_units_risked": 2142,
+        "hypothetical_profit_units": 46.69182531731914,
+        "hypothetical_roi": 0.02179823777652621,
+        "unique_events": 754,
+        "max_drawdown_units": 338.633017317221,
+        "confidence_intervals": {
+          "paired_brier_delta_95pct": [
+            0.010174458457808712,
+            0.026397525236478328
+          ],
+          "roi_95pct": [
+            -0.1801719363033874,
+            0.2446196044727227
+          ],
+          "event_clusters": 754,
+          "replicates": 1000,
+          "seed": 20261109,
+          "interpretation": "descriptive event clusters; not week/season independent confirmation"
+        }
+      }
+    },
+    {
+      "season": 2024,
+      "market": "spread",
+      "events": 770,
+      "rows": 6949,
+      "event_weighted_conditional_brier": {
+        "parent": 0.28021350190653554,
+        "challenger": 0.24999999999997877,
+        "novig": 0.2492123112741868,
+        "elo": null
+      },
+      "event_weighted_threeway_brier": {
+        "parent": 0.5809992176651649,
+        "challenger": 0.522373437350636
+      },
+      "infinite_logloss_rows": {
+        "parent": 0,
+        "challenger": 0
+      },
+      "event_weighted_logloss": {
+        "parent": 0.8445087579862542,
+        "challenger": 0.7747737903023191
+      },
+      "parent_quote_weighted": {
+        "quotes": 6949,
+        "nonpush": 6780,
+        "pushes": 169,
+        "model_conditional_brier": 0.2794796980000948,
+        "same_quote_novig_conditional_brier": 0.2494829831343186,
+        "hypothetical_selected": 2595,
+        "hypothetical_net_units_risked": 2595,
+        "hypothetical_profit_units": -363.58667446991575,
+        "hypothetical_roi": -0.14011047185738565,
+        "unique_events": 770,
+        "max_drawdown_units": 417.9346627102536,
+        "confidence_intervals": {
+          "paired_brier_delta_95pct": [
+            0.01851870483844927,
+            0.0403900876175081
+          ],
+          "roi_95pct": [
+            -0.24662201843193293,
+            -0.02820660243261273
+          ],
+          "event_clusters": 770,
+          "replicates": 1000,
+          "seed": 20261109,
+          "interpretation": "descriptive event clusters; not week/season independent confirmation"
+        }
+      },
+      "challenger_quote_weighted": {
+        "quotes": 6949,
+        "nonpush": 6780,
+        "pushes": 169,
+        "model_conditional_brier": 0.25,
+        "same_quote_novig_conditional_brier": 0.2494829831343186,
+        "hypothetical_selected": 13,
+        "hypothetical_net_units_risked": 13,
+        "hypothetical_profit_units": -4.9799999999999995,
+        "hypothetical_roi": -0.38307692307692304,
+        "unique_events": 770,
+        "max_drawdown_units": 6.1000000000000005,
+        "confidence_intervals": {
+          "paired_brier_delta_95pct": [
+            8.346370852777444e-05,
+            0.0009230345448232666
+          ],
+          "roi_95pct": [
+            -1.0,
+            0.7723863636363614
+          ],
+          "event_clusters": 770,
+          "replicates": 1000,
+          "seed": 20261109,
+          "interpretation": "descriptive event clusters; not week/season independent confirmation"
+        }
+      }
+    },
+    {
+      "season": 2024,
+      "market": "total",
+      "events": 770,
+      "rows": 6965,
+      "event_weighted_conditional_brier": {
+        "parent": 0.24930323001169746,
+        "challenger": 0.24999999999997885,
+        "novig": 0.2496260882588124,
+        "elo": null
+      },
+      "event_weighted_threeway_brier": {
+        "parent": 0.5104192039548594,
+        "challenger": 0.5125128049049273
+      },
+      "infinite_logloss_rows": {
+        "parent": 0,
+        "challenger": 0
+      },
+      "event_weighted_logloss": {
+        "parent": 0.7405185449847371,
+        "challenger": 0.7426894739082903
+      },
+      "parent_quote_weighted": {
+        "quotes": 6965,
+        "nonpush": 6874,
+        "pushes": 91,
+        "model_conditional_brier": 0.2488116204739956,
+        "same_quote_novig_conditional_brier": 0.24967806200395892,
+        "hypothetical_selected": 1567,
+        "hypothetical_net_units_risked": 1567,
+        "hypothetical_profit_units": 229.02791635448895,
+        "hypothetical_roi": 0.1461569344955258,
+        "unique_events": 770,
+        "max_drawdown_units": 53.56813910692189,
+        "confidence_intervals": {
+          "paired_brier_delta_95pct": [
+            -0.0069928865050157525,
+            0.005566910872611108
+          ],
+          "roi_95pct": [
+            0.014007927611331104,
+            0.2772111398758655
+          ],
+          "event_clusters": 770,
+          "replicates": 1000,
+          "seed": 20261109,
+          "interpretation": "descriptive event clusters; not week/season independent confirmation"
+        }
+      },
+      "challenger_quote_weighted": {
+        "quotes": 6965,
+        "nonpush": 6874,
+        "pushes": 91,
+        "model_conditional_brier": 0.25,
+        "same_quote_novig_conditional_brier": 0.24967806200395892,
+        "hypothetical_selected": 2,
+        "hypothetical_net_units_risked": 2,
+        "hypothetical_profit_units": -2,
+        "hypothetical_roi": -1.0,
+        "unique_events": 770,
+        "max_drawdown_units": 2.0,
+        "confidence_intervals": {
+          "paired_brier_delta_95pct": [
+            -5.439018453018895e-05,
+            0.00074228433485456
+          ],
+          "roi_95pct": [
+            -1.0,
+            -1.0
+          ],
+          "event_clusters": 770,
+          "replicates": 1000,
+          "seed": 20261109,
+          "interpretation": "descriptive event clusters; not week/season independent confirmation"
+        }
+      }
+    },
+    {
+      "season": 2025,
+      "market": "moneyline",
+      "events": 755,
+      "rows": 7721,
+      "event_weighted_conditional_brier": {
+        "parent": 0.19325379043327182,
+        "challenger": 0.19541259714084463,
+        "novig": 0.18033545162049916,
+        "elo": 0.21456074573701964
+      },
+      "event_weighted_threeway_brier": {
+        "parent": 0.38650758086654363,
+        "challenger": 0.39082519428168927
+      },
+      "infinite_logloss_rows": {
+        "parent": 0,
+        "challenger": 0
+      },
+      "event_weighted_logloss": {
+        "parent": 0.5667492525600625,
+        "challenger": 0.5734972632162408
+      },
+      "parent_quote_weighted": {
+        "quotes": 7721,
+        "nonpush": 7721,
+        "pushes": 0,
+        "model_conditional_brier": 0.19717735116136564,
+        "same_quote_novig_conditional_brier": 0.1840783300366329,
+        "hypothetical_selected": 2258,
+        "hypothetical_net_units_risked": 2258,
+        "hypothetical_profit_units": 200.03739861095832,
+        "hypothetical_roi": 0.088590521971195,
+        "unique_events": 755,
+        "max_drawdown_units": 195.47120111938705,
+        "confidence_intervals": {
+          "paired_brier_delta_95pct": [
+            0.004091652182720307,
+            0.021915080079762936
+          ],
+          "roi_95pct": [
+            -0.11230948197121131,
+            0.32234815700403685
+          ],
+          "event_clusters": 755,
+          "replicates": 1000,
+          "seed": 20261109,
+          "interpretation": "descriptive event clusters; not week/season independent confirmation"
+        }
+      },
+      "challenger_quote_weighted": {
+        "quotes": 7721,
+        "nonpush": 7721,
+        "pushes": 0,
+        "model_conditional_brier": 0.19914267589327514,
+        "same_quote_novig_conditional_brier": 0.1840783300366329,
+        "hypothetical_selected": 2246,
+        "hypothetical_net_units_risked": 2246,
+        "hypothetical_profit_units": 213.67693991228577,
+        "hypothetical_roi": 0.09513666069113347,
+        "unique_events": 755,
+        "max_drawdown_units": 236.11540099865965,
+        "confidence_intervals": {
+          "paired_brier_delta_95pct": [
+            0.006540085639709632,
+            0.023073351228528702
+          ],
+          "roi_95pct": [
+            -0.1244247000225819,
+            0.3671728641649881
+          ],
+          "event_clusters": 755,
+          "replicates": 1000,
+          "seed": 20261109,
+          "interpretation": "descriptive event clusters; not week/season independent confirmation"
+        }
+      }
+    },
+    {
+      "season": 2025,
+      "market": "spread",
+      "events": 776,
+      "rows": 8164,
+      "event_weighted_conditional_brier": {
+        "parent": 0.26462673709782086,
+        "challenger": 0.2500000000000154,
+        "novig": 0.2497000442653817,
+        "elo": null
+      },
+      "event_weighted_threeway_brier": {
+        "parent": 0.5449721603789017,
+        "challenger": 0.5162578167633419
+      },
+      "infinite_logloss_rows": {
+        "parent": 0,
+        "challenger": 0
+      },
+      "event_weighted_logloss": {
+        "parent": 0.7901782770761425,
+        "challenger": 0.755429268009457
+      },
+      "parent_quote_weighted": {
+        "quotes": 8164,
+        "nonpush": 8022,
+        "pushes": 142,
+        "model_conditional_brier": 0.2638822139219539,
+        "same_quote_novig_conditional_brier": 0.24997353238326153,
+        "hypothetical_selected": 2635,
+        "hypothetical_net_units_risked": 2635,
+        "hypothetical_profit_units": 45.879559938444736,
+        "hypothetical_roi": 0.01741159769959952,
+        "unique_events": 776,
+        "max_drawdown_units": 199.0628398045745,
+        "confidence_intervals": {
+          "paired_brier_delta_95pct": [
+            0.0037252325067982303,
+            0.0246434396359528
+          ],
+          "roi_95pct": [
+            -0.10510254326167619,
+            0.13816768620067252
+          ],
+          "event_clusters": 776,
+          "replicates": 1000,
+          "seed": 20261109,
+          "interpretation": "descriptive event clusters; not week/season independent confirmation"
+        }
+      },
+      "challenger_quote_weighted": {
+        "quotes": 8164,
+        "nonpush": 8022,
+        "pushes": 142,
+        "model_conditional_brier": 0.25,
+        "same_quote_novig_conditional_brier": 0.24997353238326153,
+        "hypothetical_selected": 2,
+        "hypothetical_net_units_risked": 2,
+        "hypothetical_profit_units": 4.18,
+        "hypothetical_roi": 2.09,
+        "unique_events": 776,
+        "max_drawdown_units": 0,
+        "confidence_intervals": {
+          "paired_brier_delta_95pct": [
+            -0.0003055860611112576,
+            0.0003546506709313558
+          ],
+          "roi_95pct": [
+            2.09,
+            2.09
+          ],
+          "event_clusters": 776,
+          "replicates": 1000,
+          "seed": 20261109,
+          "interpretation": "descriptive event clusters; not week/season independent confirmation"
+        }
+      }
+    },
+    {
+      "season": 2025,
+      "market": "total",
+      "events": 776,
+      "rows": 8146,
+      "event_weighted_conditional_brier": {
+        "parent": 0.2533844672615988,
+        "challenger": 0.25000000000001177,
+        "novig": 0.2500372880196846,
+        "elo": null
+      },
+      "event_weighted_threeway_brier": {
+        "parent": 0.5142844889695434,
+        "challenger": 0.5072183798304949
+      },
+      "infinite_logloss_rows": {
+        "parent": 0,
+        "challenger": 0
+      },
+      "event_weighted_logloss": {
+        "parent": 0.7313046208346176,
+        "challenger": 0.7235685426769364
+      },
+      "parent_quote_weighted": {
+        "quotes": 8146,
+        "nonpush": 8085,
+        "pushes": 61,
+        "model_conditional_brier": 0.2535769217043072,
+        "same_quote_novig_conditional_brier": 0.25007710078036277,
+        "hypothetical_selected": 2001,
+        "hypothetical_net_units_risked": 2001,
+        "hypothetical_profit_units": -73.536836376205,
+        "hypothetical_roi": -0.03675004316651924,
+        "unique_events": 776,
+        "max_drawdown_units": 201.58040577530022,
+        "confidence_intervals": {
+          "paired_brier_delta_95pct": [
+            -0.0024217020562628316,
+            0.009204496504991532
+          ],
+          "roi_95pct": [
+            -0.16125282594068302,
+            0.0889697855615012
+          ],
+          "event_clusters": 776,
+          "replicates": 1000,
+          "seed": 20261109,
+          "interpretation": "descriptive event clusters; not week/season independent confirmation"
+        }
+      },
+      "challenger_quote_weighted": {
+        "quotes": 8146,
+        "nonpush": 8085,
+        "pushes": 61,
+        "model_conditional_brier": 0.25,
+        "same_quote_novig_conditional_brier": 0.25007710078036277,
+        "hypothetical_selected": 2,
+        "hypothetical_net_units_risked": 2,
+        "hypothetical_profit_units": 3.7,
+        "hypothetical_roi": 1.85,
+        "unique_events": 776,
+        "max_drawdown_units": 0,
+        "confidence_intervals": {
+          "paired_brier_delta_95pct": [
+            -0.000342741189306816,
+            0.00019741957652447326
+          ],
+          "roi_95pct": [
+            1.85,
+            1.8500000000000003
+          ],
+          "event_clusters": 776,
+          "replicates": 1000,
+          "seed": 20261109,
+          "interpretation": "descriptive event clusters; not week/season independent confirmation"
+        }
+      }
+    }
+  ],
+  "rejections": {},
+  "transport_caveat": "Historical rolling-fold input differs from official first-mean prospective point kernel. Future calibration transfer is unvalidated.",
+  "approved_risk": 0
+}

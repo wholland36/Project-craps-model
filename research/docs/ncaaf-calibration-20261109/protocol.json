@@ -1,0 +1,32 @@
+{
+  "version": "ncaaf-temperature-v1-20261109",
+  "fit_seasons": [
+    2022,
+    2023
+  ],
+  "examined_evaluation_seasons": [
+    2024,
+    2025
+  ],
+  "transformation": "symmetric conditional logit temperature; no intercept; one nonnegative slope per market; push mass unchanged",
+  "objective": "event-weighted conditional nonpush logistic loss + 0.5*(slope-1)^2",
+  "slope_bounds": [
+    0,
+    5
+  ],
+  "fit_endpoint_feature_epsilon": 1e-12,
+  "endpoint_evaluation": "preserve exact 0/1 when slope>0; slope zero maps conditional p to .5",
+  "primary_sides": [
+    "home",
+    "over"
+  ],
+  "event_weight": "one per game per market; shared among its book/line rows",
+  "market_features": false,
+  "no_grid_or_candidate_selection": true,
+  "refit": false,
+  "confirmation_open": false,
+  "live_risk": 0,
+  "coherent_joint_score_certificate": false,
+  "caveat": "Temperature and bounds are unvalidated structural choices. Separate market probabilities do not certify a coherent joint score distribution. Examined history is not holdout.",
+  "prospective": "new received-before-kickoff source captures after registration only; first event/book/market/line capture; all descriptive pilot excluded from future confirmation"
+}
