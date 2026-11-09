@@ -1,0 +1,5636 @@
+{
+  "cohort": "ALREADY_EXAMINED_2022_2025_CHRONOLOGICAL_REPLAY",
+  "input_sha256": "5cf5b1a5e78612aad8b78a76e0c8e66735c495324d46cb6fa78ea505d36404c2",
+  "read_rows": 227030,
+  "rejections": {},
+  "season_market": [
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "quotes": 24720,
+      "nonpush": 24720,
+      "pushes": 0,
+      "model_conditional_brier": 0.22110858996591182,
+      "same_quote_novig_conditional_brier": 0.1980697974979871,
+      "hypothetical_selected": 8184,
+      "hypothetical_net_units_risked": 8184,
+      "hypothetical_profit_units": 1463.8186799501477,
+      "hypothetical_roi": 0.17886347506722236,
+      "unique_events": 720,
+      "max_drawdown_units": 439.1502890868376,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.013164618427469865,
+          0.03274436619638423
+        ],
+        "roi_95pct": [
+          0.0018191496848232274,
+          0.36923156387174055
+        ],
+        "event_clusters": 720,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      },
+      "elo_conditional_brier_paired_quotes": 0.23011536487227968
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "quotes": 26768,
+      "nonpush": 26448,
+      "pushes": 320,
+      "model_conditional_brier": 0.2820972332388998,
+      "same_quote_novig_conditional_brier": 0.2501677436324709,
+      "hypothetical_selected": 9180,
+      "hypothetical_net_units_risked": 9180,
+      "hypothetical_profit_units": -443.1810046930739,
+      "hypothetical_roi": -0.04827679789684901,
+      "unique_events": 722,
+      "max_drawdown_units": 645.2968908636626,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.019380436747830652,
+          0.04425606193853377
+        ],
+        "roi_95pct": [
+          -0.1298561609389766,
+          0.03221093184618277
+        ],
+        "event_clusters": 722,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      },
+      "elo_conditional_brier_paired_quotes": null
+    },
+    {
+      "season": 2022,
+      "market": "total",
+      "quotes": 24884,
+      "nonpush": 24532,
+      "pushes": 352,
+      "model_conditional_brier": 0.27204092779633643,
+      "same_quote_novig_conditional_brier": 0.25005990674745476,
+      "hypothetical_selected": 8997,
+      "hypothetical_net_units_risked": 8997,
+      "hypothetical_profit_units": -780.1579054697474,
+      "hypothetical_roi": -0.08671311609089112,
+      "unique_events": 722,
+      "max_drawdown_units": 974.6898257537334,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.011243628146728026,
+          0.031386258360054944
+        ],
+        "roi_95pct": [
+          -0.16283381471518923,
+          0.00577237244721013
+        ],
+        "event_clusters": 722,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      },
+      "elo_conditional_brier_paired_quotes": null
+    },
+    {
+      "season": 2023,
+      "market": "moneyline",
+      "quotes": 19362,
+      "nonpush": 19362,
+      "pushes": 0,
+      "model_conditional_brier": 0.203099630379574,
+      "same_quote_novig_conditional_brier": 0.17859017163898933,
+      "hypothetical_selected": 6421,
+      "hypothetical_net_units_risked": 6421,
+      "hypothetical_profit_units": -899.2970478023201,
+      "hypothetical_roi": -0.1400556062610684,
+      "unique_events": 760,
+      "max_drawdown_units": 1115.280729950484,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.015023357244942782,
+          0.03406704994573377
+        ],
+        "roi_95pct": [
+          -0.2586202587969733,
+          -0.0035605476209737666
+        ],
+        "event_clusters": 760,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      },
+      "elo_conditional_brier_paired_quotes": 0.21485534659669478
+    },
+    {
+      "season": 2023,
+      "market": "spread",
+      "quotes": 21732,
+      "nonpush": 21228,
+      "pushes": 504,
+      "model_conditional_brier": 0.2831016723468808,
+      "same_quote_novig_conditional_brier": 0.24999312393363754,
+      "hypothetical_selected": 8273,
+      "hypothetical_net_units_risked": 8273,
+      "hypothetical_profit_units": -641.5750776626015,
+      "hypothetical_roi": -0.07755047475675106,
+      "unique_events": 763,
+      "max_drawdown_units": 709.9048191577765,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.021886734696536993,
+          0.04495426668798509
+        ],
+        "roi_95pct": [
+          -0.15168321540114046,
+          -0.002095342995884811
+        ],
+        "event_clusters": 763,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      },
+      "elo_conditional_brier_paired_quotes": null
+    },
+    {
+      "season": 2023,
+      "market": "total",
+      "quotes": 20364,
+      "nonpush": 20074,
+      "pushes": 290,
+      "model_conditional_brier": 0.26234748872532115,
+      "same_quote_novig_conditional_brier": 0.24995548870393228,
+      "hypothetical_selected": 6655,
+      "hypothetical_net_units_risked": 6655,
+      "hypothetical_profit_units": -108.14288492061446,
+      "hypothetical_roi": -0.016249870010610738,
+      "unique_events": 763,
+      "max_drawdown_units": 327.48307746900895,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.004333563265331171,
+          0.020723136711823464
+        ],
+        "roi_95pct": [
+          -0.09508466596812747,
+          0.060056933416118494
+        ],
+        "event_clusters": 763,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      },
+      "elo_conditional_brier_paired_quotes": null
+    },
+    {
+      "season": 2024,
+      "market": "moneyline",
+      "quotes": 13310,
+      "nonpush": 13310,
+      "pushes": 0,
+      "model_conditional_brier": 0.20963350940181008,
+      "same_quote_novig_conditional_brier": 0.19019606891657248,
+      "hypothetical_selected": 4295,
+      "hypothetical_net_units_risked": 4295,
+      "hypothetical_profit_units": -428.37797770693436,
+      "hypothetical_roi": -0.09973876081651557,
+      "unique_events": 754,
+      "max_drawdown_units": 667.5894800349166,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.010570805166109556,
+          0.028006158506947234
+        ],
+        "roi_95pct": [
+          -0.2165398914449099,
+          0.04380871738361676
+        ],
+        "event_clusters": 754,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      },
+      "elo_conditional_brier_paired_quotes": 0.22833343533531916
+    },
+    {
+      "season": 2024,
+      "market": "spread",
+      "quotes": 13898,
+      "nonpush": 13560,
+      "pushes": 338,
+      "model_conditional_brier": 0.27947969800009304,
+      "same_quote_novig_conditional_brier": 0.24948298313430572,
+      "hypothetical_selected": 5050,
+      "hypothetical_net_units_risked": 5050,
+      "hypothetical_profit_units": -497.85420746878145,
+      "hypothetical_roi": -0.09858499157797652,
+      "unique_events": 770,
+      "max_drawdown_units": 613.0397610820042,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.018518704838449234,
+          0.04039008761750813
+        ],
+        "roi_95pct": [
+          -0.17624879980009994,
+          -0.015217206757683056
+        ],
+        "event_clusters": 770,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      },
+      "elo_conditional_brier_paired_quotes": null
+    },
+    {
+      "season": 2024,
+      "market": "total",
+      "quotes": 13930,
+      "nonpush": 13748,
+      "pushes": 182,
+      "model_conditional_brier": 0.24881162047400016,
+      "same_quote_novig_conditional_brier": 0.24967806200394724,
+      "hypothetical_selected": 3617,
+      "hypothetical_net_units_risked": 3617,
+      "hypothetical_profit_units": 333.5112534485198,
+      "hypothetical_roi": 0.09220659481573674,
+      "unique_events": 770,
+      "max_drawdown_units": 94.35858192993135,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.006992886505015654,
+          0.005566910872611142
+        ],
+        "roi_95pct": [
+          0.0015908337805013075,
+          0.18555573659710767
+        ],
+        "event_clusters": 770,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      },
+      "elo_conditional_brier_paired_quotes": null
+    },
+    {
+      "season": 2025,
+      "market": "moneyline",
+      "quotes": 15442,
+      "nonpush": 15442,
+      "pushes": 0,
+      "model_conditional_brier": 0.19717735116136534,
+      "same_quote_novig_conditional_brier": 0.18407833003663324,
+      "hypothetical_selected": 5004,
+      "hypothetical_net_units_risked": 5004,
+      "hypothetical_profit_units": -399.24224685102206,
+      "hypothetical_roi": -0.07978462167286612,
+      "unique_events": 755,
+      "max_drawdown_units": 475.6276435838902,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.004091652182720365,
+          0.021915080079762964
+        ],
+        "roi_95pct": [
+          -0.20782946732848873,
+          0.0632563560830445
+        ],
+        "event_clusters": 755,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      },
+      "elo_conditional_brier_paired_quotes": 0.21787795551654113
+    },
+    {
+      "season": 2025,
+      "market": "spread",
+      "quotes": 16328,
+      "nonpush": 16044,
+      "pushes": 284,
+      "model_conditional_brier": 0.263882213921955,
+      "same_quote_novig_conditional_brier": 0.2499735323832513,
+      "hypothetical_selected": 5870,
+      "hypothetical_net_units_risked": 5870,
+      "hypothetical_profit_units": -124.93239023822873,
+      "hypothetical_roi": -0.021283201062730617,
+      "unique_events": 776,
+      "max_drawdown_units": 339.59461120376045,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.0037252325067982273,
+          0.024643439635952717
+        ],
+        "roi_95pct": [
+          -0.09730693594113976,
+          0.05479229422730779
+        ],
+        "event_clusters": 776,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      },
+      "elo_conditional_brier_paired_quotes": null
+    },
+    {
+      "season": 2025,
+      "market": "total",
+      "quotes": 16292,
+      "nonpush": 16170,
+      "pushes": 122,
+      "model_conditional_brier": 0.2535769217043112,
+      "same_quote_novig_conditional_brier": 0.25007710078035333,
+      "hypothetical_selected": 4038,
+      "hypothetical_net_units_risked": 4038,
+      "hypothetical_profit_units": 123.28655091475639,
+      "hypothetical_roi": 0.030531587646051607,
+      "unique_events": 776,
+      "max_drawdown_units": 117.98658101281681,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.0024217020562628294,
+          0.00920449650499156
+        ],
+        "roi_95pct": [
+          -0.055641087119015914,
+          0.11999083235976678
+        ],
+        "event_clusters": 776,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      },
+      "elo_conditional_brier_paired_quotes": null
+    }
+  ],
+  "season_market_book": [
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "book": "barstool",
+      "quotes": 1314,
+      "nonpush": 1314,
+      "pushes": 0,
+      "model_conditional_brier": 0.22178948097445428,
+      "same_quote_novig_conditional_brier": 0.19867085557279865,
+      "hypothetical_selected": 413,
+      "hypothetical_net_units_risked": 413,
+      "hypothetical_profit_units": 53.914957767790256,
+      "hypothetical_roi": 0.13054469193169554,
+      "unique_events": 657,
+      "max_drawdown_units": 24.88637737112203,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.012463421648700545,
+          0.03402858981301899
+        ],
+        "roi_95pct": [
+          -0.07778410781083472,
+          0.31713290888789086
+        ],
+        "event_clusters": 657,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "book": "betfair",
+      "quotes": 424,
+      "nonpush": 424,
+      "pushes": 0,
+      "model_conditional_brier": 0.18078325076082982,
+      "same_quote_novig_conditional_brier": 0.1669350651932448,
+      "hypothetical_selected": 136,
+      "hypothetical_net_units_risked": 136,
+      "hypothetical_profit_units": 33.107641329099984,
+      "hypothetical_roi": 0.2434385391845587,
+      "unique_events": 212,
+      "max_drawdown_units": 22.668433773962477,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.0027345902795182274,
+          0.031396752446210256
+        ],
+        "roi_95pct": [
+          -0.13386346017824857,
+          0.697085985547074
+        ],
+        "event_clusters": 212,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "book": "betmgm",
+      "quotes": 1066,
+      "nonpush": 1066,
+      "pushes": 0,
+      "model_conditional_brier": 0.21444896453195678,
+      "same_quote_novig_conditional_brier": 0.18747135311551402,
+      "hypothetical_selected": 339,
+      "hypothetical_net_units_risked": 339,
+      "hypothetical_profit_units": 22.072192051150452,
+      "hypothetical_roi": 0.06510971106534057,
+      "unique_events": 533,
+      "max_drawdown_units": 23.087825794895206,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.014403555306495935,
+          0.03935399425117492
+        ],
+        "roi_95pct": [
+          -0.12398210177614567,
+          0.2827283803284566
+        ],
+        "event_clusters": 533,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "book": "betonlineag",
+      "quotes": 1220,
+      "nonpush": 1220,
+      "pushes": 0,
+      "model_conditional_brier": 0.2277995458828297,
+      "same_quote_novig_conditional_brier": 0.2052039647553334,
+      "hypothetical_selected": 417,
+      "hypothetical_net_units_risked": 417,
+      "hypothetical_profit_units": 59.31367978294652,
+      "hypothetical_roi": 0.14223904024687414,
+      "unique_events": 610,
+      "max_drawdown_units": 23.119995270835606,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.011892428747151513,
+          0.03310749292205385
+        ],
+        "roi_95pct": [
+          -0.038861811945829786,
+          0.34219953996586183
+        ],
+        "event_clusters": 610,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "book": "betrivers",
+      "quotes": 1312,
+      "nonpush": 1312,
+      "pushes": 0,
+      "model_conditional_brier": 0.22173155443703185,
+      "same_quote_novig_conditional_brier": 0.19852588189693615,
+      "hypothetical_selected": 413,
+      "hypothetical_net_units_risked": 413,
+      "hypothetical_profit_units": 53.914957767790256,
+      "hypothetical_roi": 0.13054469193169554,
+      "unique_events": 656,
+      "max_drawdown_units": 24.88637737112203,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.01325519087131385,
+          0.034598496142597995
+        ],
+        "roi_95pct": [
+          -0.06634438288253433,
+          0.332232227437684
+        ],
+        "event_clusters": 656,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "book": "betus",
+      "quotes": 1174,
+      "nonpush": 1174,
+      "pushes": 0,
+      "model_conditional_brier": 0.22061197304198754,
+      "same_quote_novig_conditional_brier": 0.20327903671611153,
+      "hypothetical_selected": 392,
+      "hypothetical_net_units_risked": 392,
+      "hypothetical_profit_units": 42.72415512838471,
+      "hypothetical_roi": 0.10899019165404263,
+      "unique_events": 587,
+      "max_drawdown_units": 13.265867271819587,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.0069537116523795866,
+          0.027554744752159965
+        ],
+        "roi_95pct": [
+          -0.06769633834673643,
+          0.2924298090054983
+        ],
+        "event_clusters": 587,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "book": "bovada",
+      "quotes": 1008,
+      "nonpush": 1008,
+      "pushes": 0,
+      "model_conditional_brier": 0.2264915165206169,
+      "same_quote_novig_conditional_brier": 0.19986643687215383,
+      "hypothetical_selected": 334,
+      "hypothetical_net_units_risked": 334,
+      "hypothetical_profit_units": 32.592331617673246,
+      "hypothetical_roi": 0.09758183119063846,
+      "unique_events": 504,
+      "max_drawdown_units": 15.884624525800994,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.014834123159157333,
+          0.039211856661559
+        ],
+        "roi_95pct": [
+          -0.09702466548251373,
+          0.30525473079423726
+        ],
+        "event_clusters": 504,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "book": "circasports",
+      "quotes": 1342,
+      "nonpush": 1342,
+      "pushes": 0,
+      "model_conditional_brier": 0.22355894405779447,
+      "same_quote_novig_conditional_brier": 0.19839860803859144,
+      "hypothetical_selected": 446,
+      "hypothetical_net_units_risked": 446,
+      "hypothetical_profit_units": 37.535218394512896,
+      "hypothetical_roi": 0.08415968249890783,
+      "unique_events": 671,
+      "max_drawdown_units": 23.677651687203184,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.014898097207315008,
+          0.03623726349892827
+        ],
+        "roi_95pct": [
+          -0.07485509581582409,
+          0.2773154482568511
+        ],
+        "event_clusters": 671,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "book": "draftkings",
+      "quotes": 1316,
+      "nonpush": 1316,
+      "pushes": 0,
+      "model_conditional_brier": 0.2183014242225001,
+      "same_quote_novig_conditional_brier": 0.1948258555662737,
+      "hypothetical_selected": 444,
+      "hypothetical_net_units_risked": 444,
+      "hypothetical_profit_units": 48.31166885045333,
+      "hypothetical_roi": 0.10881006497849849,
+      "unique_events": 658,
+      "max_drawdown_units": 21.929065840609862,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.012956071769305643,
+          0.03445300326101628
+        ],
+        "roi_95pct": [
+          -0.0992013087680954,
+          0.3031277312453995
+        ],
+        "event_clusters": 658,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "book": "fanduel",
+      "quotes": 1272,
+      "nonpush": 1272,
+      "pushes": 0,
+      "model_conditional_brier": 0.2116694584282325,
+      "same_quote_novig_conditional_brier": 0.18759511642691531,
+      "hypothetical_selected": 418,
+      "hypothetical_net_units_risked": 418,
+      "hypothetical_profit_units": 31.37135454529531,
+      "hypothetical_roi": 0.07505108742893615,
+      "unique_events": 636,
+      "max_drawdown_units": 28.907797003416754,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.013488517014538216,
+          0.03412505517753244
+        ],
+        "roi_95pct": [
+          -0.12444152181796636,
+          0.27734109709095106
+        ],
+        "event_clusters": 636,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "book": "foxbet",
+      "quotes": 484,
+      "nonpush": 484,
+      "pushes": 0,
+      "model_conditional_brier": 0.237131901436925,
+      "same_quote_novig_conditional_brier": 0.2038143130882914,
+      "hypothetical_selected": 148,
+      "hypothetical_net_units_risked": 148,
+      "hypothetical_profit_units": -6.192848465659488,
+      "hypothetical_roi": -0.041843570713915465,
+      "unique_events": 242,
+      "max_drawdown_units": 26.338244042556294,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.016340503579953314,
+          0.051037845969496225
+        ],
+        "roi_95pct": [
+          -0.2827811023517579,
+          0.22655201914321535
+        ],
+        "event_clusters": 242,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "book": "gtbets",
+      "quotes": 1152,
+      "nonpush": 1152,
+      "pushes": 0,
+      "model_conditional_brier": 0.22580760656514856,
+      "same_quote_novig_conditional_brier": 0.20326517666631994,
+      "hypothetical_selected": 403,
+      "hypothetical_net_units_risked": 403,
+      "hypothetical_profit_units": 78.18467371527953,
+      "hypothetical_roi": 0.19400663452922962,
+      "unique_events": 576,
+      "max_drawdown_units": 19.26072121156155,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.010580480457345009,
+          0.03420487701265786
+        ],
+        "roi_95pct": [
+          -0.015107988566874397,
+          0.4258969103316827
+        ],
+        "event_clusters": 576,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "book": "intertops",
+      "quotes": 1148,
+      "nonpush": 1148,
+      "pushes": 0,
+      "model_conditional_brier": 0.22468797136458898,
+      "same_quote_novig_conditional_brier": 0.1992465317842839,
+      "hypothetical_selected": 399,
+      "hypothetical_net_units_risked": 399,
+      "hypothetical_profit_units": 28.016724738077638,
+      "hypothetical_roi": 0.07021735523327728,
+      "unique_events": 574,
+      "max_drawdown_units": 23.620909945031524,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.014042518214762835,
+          0.038591103899950595
+        ],
+        "roi_95pct": [
+          -0.09971094523557116,
+          0.25180161696322745
+        ],
+        "event_clusters": 574,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "book": "lowvig",
+      "quotes": 1236,
+      "nonpush": 1236,
+      "pushes": 0,
+      "model_conditional_brier": 0.22785362612480572,
+      "same_quote_novig_conditional_brier": 0.20504407243762307,
+      "hypothetical_selected": 427,
+      "hypothetical_net_units_risked": 427,
+      "hypothetical_profit_units": 66.43597281959573,
+      "hypothetical_roi": 0.15558775835970898,
+      "unique_events": 618,
+      "max_drawdown_units": 22.298850632396825,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.01212575712233877,
+          0.03401071779384117
+        ],
+        "roi_95pct": [
+          -0.018989748695401147,
+          0.33893412177696247
+        ],
+        "event_clusters": 618,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "book": "mybookieag",
+      "quotes": 1334,
+      "nonpush": 1334,
+      "pushes": 0,
+      "model_conditional_brier": 0.21765478582782397,
+      "same_quote_novig_conditional_brier": 0.20103493200439534,
+      "hypothetical_selected": 478,
+      "hypothetical_net_units_risked": 478,
+      "hypothetical_profit_units": 576.9411542968128,
+      "hypothetical_roi": 1.2069898625456335,
+      "unique_events": 667,
+      "max_drawdown_units": 29.049971520536012,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.0028399359831864303,
+          0.02897937400261174
+        ],
+        "roi_95pct": [
+          0.6766153634704948,
+          1.878149736784276
+        ],
+        "event_clusters": 667,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "book": "pointsbetus",
+      "quotes": 1294,
+      "nonpush": 1294,
+      "pushes": 0,
+      "model_conditional_brier": 0.22883712307388404,
+      "same_quote_novig_conditional_brier": 0.20476097451248979,
+      "hypothetical_selected": 429,
+      "hypothetical_net_units_risked": 429,
+      "hypothetical_profit_units": 50.93308931266463,
+      "hypothetical_roi": 0.11872514991297116,
+      "unique_events": 647,
+      "max_drawdown_units": 23.674979547414637,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.013539845205660681,
+          0.03490168137106814
+        ],
+        "roi_95pct": [
+          -0.05850438329050434,
+          0.31538532696196186
+        ],
+        "event_clusters": 647,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "book": "sugarhouse",
+      "quotes": 1296,
+      "nonpush": 1296,
+      "pushes": 0,
+      "model_conditional_brier": 0.22299422063593102,
+      "same_quote_novig_conditional_brier": 0.19967950530367076,
+      "hypothetical_selected": 411,
+      "hypothetical_net_units_risked": 411,
+      "hypothetical_profit_units": 54.1955333073586,
+      "hypothetical_roi": 0.13186261145342726,
+      "unique_events": 648,
+      "max_drawdown_units": 24.88637737112203,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.01225357574683825,
+          0.03389308342286213
+        ],
+        "roi_95pct": [
+          -0.060623611516117705,
+          0.3393246684051087
+        ],
+        "event_clusters": 648,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "book": "superbook",
+      "quotes": 1254,
+      "nonpush": 1254,
+      "pushes": 0,
+      "model_conditional_brier": 0.21819445480985633,
+      "same_quote_novig_conditional_brier": 0.19878503803813774,
+      "hypothetical_selected": 424,
+      "hypothetical_net_units_risked": 424,
+      "hypothetical_profit_units": 69.06357398147046,
+      "hypothetical_roi": 0.1628857876921473,
+      "unique_events": 627,
+      "max_drawdown_units": 17.78689858236138,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.009502999020352211,
+          0.029094043473568247
+        ],
+        "roi_95pct": [
+          -0.03451777663993992,
+          0.3843576702830739
+        ],
+        "event_clusters": 627,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "book": "unibet",
+      "quotes": 666,
+      "nonpush": 666,
+      "pushes": 0,
+      "model_conditional_brier": 0.23404087954539302,
+      "same_quote_novig_conditional_brier": 0.19657386340595104,
+      "hypothetical_selected": 219,
+      "hypothetical_net_units_risked": 219,
+      "hypothetical_profit_units": 12.18944312040356,
+      "hypothetical_roi": 0.055659557627413515,
+      "unique_events": 333,
+      "max_drawdown_units": 25.405729706696786,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.01983812085911277,
+          0.055901472136127846
+        ],
+        "roi_95pct": [
+          -0.1820546127867764,
+          0.3251609847196901
+        ],
+        "event_clusters": 333,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "book": "unibet_us",
+      "quotes": 658,
+      "nonpush": 658,
+      "pushes": 0,
+      "model_conditional_brier": 0.21109856691059006,
+      "same_quote_novig_conditional_brier": 0.20170697487103,
+      "hypothetical_selected": 195,
+      "hypothetical_net_units_risked": 195,
+      "hypothetical_profit_units": 26.170729366992468,
+      "hypothetical_roi": 0.13420886854867933,
+      "unique_events": 329,
+      "max_drawdown_units": 10.418217054263565,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.0015715346442017953,
+          0.02058063858464084
+        ],
+        "roi_95pct": [
+          -0.14946357043852415,
+          0.40954613615250784
+        ],
+        "event_clusters": 329,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "book": "williamhill_us",
+      "quotes": 1358,
+      "nonpush": 1358,
+      "pushes": 0,
+      "model_conditional_brier": 0.22022063121898133,
+      "same_quote_novig_conditional_brier": 0.1962337935098318,
+      "hypothetical_selected": 450,
+      "hypothetical_net_units_risked": 450,
+      "hypothetical_profit_units": 53.92484612516874,
+      "hypothetical_roi": 0.11983299138926387,
+      "unique_events": 679,
+      "max_drawdown_units": 23.270736872502184,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.013186893911679301,
+          0.03417155958347864
+        ],
+        "roi_95pct": [
+          -0.06509335487700356,
+          0.32699353756677896
+        ],
+        "event_clusters": 679,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "moneyline",
+      "book": "wynnbet",
+      "quotes": 1392,
+      "nonpush": 1392,
+      "pushes": 0,
+      "model_conditional_brier": 0.21483975489575916,
+      "same_quote_novig_conditional_brier": 0.1911696180262731,
+      "hypothetical_selected": 449,
+      "hypothetical_net_units_risked": 449,
+      "hypothetical_profit_units": 39.09763039688835,
+      "hypothetical_roi": 0.08707712783271347,
+      "unique_events": 696,
+      "max_drawdown_units": 25.74022971265139,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.013220937845964889,
+          0.0338375974456865
+        ],
+        "roi_95pct": [
+          -0.0938107562166038,
+          0.27586870497583604
+        ],
+        "event_clusters": 696,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "book": "barstool",
+      "quotes": 1398,
+      "nonpush": 1378,
+      "pushes": 20,
+      "model_conditional_brier": 0.28331067770769797,
+      "same_quote_novig_conditional_brier": 0.2501084985587811,
+      "hypothetical_selected": 478,
+      "hypothetical_net_units_risked": 478,
+      "hypothetical_profit_units": -22.407517119061094,
+      "hypothetical_roi": -0.04687765087669685,
+      "unique_events": 699,
+      "max_drawdown_units": 34.643422617073824,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.02038371400345327,
+          0.04531101973880038
+        ],
+        "roi_95pct": [
+          -0.13275758877920715,
+          0.0380896435623565
+        ],
+        "event_clusters": 699,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "book": "betmgm",
+      "quotes": 1030,
+      "nonpush": 1020,
+      "pushes": 10,
+      "model_conditional_brier": 0.2885761452614303,
+      "same_quote_novig_conditional_brier": 0.2501640047016814,
+      "hypothetical_selected": 370,
+      "hypothetical_net_units_risked": 370,
+      "hypothetical_profit_units": -26.61741953698471,
+      "hypothetical_roi": -0.0719389717215803,
+      "unique_events": 515,
+      "max_drawdown_units": 35.928543195934424,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.023042309190405563,
+          0.052845269254946474
+        ],
+        "roi_95pct": [
+          -0.16711618703048137,
+          0.02447865766731526
+        ],
+        "event_clusters": 515,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "book": "betonlineag",
+      "quotes": 1384,
+      "nonpush": 1368,
+      "pushes": 16,
+      "model_conditional_brier": 0.2825665828655904,
+      "same_quote_novig_conditional_brier": 0.2505329717052868,
+      "hypothetical_selected": 461,
+      "hypothetical_net_units_risked": 461,
+      "hypothetical_profit_units": -23.838314048421548,
+      "hypothetical_roi": -0.05171000878182548,
+      "unique_events": 692,
+      "max_drawdown_units": 37.37576194932228,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.020115040993169145,
+          0.04459256622350398
+        ],
+        "roi_95pct": [
+          -0.14319893211612159,
+          0.03409584355234161
+        ],
+        "event_clusters": 692,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "book": "betrivers",
+      "quotes": 1400,
+      "nonpush": 1380,
+      "pushes": 20,
+      "model_conditional_brier": 0.2831166579848087,
+      "same_quote_novig_conditional_brier": 0.2500976904822616,
+      "hypothetical_selected": 479,
+      "hypothetical_net_units_risked": 479,
+      "hypothetical_profit_units": -21.50632760061494,
+      "hypothetical_roi": -0.04489838747518777,
+      "unique_events": 700,
+      "max_drawdown_units": 33.74223309862767,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.021582519999733887,
+          0.04549524583503967
+        ],
+        "roi_95pct": [
+          -0.13151266546636342,
+          0.03369736328012004
+        ],
+        "event_clusters": 700,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "book": "betus",
+      "quotes": 1350,
+      "nonpush": 1330,
+      "pushes": 20,
+      "model_conditional_brier": 0.2752728772496603,
+      "same_quote_novig_conditional_brier": 0.25008092842725416,
+      "hypothetical_selected": 459,
+      "hypothetical_net_units_risked": 459,
+      "hypothetical_profit_units": -12.906832298136742,
+      "hypothetical_roi": -0.02811946034452449,
+      "unique_events": 675,
+      "max_drawdown_units": 24.309712027103316,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.013642599210312053,
+          0.03590323509330762
+        ],
+        "roi_95pct": [
+          -0.11047742288773339,
+          0.05836851681661969
+        ],
+        "event_clusters": 675,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "book": "bovada",
+      "quotes": 1068,
+      "nonpush": 1056,
+      "pushes": 12,
+      "model_conditional_brier": 0.2841815629263575,
+      "same_quote_novig_conditional_brier": 0.2498858873956009,
+      "hypothetical_selected": 370,
+      "hypothetical_net_units_risked": 370,
+      "hypothetical_profit_units": -24.1027667984189,
+      "hypothetical_roi": -0.06514261296869973,
+      "unique_events": 534,
+      "max_drawdown_units": 33.32166384340295,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.019537164875234454,
+          0.04896689372670648
+        ],
+        "roi_95pct": [
+          -0.15926965458248618,
+          0.030253157610619925
+        ],
+        "event_clusters": 534,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "book": "circasports",
+      "quotes": 1438,
+      "nonpush": 1424,
+      "pushes": 14,
+      "model_conditional_brier": 0.28416475825968796,
+      "same_quote_novig_conditional_brier": 0.25019183184836113,
+      "hypothetical_selected": 501,
+      "hypothetical_net_units_risked": 501,
+      "hypothetical_profit_units": -22.671424662727336,
+      "hypothetical_roi": -0.04525234463618231,
+      "unique_events": 719,
+      "max_drawdown_units": 35.82992594837013,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.022340112172140426,
+          0.046558688980271275
+        ],
+        "roi_95pct": [
+          -0.12980597852579634,
+          0.03861056132558867
+        ],
+        "event_clusters": 719,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "book": "draftkings",
+      "quotes": 1372,
+      "nonpush": 1356,
+      "pushes": 16,
+      "model_conditional_brier": 0.28211183313918803,
+      "same_quote_novig_conditional_brier": 0.25034123259654173,
+      "hypothetical_selected": 461,
+      "hypothetical_net_units_risked": 461,
+      "hypothetical_profit_units": -27.645511010728402,
+      "hypothetical_roi": -0.059968570522187424,
+      "unique_events": 686,
+      "max_drawdown_units": 41.15736871823821,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.01943824835204206,
+          0.043804004380055744
+        ],
+        "roi_95pct": [
+          -0.1437837206817009,
+          0.026413631604847176
+        ],
+        "event_clusters": 686,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "book": "fanduel",
+      "quotes": 1280,
+      "nonpush": 1280,
+      "pushes": 0,
+      "model_conditional_brier": 0.2842325311315953,
+      "same_quote_novig_conditional_brier": 0.24987157100372367,
+      "hypothetical_selected": 428,
+      "hypothetical_net_units_risked": 428,
+      "hypothetical_profit_units": -24.670035181220744,
+      "hypothetical_roi": -0.05764026911500174,
+      "unique_events": 640,
+      "max_drawdown_units": 33.93323512327903,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.021816061126446355,
+          0.04612616778563888
+        ],
+        "roi_95pct": [
+          -0.14005311036255944,
+          0.03170955325115451
+        ],
+        "event_clusters": 640,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "book": "foxbet",
+      "quotes": 496,
+      "nonpush": 488,
+      "pushes": 8,
+      "model_conditional_brier": 0.2957146236742611,
+      "same_quote_novig_conditional_brier": 0.2494317821615866,
+      "hypothetical_selected": 168,
+      "hypothetical_net_units_risked": 168,
+      "hypothetical_profit_units": -26.732783036172844,
+      "hypothetical_roi": -0.15912370854864788,
+      "unique_events": 248,
+      "max_drawdown_units": 29.39842248147334,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.02427834908692144,
+          0.06912232620087103
+        ],
+        "roi_95pct": [
+          -0.3104145811713471,
+          -0.020704412917697985
+        ],
+        "event_clusters": 248,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "book": "gtbets",
+      "quotes": 1206,
+      "nonpush": 1188,
+      "pushes": 18,
+      "model_conditional_brier": 0.27942917586715976,
+      "same_quote_novig_conditional_brier": 0.25017825831020013,
+      "hypothetical_selected": 422,
+      "hypothetical_net_units_risked": 422,
+      "hypothetical_profit_units": -15.902995094111581,
+      "hypothetical_roi": -0.037684822497894746,
+      "unique_events": 603,
+      "max_drawdown_units": 25.149762913448182,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.01649164474838668,
+          0.04364154417828521
+        ],
+        "roi_95pct": [
+          -0.13855240378489042,
+          0.049565263749177635
+        ],
+        "event_clusters": 603,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "book": "intertops",
+      "quotes": 1258,
+      "nonpush": 1246,
+      "pushes": 12,
+      "model_conditional_brier": 0.28490682424577907,
+      "same_quote_novig_conditional_brier": 0.2505521762997476,
+      "hypothetical_selected": 435,
+      "hypothetical_net_units_risked": 435,
+      "hypothetical_profit_units": -22.531714662149398,
+      "hypothetical_roi": -0.05179704520034344,
+      "unique_events": 629,
+      "max_drawdown_units": 32.30227743271212,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.02097582111529439,
+          0.0484750214975605
+        ],
+        "roi_95pct": [
+          -0.1445422193560342,
+          0.03770789391054889
+        ],
+        "event_clusters": 629,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "book": "lowvig",
+      "quotes": 1398,
+      "nonpush": 1380,
+      "pushes": 18,
+      "model_conditional_brier": 0.2839111706823817,
+      "same_quote_novig_conditional_brier": 0.2507820797512453,
+      "hypothetical_selected": 532,
+      "hypothetical_net_units_risked": 532,
+      "hypothetical_profit_units": -15.531546941514868,
+      "hypothetical_roi": -0.029194637108110655,
+      "unique_events": 699,
+      "max_drawdown_units": 28.3253679077843,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.02218999054398636,
+          0.044897320519107234
+        ],
+        "roi_95pct": [
+          -0.10638296449316087,
+          0.044247184681995955
+        ],
+        "event_clusters": 699,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "book": "mybookieag",
+      "quotes": 1306,
+      "nonpush": 1290,
+      "pushes": 16,
+      "model_conditional_brier": 0.2841948302025224,
+      "same_quote_novig_conditional_brier": 0.24995234749727324,
+      "hypothetical_selected": 445,
+      "hypothetical_net_units_risked": 445,
+      "hypothetical_profit_units": -33.17805383022767,
+      "hypothetical_roi": -0.07455742433759027,
+      "unique_events": 653,
+      "max_drawdown_units": 43.40316205533603,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.020447177466719636,
+          0.04751606562812317
+        ],
+        "roi_95pct": [
+          -0.16374461915137897,
+          0.01419807872988762
+        ],
+        "event_clusters": 653,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "book": "pointsbetus",
+      "quotes": 1406,
+      "nonpush": 1388,
+      "pushes": 18,
+      "model_conditional_brier": 0.282397085752132,
+      "same_quote_novig_conditional_brier": 0.2502190103594279,
+      "hypothetical_selected": 490,
+      "hypothetical_net_units_risked": 490,
+      "hypothetical_profit_units": -24.153506094790135,
+      "hypothetical_roi": -0.04929286958120436,
+      "unique_events": 703,
+      "max_drawdown_units": 36.240086181370266,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.020512766919230128,
+          0.045433725928459325
+        ],
+        "roi_95pct": [
+          -0.13558494124547474,
+          0.031805790316450644
+        ],
+        "event_clusters": 703,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "book": "sugarhouse",
+      "quotes": 1378,
+      "nonpush": 1360,
+      "pushes": 18,
+      "model_conditional_brier": 0.2838310974356516,
+      "same_quote_novig_conditional_brier": 0.2501065007796747,
+      "hypothetical_selected": 472,
+      "hypothetical_net_units_risked": 472,
+      "hypothetical_profit_units": -22.11855608010006,
+      "hypothetical_roi": -0.046861347627330636,
+      "unique_events": 689,
+      "max_drawdown_units": 34.35446157811278,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.021409660092451856,
+          0.04602702455279479
+        ],
+        "roi_95pct": [
+          -0.13131439487612137,
+          0.04040122477688435
+        ],
+        "event_clusters": 689,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "book": "superbook",
+      "quotes": 1322,
+      "nonpush": 1306,
+      "pushes": 16,
+      "model_conditional_brier": 0.275508291745345,
+      "same_quote_novig_conditional_brier": 0.25,
+      "hypothetical_selected": 441,
+      "hypothetical_net_units_risked": 441,
+      "hypothetical_profit_units": -17.909090909090967,
+      "hypothetical_roi": -0.040610183467326456,
+      "unique_events": 661,
+      "max_drawdown_units": 32.545454545454525,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.013650164143735634,
+          0.03684189954230682
+        ],
+        "roi_95pct": [
+          -0.1234557701728609,
+          0.0504051995252022
+        ],
+        "event_clusters": 661,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "book": "twinspires",
+      "quotes": 1014,
+      "nonpush": 1002,
+      "pushes": 12,
+      "model_conditional_brier": 0.26380502444193943,
+      "same_quote_novig_conditional_brier": 0.25008922548358725,
+      "hypothetical_selected": 311,
+      "hypothetical_net_units_risked": 311,
+      "hypothetical_profit_units": 5.105994587344883,
+      "hypothetical_roi": 0.01641798902683242,
+      "unique_events": 507,
+      "max_drawdown_units": 16.60164929376846,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.0032110973548376814,
+          0.024689707073456447
+        ],
+        "roi_95pct": [
+          -0.08930401435919144,
+          0.1232664319950068
+        ],
+        "event_clusters": 507,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "book": "unibet",
+      "quotes": 724,
+      "nonpush": 708,
+      "pushes": 16,
+      "model_conditional_brier": 0.30239291316778577,
+      "same_quote_novig_conditional_brier": 0.24968953402749164,
+      "hypothetical_selected": 279,
+      "hypothetical_net_units_risked": 279,
+      "hypothetical_profit_units": -27.029741913727776,
+      "hypothetical_roi": -0.09688079538970529,
+      "unique_events": 362,
+      "max_drawdown_units": 34.40710658802002,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.031220258948803984,
+          0.0748631392640871
+        ],
+        "roi_95pct": [
+          -0.20783345835958442,
+          0.02058352785701737
+        ],
+        "event_clusters": 362,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "book": "unibet_us",
+      "quotes": 688,
+      "nonpush": 684,
+      "pushes": 4,
+      "model_conditional_brier": 0.263192692464496,
+      "same_quote_novig_conditional_brier": 0.25039810605771345,
+      "hypothetical_selected": 196,
+      "hypothetical_net_units_risked": 196,
+      "hypothetical_profit_units": 1.827575801757297,
+      "hypothetical_roi": 0.009324366335496413,
+      "unique_events": 344,
+      "max_drawdown_units": 16.207709899829066,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.00047628234551676507,
+          0.025608581776067695
+        ],
+        "roi_95pct": [
+          -0.1277808556706275,
+          0.13918468181551946
+        ],
+        "event_clusters": 344,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "book": "williamhill_us",
+      "quotes": 1422,
+      "nonpush": 1402,
+      "pushes": 20,
+      "model_conditional_brier": 0.28309149573513576,
+      "same_quote_novig_conditional_brier": 0.2501337075582079,
+      "hypothetical_selected": 488,
+      "hypothetical_net_units_risked": 488,
+      "hypothetical_profit_units": -19.805947675512925,
+      "hypothetical_roi": -0.040585958351460914,
+      "unique_events": 711,
+      "max_drawdown_units": 31.60351966873693,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.021712981286092874,
+          0.045418341320784546
+        ],
+        "roi_95pct": [
+          -0.12115857461199347,
+          0.0381315914578364
+        ],
+        "event_clusters": 711,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "spread",
+      "book": "wynnbet",
+      "quotes": 1430,
+      "nonpush": 1414,
+      "pushes": 16,
+      "model_conditional_brier": 0.2820903760280434,
+      "same_quote_novig_conditional_brier": 0.25019708084672526,
+      "hypothetical_selected": 494,
+      "hypothetical_net_units_risked": 494,
+      "hypothetical_profit_units": -18.854490588506007,
+      "hypothetical_roi": -0.038166984996975725,
+      "unique_events": 715,
+      "max_drawdown_units": 31.03197976599501,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.019633743019364776,
+          0.043993121523806175
+        ],
+        "roi_95pct": [
+          -0.12374771470121844,
+          0.04789518002641342
+        ],
+        "event_clusters": 715,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "total",
+      "book": "barstool",
+      "quotes": 1404,
+      "nonpush": 1386,
+      "pushes": 18,
+      "model_conditional_brier": 0.2733464932559146,
+      "same_quote_novig_conditional_brier": 0.25013585471478084,
+      "hypothetical_selected": 510,
+      "hypothetical_net_units_risked": 510,
+      "hypothetical_profit_units": -41.31268907915966,
+      "hypothetical_roi": -0.08100527270423463,
+      "unique_events": 702,
+      "max_drawdown_units": 51.525950337910594,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.012453737919067384,
+          0.0325581677338951
+        ],
+        "roi_95pct": [
+          -0.15933834022217278,
+          0.0034207189669345933
+        ],
+        "event_clusters": 702,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "total",
+      "book": "betmgm",
+      "quotes": 1082,
+      "nonpush": 1076,
+      "pushes": 6,
+      "model_conditional_brier": 0.27083695164832294,
+      "same_quote_novig_conditional_brier": 0.2498684272302242,
+      "hypothetical_selected": 399,
+      "hypothetical_net_units_risked": 399,
+      "hypothetical_profit_units": -31.246847355542968,
+      "hypothetical_roi": -0.07831290064045857,
+      "unique_events": 541,
+      "max_drawdown_units": 47.6412572934312,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.009179772575221325,
+          0.03290878923216557
+        ],
+        "roi_95pct": [
+          -0.16876995620345517,
+          0.019748227626064856
+        ],
+        "event_clusters": 541,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "total",
+      "book": "betonlineag",
+      "quotes": 1384,
+      "nonpush": 1360,
+      "pushes": 24,
+      "model_conditional_brier": 0.2716865284074241,
+      "same_quote_novig_conditional_brier": 0.25022228186757095,
+      "hypothetical_selected": 491,
+      "hypothetical_net_units_risked": 491,
+      "hypothetical_profit_units": -52.33201792202743,
+      "hypothetical_roi": -0.10658252122612512,
+      "unique_events": 692,
+      "max_drawdown_units": 63.33790127928483,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.011975942838939518,
+          0.03186035081155187
+        ],
+        "roi_95pct": [
+          -0.19047991934700115,
+          -0.03007122644929168
+        ],
+        "event_clusters": 692,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "total",
+      "book": "betrivers",
+      "quotes": 1400,
+      "nonpush": 1382,
+      "pushes": 18,
+      "model_conditional_brier": 0.27311433628773985,
+      "same_quote_novig_conditional_brier": 0.2501501171999945,
+      "hypothetical_selected": 509,
+      "hypothetical_net_units_risked": 509,
+      "hypothetical_profit_units": -40.29645531292588,
+      "hypothetical_roi": -0.07916788863050271,
+      "unique_events": 700,
+      "max_drawdown_units": 51.296000463223876,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.013152106715533202,
+          0.03275317797367361
+        ],
+        "roi_95pct": [
+          -0.15575148579239043,
+          0.006858277377792955
+        ],
+        "event_clusters": 700,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "total",
+      "book": "betus",
+      "quotes": 1350,
+      "nonpush": 1328,
+      "pushes": 22,
+      "model_conditional_brier": 0.2733659089414233,
+      "same_quote_novig_conditional_brier": 0.2498923244452169,
+      "hypothetical_selected": 483,
+      "hypothetical_net_units_risked": 483,
+      "hypothetical_profit_units": -49.12779973649567,
+      "hypothetical_roi": -0.10171387109005314,
+      "unique_events": 675,
+      "max_drawdown_units": 60.48710709580288,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.014006332438211316,
+          0.034463527517055684
+        ],
+        "roi_95pct": [
+          -0.18697171315718267,
+          -0.022672267507178084
+        ],
+        "event_clusters": 675,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "total",
+      "book": "bovada",
+      "quotes": 1086,
+      "nonpush": 1072,
+      "pushes": 14,
+      "model_conditional_brier": 0.26772271965883965,
+      "same_quote_novig_conditional_brier": 0.2502378929587418,
+      "hypothetical_selected": 382,
+      "hypothetical_net_units_risked": 382,
+      "hypothetical_profit_units": -24.678336156597055,
+      "hypothetical_roi": -0.06460297423192947,
+      "unique_events": 543,
+      "max_drawdown_units": 34.78863165819688,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.006983336867392896,
+          0.028376182043586818
+        ],
+        "roi_95pct": [
+          -0.15445518144004966,
+          0.027602119304888224
+        ],
+        "event_clusters": 543,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "total",
+      "book": "circasports",
+      "quotes": 1436,
+      "nonpush": 1404,
+      "pushes": 32,
+      "model_conditional_brier": 0.2734837848470986,
+      "same_quote_novig_conditional_brier": 0.24999961337728555,
+      "hypothetical_selected": 522,
+      "hypothetical_net_units_risked": 522,
+      "hypothetical_profit_units": -49.22892337837229,
+      "hypothetical_roi": -0.09430828233404653,
+      "unique_events": 718,
+      "max_drawdown_units": 59.876997793169124,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.014013985725266076,
+          0.03321462736659375
+        ],
+        "roi_95pct": [
+          -0.17317193144632026,
+          -0.008599429793792102
+        ],
+        "event_clusters": 718,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "total",
+      "book": "draftkings",
+      "quotes": 1372,
+      "nonpush": 1354,
+      "pushes": 18,
+      "model_conditional_brier": 0.27317833188403046,
+      "same_quote_novig_conditional_brier": 0.2496398131911076,
+      "hypothetical_selected": 496,
+      "hypothetical_net_units_risked": 496,
+      "hypothetical_profit_units": -55.59297948428408,
+      "hypothetical_roi": -0.1120826199279921,
+      "unique_events": 686,
+      "max_drawdown_units": 64.92461885940163,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.014182394556881736,
+          0.03363723906169172
+        ],
+        "roi_95pct": [
+          -0.19532912665512403,
+          -0.02998344288086505
+        ],
+        "event_clusters": 686,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "total",
+      "book": "fanduel",
+      "quotes": 1278,
+      "nonpush": 1278,
+      "pushes": 0,
+      "model_conditional_brier": 0.26840381026677396,
+      "same_quote_novig_conditional_brier": 0.25031287924725215,
+      "hypothetical_selected": 465,
+      "hypothetical_net_units_risked": 465,
+      "hypothetical_profit_units": -33.047598184501645,
+      "hypothetical_roi": -0.07107010362258419,
+      "unique_events": 639,
+      "max_drawdown_units": 43.40591878416548,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.00742253970987535,
+          0.027494631630183574
+        ],
+        "roi_95pct": [
+          -0.15569456273572493,
+          0.01672778875802459
+        ],
+        "event_clusters": 639,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "total",
+      "book": "foxbet",
+      "quotes": 492,
+      "nonpush": 484,
+      "pushes": 8,
+      "model_conditional_brier": 0.2829682284302006,
+      "same_quote_novig_conditional_brier": 0.24968722672345822,
+      "hypothetical_selected": 166,
+      "hypothetical_net_units_risked": 166,
+      "hypothetical_profit_units": -25.753833736884587,
+      "hypothetical_roi": -0.1551435767282204,
+      "unique_events": 246,
+      "max_drawdown_units": 32.302810184166106,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.017936691686889567,
+          0.05048488222146733
+        ],
+        "roi_95pct": [
+          -0.29615619540337423,
+          -0.01957708905493993
+        ],
+        "event_clusters": 246,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "total",
+      "book": "gtbets",
+      "quotes": 878,
+      "nonpush": 868,
+      "pushes": 10,
+      "model_conditional_brier": 0.2751234370782085,
+      "same_quote_novig_conditional_brier": 0.25,
+      "hypothetical_selected": 322,
+      "hypothetical_net_units_risked": 322,
+      "hypothetical_profit_units": -32.3027522935779,
+      "hypothetical_roi": -0.10031910650179474,
+      "unique_events": 439,
+      "max_drawdown_units": 44.917431192660516,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.012617436970655203,
+          0.038280655556889774
+        ],
+        "roi_95pct": [
+          -0.20486013373833387,
+          0.0026803757229385207
+        ],
+        "event_clusters": 439,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "total",
+      "book": "intertops",
+      "quotes": 614,
+      "nonpush": 610,
+      "pushes": 4,
+      "model_conditional_brier": 0.26232848648106827,
+      "same_quote_novig_conditional_brier": 0.25014362776209964,
+      "hypothetical_selected": 225,
+      "hypothetical_net_units_risked": 225,
+      "hypothetical_profit_units": 2.4025974025974075,
+      "hypothetical_roi": 0.0106782106782107,
+      "unique_events": 307,
+      "max_drawdown_units": 18.640692640692638,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.0027447078366390197,
+          0.02761354632308953
+        ],
+        "roi_95pct": [
+          -0.11138557686990533,
+          0.13591383235023602
+        ],
+        "event_clusters": 307,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "total",
+      "book": "lowvig",
+      "quotes": 1398,
+      "nonpush": 1374,
+      "pushes": 24,
+      "model_conditional_brier": 0.27175757507160564,
+      "same_quote_novig_conditional_brier": 0.250318408486405,
+      "hypothetical_selected": 516,
+      "hypothetical_net_units_risked": 516,
+      "hypothetical_profit_units": -41.31945620600963,
+      "hypothetical_roi": -0.08007646551552254,
+      "unique_events": 699,
+      "max_drawdown_units": 53.09388926914268,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.012153835102159368,
+          0.03079466451977464
+        ],
+        "roi_95pct": [
+          -0.16152822458521354,
+          -0.002134535573295841
+        ],
+        "event_clusters": 699,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "total",
+      "book": "mybookieag",
+      "quotes": 1310,
+      "nonpush": 1282,
+      "pushes": 28,
+      "model_conditional_brier": 0.2706985930597547,
+      "same_quote_novig_conditional_brier": 0.25,
+      "hypothetical_selected": 478,
+      "hypothetical_net_units_risked": 478,
+      "hypothetical_profit_units": -35.5454545454547,
+      "hypothetical_roi": -0.07436287561810608,
+      "unique_events": 655,
+      "max_drawdown_units": 46.99999999999998,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.00960047048843762,
+          0.031393124304443444
+        ],
+        "roi_95pct": [
+          -0.16158119733760232,
+          0.010374675341837038
+        ],
+        "event_clusters": 655,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "total",
+      "book": "pointsbetus",
+      "quotes": 1418,
+      "nonpush": 1398,
+      "pushes": 20,
+      "model_conditional_brier": 0.2723782614317953,
+      "same_quote_novig_conditional_brier": 0.24997655655698472,
+      "hypothetical_selected": 527,
+      "hypothetical_net_units_risked": 527,
+      "hypothetical_profit_units": -51.001046842478345,
+      "hypothetical_roi": -0.09677617996675209,
+      "unique_events": 709,
+      "max_drawdown_units": 59.64316706565985,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.012577522010843197,
+          0.032851000961817076
+        ],
+        "roi_95pct": [
+          -0.17951935962619275,
+          -0.011846868048442356
+        ],
+        "event_clusters": 709,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "total",
+      "book": "sugarhouse",
+      "quotes": 1382,
+      "nonpush": 1364,
+      "pushes": 18,
+      "model_conditional_brier": 0.2738115622360896,
+      "same_quote_novig_conditional_brier": 0.25016446465447434,
+      "hypothetical_selected": 502,
+      "hypothetical_net_units_risked": 502,
+      "hypothetical_profit_units": -44.71180270079313,
+      "hypothetical_roi": -0.08906733605735682,
+      "unique_events": 691,
+      "max_drawdown_units": 53.39482677358497,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.01411366273703109,
+          0.033395566233810736
+        ],
+        "roi_95pct": [
+          -0.17340317886683204,
+          -0.008416045788227649
+        ],
+        "event_clusters": 691,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "total",
+      "book": "superbook",
+      "quotes": 1322,
+      "nonpush": 1298,
+      "pushes": 24,
+      "model_conditional_brier": 0.27053731863419045,
+      "same_quote_novig_conditional_brier": 0.25,
+      "hypothetical_selected": 471,
+      "hypothetical_net_units_risked": 471,
+      "hypothetical_profit_units": -37.18181818181819,
+      "hypothetical_roi": -0.07894228913337195,
+      "unique_events": 661,
+      "max_drawdown_units": 49.09090909090907,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.010084463260835879,
+          0.031065801007796906
+        ],
+        "roi_95pct": [
+          -0.16775492617173515,
+          0.005127642899636058
+        ],
+        "event_clusters": 661,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "total",
+      "book": "unibet",
+      "quotes": 724,
+      "nonpush": 716,
+      "pushes": 8,
+      "model_conditional_brier": 0.27672765063007226,
+      "same_quote_novig_conditional_brier": 0.25016286418075623,
+      "hypothetical_selected": 259,
+      "hypothetical_net_units_risked": 259,
+      "hypothetical_profit_units": -29.838761638528695,
+      "hypothetical_roi": -0.11520757389393319,
+      "unique_events": 362,
+      "max_drawdown_units": 38.728091171982065,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.012081030849059177,
+          0.041586053199997926
+        ],
+        "roi_95pct": [
+          -0.23060177360066425,
+          0.008460755479676762
+        ],
+        "event_clusters": 362,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "total",
+      "book": "unibet_us",
+      "quotes": 692,
+      "nonpush": 682,
+      "pushes": 10,
+      "model_conditional_brier": 0.2686422287127926,
+      "same_quote_novig_conditional_brier": 0.2501083725107979,
+      "hypothetical_selected": 245,
+      "hypothetical_net_units_risked": 245,
+      "hypothetical_profit_units": -13.008549175572238,
+      "hypothetical_roi": -0.053096119083968316,
+      "unique_events": 346,
+      "max_drawdown_units": 22.87687011437826,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.00534908872337201,
+          0.032818237851010214
+        ],
+        "roi_95pct": [
+          -0.17007112067146624,
+          0.06340708510128167
+        ],
+        "event_clusters": 346,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "total",
+      "book": "williamhill_us",
+      "quotes": 1422,
+      "nonpush": 1400,
+      "pushes": 22,
+      "model_conditional_brier": 0.2728993470063371,
+      "same_quote_novig_conditional_brier": 0.25000090956153925,
+      "hypothetical_selected": 514,
+      "hypothetical_net_units_risked": 514,
+      "hypothetical_profit_units": -46.81818181818207,
+      "hypothetical_roi": -0.0910859568447122,
+      "unique_events": 711,
+      "max_drawdown_units": 57.90909090909105,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.012929348811495052,
+          0.03232023297843174
+        ],
+        "roi_95pct": [
+          -0.17104073167414713,
+          -0.00546437337101
+        ],
+        "event_clusters": 711,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2022,
+      "market": "total",
+      "book": "wynnbet",
+      "quotes": 1440,
+      "nonpush": 1416,
+      "pushes": 24,
+      "model_conditional_brier": 0.271569316083674,
+      "same_quote_novig_conditional_brier": 0.2500935160111015,
+      "hypothetical_selected": 515,
+      "hypothetical_net_units_risked": 515,
+      "hypothetical_profit_units": -48.215199123127704,
+      "hypothetical_roi": -0.09362174587015087,
+      "unique_events": 720,
+      "max_drawdown_units": 62.167580075508575,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.011699566371237053,
+          0.030964611831771943
+        ],
+        "roi_95pct": [
+          -0.17017207724769765,
+          -0.012181824663789134
+        ],
+        "event_clusters": 720,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "moneyline",
+      "book": "barstool",
+      "quotes": 1166,
+      "nonpush": 1166,
+      "pushes": 0,
+      "model_conditional_brier": 0.1975357374745557,
+      "same_quote_novig_conditional_brier": 0.17033834360556593,
+      "hypothetical_selected": 399,
+      "hypothetical_net_units_risked": 399,
+      "hypothetical_profit_units": -83.21696357752239,
+      "hypothetical_roi": -0.20856381849003106,
+      "unique_events": 583,
+      "max_drawdown_units": 90.12165333221216,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.01711999060502714,
+          0.03713770784597297
+        ],
+        "roi_95pct": [
+          -0.3434219755891134,
+          -0.05210892994256244
+        ],
+        "event_clusters": 583,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "moneyline",
+      "book": "betmgm",
+      "quotes": 1476,
+      "nonpush": 1476,
+      "pushes": 0,
+      "model_conditional_brier": 0.19937454947792937,
+      "same_quote_novig_conditional_brier": 0.17532285189878719,
+      "hypothetical_selected": 480,
+      "hypothetical_net_units_risked": 480,
+      "hypothetical_profit_units": -71.39147205212757,
+      "hypothetical_roi": -0.14873223344193243,
+      "unique_events": 738,
+      "max_drawdown_units": 90.23493635893526,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.015424015603457934,
+          0.03268424681968223
+        ],
+        "roi_95pct": [
+          -0.27506762466723667,
+          -0.01254479319571497
+        ],
+        "event_clusters": 738,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "moneyline",
+      "book": "betonlineag",
+      "quotes": 1354,
+      "nonpush": 1354,
+      "pushes": 0,
+      "model_conditional_brier": 0.2046628844336604,
+      "same_quote_novig_conditional_brier": 0.18072397778350843,
+      "hypothetical_selected": 462,
+      "hypothetical_net_units_risked": 462,
+      "hypothetical_profit_units": -67.42400915449119,
+      "hypothetical_roi": -0.14593941375430994,
+      "unique_events": 677,
+      "max_drawdown_units": 79.28672627256411,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.013762796617608564,
+          0.03402389087367154
+        ],
+        "roi_95pct": [
+          -0.2717483629748989,
+          -0.004308861515073724
+        ],
+        "event_clusters": 677,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "moneyline",
+      "book": "betrivers",
+      "quotes": 1416,
+      "nonpush": 1416,
+      "pushes": 0,
+      "model_conditional_brier": 0.20747149296420572,
+      "same_quote_novig_conditional_brier": 0.18123599686942887,
+      "hypothetical_selected": 455,
+      "hypothetical_net_units_risked": 455,
+      "hypothetical_profit_units": -62.602734477526454,
+      "hypothetical_roi": -0.13758842742313507,
+      "unique_events": 708,
+      "max_drawdown_units": 72.52126032946553,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.016922024017159976,
+          0.034933496738122904
+        ],
+        "roi_95pct": [
+          -0.27080204579886447,
+          0.003510192013952225
+        ],
+        "event_clusters": 708,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "moneyline",
+      "book": "betus",
+      "quotes": 1352,
+      "nonpush": 1352,
+      "pushes": 0,
+      "model_conditional_brier": 0.2090384435424001,
+      "same_quote_novig_conditional_brier": 0.18264978619759956,
+      "hypothetical_selected": 465,
+      "hypothetical_net_units_risked": 465,
+      "hypothetical_profit_units": -93.98306010284075,
+      "hypothetical_roi": -0.20211410774804464,
+      "unique_events": 676,
+      "max_drawdown_units": 104.0199368436709,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.017344072216334612,
+          0.0362697695816954
+        ],
+        "roi_95pct": [
+          -0.31235354287577566,
+          -0.09412403463764459
+        ],
+        "event_clusters": 676,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "moneyline",
+      "book": "bovada",
+      "quotes": 1272,
+      "nonpush": 1272,
+      "pushes": 0,
+      "model_conditional_brier": 0.20934701675207906,
+      "same_quote_novig_conditional_brier": 0.185822038504622,
+      "hypothetical_selected": 413,
+      "hypothetical_net_units_risked": 413,
+      "hypothetical_profit_units": -35.826784275135545,
+      "hypothetical_roi": -0.08674766168313691,
+      "unique_events": 636,
+      "max_drawdown_units": 60.55458237068279,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.01269075197792303,
+          0.03381836082688465
+        ],
+        "roi_95pct": [
+          -0.23632988541504324,
+          0.05842247329339311
+        ],
+        "event_clusters": 636,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "moneyline",
+      "book": "draftkings",
+      "quotes": 1454,
+      "nonpush": 1454,
+      "pushes": 0,
+      "model_conditional_brier": 0.19991273635923953,
+      "same_quote_novig_conditional_brier": 0.17554883112156108,
+      "hypothetical_selected": 483,
+      "hypothetical_net_units_risked": 483,
+      "hypothetical_profit_units": -76.67010759107224,
+      "hypothetical_roi": -0.15873728279725102,
+      "unique_events": 727,
+      "max_drawdown_units": 101.88840154587835,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.014994824615455506,
+          0.03296217946310292
+        ],
+        "roi_95pct": [
+          -0.2889120656698902,
+          -0.016742228141429602
+        ],
+        "event_clusters": 727,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "moneyline",
+      "book": "fanduel",
+      "quotes": 1436,
+      "nonpush": 1436,
+      "pushes": 0,
+      "model_conditional_brier": 0.20104371340791918,
+      "same_quote_novig_conditional_brier": 0.17549596548875562,
+      "hypothetical_selected": 467,
+      "hypothetical_net_units_risked": 467,
+      "hypothetical_profit_units": -57.75034519395128,
+      "hypothetical_roi": -0.12366240940888926,
+      "unique_events": 718,
+      "max_drawdown_units": 81.68396956201835,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.016299982075482725,
+          0.034886456959402845
+        ],
+        "roi_95pct": [
+          -0.2735538592651127,
+          0.034084129291274246
+        ],
+        "event_clusters": 718,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "moneyline",
+      "book": "lowvig",
+      "quotes": 1346,
+      "nonpush": 1346,
+      "pushes": 0,
+      "model_conditional_brier": 0.20709439604191945,
+      "same_quote_novig_conditional_brier": 0.18299833292757672,
+      "hypothetical_selected": 458,
+      "hypothetical_net_units_risked": 458,
+      "hypothetical_profit_units": -66.69026953523463,
+      "hypothetical_roi": -0.1456119422166695,
+      "unique_events": 673,
+      "max_drawdown_units": 77.42184288047538,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.014599275109779895,
+          0.033765965826654365
+        ],
+        "roi_95pct": [
+          -0.2689439856895317,
+          -0.017505903981660766
+        ],
+        "event_clusters": 673,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "moneyline",
+      "book": "mybookieag",
+      "quotes": 836,
+      "nonpush": 836,
+      "pushes": 0,
+      "model_conditional_brier": 0.21204287123062485,
+      "same_quote_novig_conditional_brier": 0.18478424587349768,
+      "hypothetical_selected": 286,
+      "hypothetical_net_units_risked": 286,
+      "hypothetical_profit_units": -19.345319179845255,
+      "hypothetical_roi": -0.06764097615330508,
+      "unique_events": 418,
+      "max_drawdown_units": 43.121213426537295,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.013586655840496517,
+          0.04018258940460459
+        ],
+        "roi_95pct": [
+          -0.25309442016509914,
+          0.15409100118904098
+        ],
+        "event_clusters": 418,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "moneyline",
+      "book": "pointsbetus",
+      "quotes": 938,
+      "nonpush": 938,
+      "pushes": 0,
+      "model_conditional_brier": 0.20602927920098202,
+      "same_quote_novig_conditional_brier": 0.1932782134055758,
+      "hypothetical_selected": 301,
+      "hypothetical_net_units_risked": 301,
+      "hypothetical_profit_units": -11.86913282566565,
+      "hypothetical_roi": -0.03943233496898887,
+      "unique_events": 469,
+      "max_drawdown_units": 48.75275214492669,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.00139939086803848,
+          0.022906489384380502
+        ],
+        "roi_95pct": [
+          -0.20405399031803045,
+          0.14916484681957287
+        ],
+        "event_clusters": 469,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "moneyline",
+      "book": "superbook",
+      "quotes": 1430,
+      "nonpush": 1430,
+      "pushes": 0,
+      "model_conditional_brier": 0.20453645990918853,
+      "same_quote_novig_conditional_brier": 0.17934716124658717,
+      "hypothetical_selected": 483,
+      "hypothetical_net_units_risked": 483,
+      "hypothetical_profit_units": -61.763875999918895,
+      "hypothetical_roi": -0.12787551966856914,
+      "unique_events": 715,
+      "max_drawdown_units": 85.44497560884453,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.015655369833221633,
+          0.03435113921810287
+        ],
+        "roi_95pct": [
+          -0.25768887413003133,
+          0.022713998350698695
+        ],
+        "event_clusters": 715,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "moneyline",
+      "book": "unibet_us",
+      "quotes": 1416,
+      "nonpush": 1416,
+      "pushes": 0,
+      "model_conditional_brier": 0.20747149296420572,
+      "same_quote_novig_conditional_brier": 0.18123977105989147,
+      "hypothetical_selected": 455,
+      "hypothetical_net_units_risked": 455,
+      "hypothetical_profit_units": -62.59128759107956,
+      "hypothetical_roi": -0.1375632694309441,
+      "unique_events": 708,
+      "max_drawdown_units": 72.50981344301864,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.01692025494349285,
+          0.034931115764797606
+        ],
+        "roi_95pct": [
+          -0.270753520954144,
+          0.003585370277590171
+        ],
+        "event_clusters": 708,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "moneyline",
+      "book": "williamhill_us",
+      "quotes": 1496,
+      "nonpush": 1496,
+      "pushes": 0,
+      "model_conditional_brier": 0.1976338220785909,
+      "same_quote_novig_conditional_brier": 0.17345896490962343,
+      "hypothetical_selected": 488,
+      "hypothetical_net_units_risked": 488,
+      "hypothetical_profit_units": -73.90589024106336,
+      "hypothetical_roi": -0.15144649639562163,
+      "unique_events": 748,
+      "max_drawdown_units": 91.27040693671965,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.014945026818717216,
+          0.033143088579699526
+        ],
+        "roi_95pct": [
+          -0.2764187500621382,
+          -0.008817129734701142
+        ],
+        "event_clusters": 748,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "moneyline",
+      "book": "wynnbet",
+      "quotes": 974,
+      "nonpush": 974,
+      "pushes": 0,
+      "model_conditional_brier": 0.18217428745094047,
+      "same_quote_novig_conditional_brier": 0.15799400326320684,
+      "hypothetical_selected": 326,
+      "hypothetical_net_units_risked": 326,
+      "hypothetical_profit_units": -54.265796004841036,
+      "hypothetical_roi": -0.16645949694736514,
+      "unique_events": 487,
+      "max_drawdown_units": 67.5090462498306,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.012658129749151776,
+          0.03506092445966597
+        ],
+        "roi_95pct": [
+          -0.31718919960866077,
+          -0.0041353584432768774
+        ],
+        "event_clusters": 487,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "spread",
+      "book": "barstool",
+      "quotes": 1186,
+      "nonpush": 1158,
+      "pushes": 28,
+      "model_conditional_brier": 0.28638046322005695,
+      "same_quote_novig_conditional_brier": 0.2502532587657273,
+      "hypothetical_selected": 458,
+      "hypothetical_net_units_risked": 458,
+      "hypothetical_profit_units": -42.680406549972005,
+      "hypothetical_roi": -0.09318866058945853,
+      "unique_events": 593,
+      "max_drawdown_units": 43.45096932053448,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.022388338093677497,
+          0.05143796581160001
+        ],
+        "roi_95pct": [
+          -0.18184364463479435,
+          -0.015387362255390493
+        ],
+        "event_clusters": 593,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "spread",
+      "book": "betmgm",
+      "quotes": 1462,
+      "nonpush": 1444,
+      "pushes": 18,
+      "model_conditional_brier": 0.2840496225656438,
+      "same_quote_novig_conditional_brier": 0.24989846287444792,
+      "hypothetical_selected": 553,
+      "hypothetical_net_units_risked": 553,
+      "hypothetical_profit_units": -44.48738942217198,
+      "hypothetical_roi": -0.08044735881043757,
+      "unique_events": 731,
+      "max_drawdown_units": 49.90184453227946,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.022560814030725004,
+          0.0466093903078427
+        ],
+        "roi_95pct": [
+          -0.15926263090825116,
+          0.00269625421681272
+        ],
+        "event_clusters": 731,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "spread",
+      "book": "betonlineag",
+      "quotes": 1478,
+      "nonpush": 1434,
+      "pushes": 44,
+      "model_conditional_brier": 0.2823729625461727,
+      "same_quote_novig_conditional_brier": 0.2500519722042129,
+      "hypothetical_selected": 567,
+      "hypothetical_net_units_risked": 567,
+      "hypothetical_profit_units": -43.602750274312356,
+      "hypothetical_roi": -0.0769007941345897,
+      "unique_events": 739,
+      "max_drawdown_units": 47.945425595423146,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.02011281685047525,
+          0.044312460055112794
+        ],
+        "roi_95pct": [
+          -0.15336978154645903,
+          -0.0017463404679608542
+        ],
+        "event_clusters": 739,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "spread",
+      "book": "betrivers",
+      "quotes": 1526,
+      "nonpush": 1490,
+      "pushes": 36,
+      "model_conditional_brier": 0.28409583963124596,
+      "same_quote_novig_conditional_brier": 0.24980230077132776,
+      "hypothetical_selected": 575,
+      "hypothetical_net_units_risked": 575,
+      "hypothetical_profit_units": -53.19938204411985,
+      "hypothetical_roi": -0.09252066442455627,
+      "unique_events": 763,
+      "max_drawdown_units": 56.95695788275151,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.022810160699685864,
+          0.046635454906896474
+        ],
+        "roi_95pct": [
+          -0.16984329115261224,
+          -0.014614654564738897
+        ],
+        "event_clusters": 763,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "spread",
+      "book": "betus",
+      "quotes": 1520,
+      "nonpush": 1476,
+      "pushes": 44,
+      "model_conditional_brier": 0.28349887566479215,
+      "same_quote_novig_conditional_brier": 0.2503295406552543,
+      "hypothetical_selected": 579,
+      "hypothetical_net_units_risked": 579,
+      "hypothetical_profit_units": -45.902310123134164,
+      "hypothetical_roi": -0.07927860124893638,
+      "unique_events": 760,
+      "max_drawdown_units": 50.98023220105601,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.021529670910610345,
+          0.0452583452528404
+        ],
+        "roi_95pct": [
+          -0.15443845786594723,
+          -0.0030509082248142585
+        ],
+        "event_clusters": 760,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "spread",
+      "book": "bovada",
+      "quotes": 1322,
+      "nonpush": 1292,
+      "pushes": 30,
+      "model_conditional_brier": 0.28272561350994774,
+      "same_quote_novig_conditional_brier": 0.24993514950573079,
+      "hypothetical_selected": 505,
+      "hypothetical_net_units_risked": 505,
+      "hypothetical_profit_units": -38.99058912102389,
+      "hypothetical_roi": -0.07720908736836414,
+      "unique_events": 661,
+      "max_drawdown_units": 43.162619988707014,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.020775235309446367,
+          0.045557403286237357
+        ],
+        "roi_95pct": [
+          -0.15436698795884823,
+          0.006169787114389362
+        ],
+        "event_clusters": 661,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "spread",
+      "book": "draftkings",
+      "quotes": 1496,
+      "nonpush": 1460,
+      "pushes": 36,
+      "model_conditional_brier": 0.2836480164232924,
+      "same_quote_novig_conditional_brier": 0.24986900055053407,
+      "hypothetical_selected": 565,
+      "hypothetical_net_units_risked": 565,
+      "hypothetical_profit_units": -48.97151892921132,
+      "hypothetical_roi": -0.08667525474196694,
+      "unique_events": 748,
+      "max_drawdown_units": 52.53380849150064,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.022664879104787747,
+          0.04614903398612595
+        ],
+        "roi_95pct": [
+          -0.16687295081732578,
+          -0.016818487584392795
+        ],
+        "event_clusters": 748,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "spread",
+      "book": "fanduel",
+      "quotes": 1474,
+      "nonpush": 1472,
+      "pushes": 2,
+      "model_conditional_brier": 0.28383126962016636,
+      "same_quote_novig_conditional_brier": 0.24991767044260604,
+      "hypothetical_selected": 548,
+      "hypothetical_net_units_risked": 548,
+      "hypothetical_profit_units": -44.37385693193432,
+      "hypothetical_roi": -0.08097419148163197,
+      "unique_events": 737,
+      "max_drawdown_units": 49.41055245203542,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.022948934259962032,
+          0.04605630122062409
+        ],
+        "roi_95pct": [
+          -0.15796877652064398,
+          -0.007282504873930165
+        ],
+        "event_clusters": 737,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "spread",
+      "book": "lowvig",
+      "quotes": 1470,
+      "nonpush": 1428,
+      "pushes": 42,
+      "model_conditional_brier": 0.28442766147163734,
+      "same_quote_novig_conditional_brier": 0.2500325043232198,
+      "hypothetical_selected": 597,
+      "hypothetical_net_units_risked": 597,
+      "hypothetical_profit_units": -36.80691214755111,
+      "hypothetical_roi": -0.06165311917512749,
+      "unique_events": 735,
+      "max_drawdown_units": 45.205754842115965,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.02254000576330206,
+          0.04629255347801341
+        ],
+        "roi_95pct": [
+          -0.1388004039164376,
+          0.01684600500384593
+        ],
+        "event_clusters": 735,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "spread",
+      "book": "mybookieag",
+      "quotes": 854,
+      "nonpush": 834,
+      "pushes": 20,
+      "model_conditional_brier": 0.2899321383160079,
+      "same_quote_novig_conditional_brier": 0.24988105146723866,
+      "hypothetical_selected": 335,
+      "hypothetical_net_units_risked": 335,
+      "hypothetical_profit_units": -29.292009110534174,
+      "hypothetical_roi": -0.08743883316577365,
+      "unique_events": 427,
+      "max_drawdown_units": 33.556546375071434,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.024898332979266927,
+          0.05669701837500935
+        ],
+        "roi_95pct": [
+          -0.19369135860738207,
+          0.005687571670989685
+        ],
+        "event_clusters": 427,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "spread",
+      "book": "pointsbetus",
+      "quotes": 970,
+      "nonpush": 944,
+      "pushes": 26,
+      "model_conditional_brier": 0.2691251664536854,
+      "same_quote_novig_conditional_brier": 0.24969298938141182,
+      "hypothetical_selected": 355,
+      "hypothetical_net_units_risked": 355,
+      "hypothetical_profit_units": -15.77752682100508,
+      "hypothetical_roi": -0.04444373752395797,
+      "unique_events": 485,
+      "max_drawdown_units": 34.63015245623944,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.006804369012888709,
+          0.03154017777860338
+        ],
+        "roi_95pct": [
+          -0.13813276653075557,
+          0.06107510368634655
+        ],
+        "event_clusters": 485,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "spread",
+      "book": "superbook",
+      "quotes": 1518,
+      "nonpush": 1474,
+      "pushes": 44,
+      "model_conditional_brier": 0.28445866709579126,
+      "same_quote_novig_conditional_brier": 0.2505255274749376,
+      "hypothetical_selected": 580,
+      "hypothetical_net_units_risked": 580,
+      "hypothetical_profit_units": -46.61363636363673,
+      "hypothetical_roi": -0.08036833855799436,
+      "unique_events": 759,
+      "max_drawdown_units": 53.27272727272725,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.022045791771324954,
+          0.04546161647253858
+        ],
+        "roi_95pct": [
+          -0.1592526433609761,
+          -0.005162705326032967
+        ],
+        "event_clusters": 759,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "spread",
+      "book": "twinspires",
+      "quotes": 1436,
+      "nonpush": 1406,
+      "pushes": 30,
+      "model_conditional_brier": 0.2796231026188535,
+      "same_quote_novig_conditional_brier": 0.24982444945603005,
+      "hypothetical_selected": 532,
+      "hypothetical_net_units_risked": 532,
+      "hypothetical_profit_units": -39.525443261757665,
+      "hypothetical_roi": -0.07429594598074749,
+      "unique_events": 718,
+      "max_drawdown_units": 52.30204845209396,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.017226836812238615,
+          0.042489797196527845
+        ],
+        "roi_95pct": [
+          -0.14676155192739254,
+          0.012729613094318774
+        ],
+        "event_clusters": 718,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "spread",
+      "book": "unibet_us",
+      "quotes": 1522,
+      "nonpush": 1492,
+      "pushes": 30,
+      "model_conditional_brier": 0.2840084256252157,
+      "same_quote_novig_conditional_brier": 0.2499452648506702,
+      "hypothetical_selected": 572,
+      "hypothetical_net_units_risked": 572,
+      "hypothetical_profit_units": -52.53910091740417,
+      "hypothetical_roi": -0.09185157503042687,
+      "unique_events": 761,
+      "max_drawdown_units": 56.24215073614723,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.02276421019432046,
+          0.04582625365154408
+        ],
+        "roi_95pct": [
+          -0.16081219057829357,
+          -0.013176613826140018
+        ],
+        "event_clusters": 761,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "spread",
+      "book": "williamhill_us",
+      "quotes": 1524,
+      "nonpush": 1482,
+      "pushes": 42,
+      "model_conditional_brier": 0.28456000505948836,
+      "same_quote_novig_conditional_brier": 0.24978187129072,
+      "hypothetical_selected": 582,
+      "hypothetical_net_units_risked": 582,
+      "hypothetical_profit_units": -44.899115377376454,
+      "hypothetical_roi": -0.0771462463528805,
+      "unique_events": 762,
+      "max_drawdown_units": 48.44456992283088,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.023518113120703725,
+          0.04611192535421096
+        ],
+        "roi_95pct": [
+          -0.15023314213327676,
+          -0.004551185187508631
+        ],
+        "event_clusters": 762,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "spread",
+      "book": "wynnbet",
+      "quotes": 974,
+      "nonpush": 942,
+      "pushes": 32,
+      "model_conditional_brier": 0.2803481493288518,
+      "same_quote_novig_conditional_brier": 0.25006049973597805,
+      "hypothetical_selected": 370,
+      "hypothetical_net_units_risked": 370,
+      "hypothetical_profit_units": -13.91313026747819,
+      "hypothetical_roi": -0.03760305477696808,
+      "unique_events": 487,
+      "max_drawdown_units": 20.65290900725687,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.016511109809269522,
+          0.04596337811838152
+        ],
+        "roi_95pct": [
+          -0.1349925927212649,
+          0.059643639501649394
+        ],
+        "event_clusters": 487,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "total",
+      "book": "barstool",
+      "quotes": 1186,
+      "nonpush": 1186,
+      "pushes": 0,
+      "model_conditional_brier": 0.2605029829929011,
+      "same_quote_novig_conditional_brier": 0.24943398598013983,
+      "hypothetical_selected": 385,
+      "hypothetical_net_units_risked": 385,
+      "hypothetical_profit_units": 8.69979296066252,
+      "hypothetical_roi": 0.022596864832889665,
+      "unique_events": 593,
+      "max_drawdown_units": 16.53764351590437,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.0019538154100797503,
+          0.020708943199655386
+        ],
+        "roi_95pct": [
+          -0.07158008191645579,
+          0.1111677036932828
+        ],
+        "event_clusters": 593,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "total",
+      "book": "betmgm",
+      "quotes": 1502,
+      "nonpush": 1498,
+      "pushes": 4,
+      "model_conditional_brier": 0.26201160881949154,
+      "same_quote_novig_conditional_brier": 0.24965641848908984,
+      "hypothetical_selected": 492,
+      "hypothetical_net_units_risked": 492,
+      "hypothetical_profit_units": -6.369471108601549,
+      "hypothetical_roi": -0.012946079489027538,
+      "unique_events": 751,
+      "max_drawdown_units": 24.58008658008658,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.0041892298333368215,
+          0.020407592639584745
+        ],
+        "roi_95pct": [
+          -0.09382128966680948,
+          0.07382987305009268
+        ],
+        "event_clusters": 751,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "total",
+      "book": "betonlineag",
+      "quotes": 1478,
+      "nonpush": 1460,
+      "pushes": 18,
+      "model_conditional_brier": 0.264818763112134,
+      "same_quote_novig_conditional_brier": 0.25034396472307174,
+      "hypothetical_selected": 477,
+      "hypothetical_net_units_risked": 477,
+      "hypothetical_profit_units": -15.584262172303811,
+      "hypothetical_roi": -0.03267140916625537,
+      "unique_events": 739,
+      "max_drawdown_units": 28.83378461042486,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.006410881572354083,
+          0.022493650029092028
+        ],
+        "roi_95pct": [
+          -0.11250437826338139,
+          0.05491001430622748
+        ],
+        "event_clusters": 739,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "total",
+      "book": "betrivers",
+      "quotes": 1526,
+      "nonpush": 1494,
+      "pushes": 32,
+      "model_conditional_brier": 0.26345708712456467,
+      "same_quote_novig_conditional_brier": 0.25004054134806825,
+      "hypothetical_selected": 491,
+      "hypothetical_net_units_risked": 491,
+      "hypothetical_profit_units": -10.247806930614573,
+      "hypothetical_roi": -0.020871297211027644,
+      "unique_events": 763,
+      "max_drawdown_units": 24.113503193513722,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.005055908485028408,
+          0.02200115696103739
+        ],
+        "roi_95pct": [
+          -0.09959088899020348,
+          0.0587666168772585
+        ],
+        "event_clusters": 763,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "total",
+      "book": "betus",
+      "quotes": 1520,
+      "nonpush": 1488,
+      "pushes": 32,
+      "model_conditional_brier": 0.2626971726686011,
+      "same_quote_novig_conditional_brier": 0.2499826493595555,
+      "hypothetical_selected": 496,
+      "hypothetical_net_units_risked": 496,
+      "hypothetical_profit_units": -14.324675324675336,
+      "hypothetical_roi": -0.028880393799748664,
+      "unique_events": 760,
+      "max_drawdown_units": 26.77922077922083,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.0043316746316337616,
+          0.02107108096067329
+        ],
+        "roi_95pct": [
+          -0.11093968377858401,
+          0.052632683982683934
+        ],
+        "event_clusters": 760,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "total",
+      "book": "bovada",
+      "quotes": 1324,
+      "nonpush": 1302,
+      "pushes": 22,
+      "model_conditional_brier": 0.2602081896405235,
+      "same_quote_novig_conditional_brier": 0.2496932576322146,
+      "hypothetical_selected": 444,
+      "hypothetical_net_units_risked": 444,
+      "hypothetical_profit_units": -0.9573687182383079,
+      "hypothetical_roi": -0.0021562358518880807,
+      "unique_events": 662,
+      "max_drawdown_units": 20.741200828157375,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.0014968918139305724,
+          0.01968457871571683
+        ],
+        "roi_95pct": [
+          -0.08998507625226555,
+          0.08792223894755477
+        ],
+        "event_clusters": 662,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "total",
+      "book": "draftkings",
+      "quotes": 1496,
+      "nonpush": 1464,
+      "pushes": 32,
+      "model_conditional_brier": 0.26218811679018583,
+      "same_quote_novig_conditional_brier": 0.24990952017374216,
+      "hypothetical_selected": 492,
+      "hypothetical_net_units_risked": 492,
+      "hypothetical_profit_units": -4.640692640692683,
+      "hypothetical_roi": -0.009432302115229031,
+      "unique_events": 748,
+      "max_drawdown_units": 24.23184223184225,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.004278712184070849,
+          0.020737354797279346
+        ],
+        "roi_95pct": [
+          -0.08898458350257775,
+          0.0706613419337634
+        ],
+        "event_clusters": 748,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "total",
+      "book": "fanduel",
+      "quotes": 1508,
+      "nonpush": 1508,
+      "pushes": 0,
+      "model_conditional_brier": 0.26204400256991967,
+      "same_quote_novig_conditional_brier": 0.24958900107148285,
+      "hypothetical_selected": 487,
+      "hypothetical_net_units_risked": 487,
+      "hypothetical_profit_units": -13.7492651950737,
+      "hypothetical_roi": -0.0282325774026154,
+      "unique_events": 754,
+      "max_drawdown_units": 28.399286041749015,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.0037486875908987524,
+          0.020945739283627817
+        ],
+        "roi_95pct": [
+          -0.11526691069317137,
+          0.05573318999256742
+        ],
+        "event_clusters": 754,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "total",
+      "book": "lowvig",
+      "quotes": 1470,
+      "nonpush": 1450,
+      "pushes": 20,
+      "model_conditional_brier": 0.26262292517084385,
+      "same_quote_novig_conditional_brier": 0.25045912739413145,
+      "hypothetical_selected": 496,
+      "hypothetical_net_units_risked": 496,
+      "hypothetical_profit_units": 0.9367024007231625,
+      "hypothetical_roi": 0.0018885129046837953,
+      "unique_events": 735,
+      "max_drawdown_units": 23.524905761907053,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.0037731254994331632,
+          0.019916177672399414
+        ],
+        "roi_95pct": [
+          -0.07854505300604706,
+          0.08759717235150288
+        ],
+        "event_clusters": 735,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "total",
+      "book": "mybookieag",
+      "quotes": 854,
+      "nonpush": 838,
+      "pushes": 16,
+      "model_conditional_brier": 0.26137025702645206,
+      "same_quote_novig_conditional_brier": 0.25004939607991444,
+      "hypothetical_selected": 279,
+      "hypothetical_net_units_risked": 279,
+      "hypothetical_profit_units": -0.8755281376059108,
+      "hypothetical_roi": -0.0031380936831753073,
+      "unique_events": 427,
+      "max_drawdown_units": 20.181818181818198,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.0001441213585077588,
+          0.022448381398933116
+        ],
+        "roi_95pct": [
+          -0.11585373253787404,
+          0.10764004111962858
+        ],
+        "event_clusters": 427,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "total",
+      "book": "pointsbetus",
+      "quotes": 970,
+      "nonpush": 956,
+      "pushes": 14,
+      "model_conditional_brier": 0.26483177202991076,
+      "same_quote_novig_conditional_brier": 0.24978679027059825,
+      "hypothetical_selected": 315,
+      "hypothetical_net_units_risked": 315,
+      "hypothetical_profit_units": -24.53039713909283,
+      "hypothetical_roi": -0.07787427663204073,
+      "unique_events": 485,
+      "max_drawdown_units": 25.439488048183673,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.006129268925047208,
+          0.02463557329034568
+        ],
+        "roi_95pct": [
+          -0.1798777910999298,
+          0.017031799854431037
+        ],
+        "event_clusters": 485,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "total",
+      "book": "superbook",
+      "quotes": 1506,
+      "nonpush": 1478,
+      "pushes": 28,
+      "model_conditional_brier": 0.26265782777870245,
+      "same_quote_novig_conditional_brier": 0.25,
+      "hypothetical_selected": 494,
+      "hypothetical_net_units_risked": 494,
+      "hypothetical_profit_units": -12.545454545454554,
+      "hypothetical_roi": -0.02539565697460436,
+      "unique_events": 753,
+      "max_drawdown_units": 24.00000000000003,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.004627075731111477,
+          0.020921523506799048
+        ],
+        "roi_95pct": [
+          -0.10544887948253413,
+          0.053843384338433775
+        ],
+        "event_clusters": 753,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "total",
+      "book": "unibet_us",
+      "quotes": 1526,
+      "nonpush": 1498,
+      "pushes": 28,
+      "model_conditional_brier": 0.26368072343855603,
+      "same_quote_novig_conditional_brier": 0.25006008689695397,
+      "hypothetical_selected": 489,
+      "hypothetical_net_units_risked": 489,
+      "hypothetical_profit_units": -8.312071770732596,
+      "hypothetical_roi": -0.016998101780639256,
+      "unique_events": 763,
+      "max_drawdown_units": 22.374780113139344,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.00523925394479709,
+          0.022375547715889378
+        ],
+        "roi_95pct": [
+          -0.09621967499497372,
+          0.062319547906193096
+        ],
+        "event_clusters": 763,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "total",
+      "book": "williamhill_us",
+      "quotes": 1524,
+      "nonpush": 1494,
+      "pushes": 30,
+      "model_conditional_brier": 0.26291523797369737,
+      "same_quote_novig_conditional_brier": 0.2502244104911987,
+      "hypothetical_selected": 498,
+      "hypothetical_net_units_risked": 498,
+      "hypothetical_profit_units": -10.369659326181106,
+      "hypothetical_roi": -0.02082260908871708,
+      "unique_events": 762,
+      "max_drawdown_units": 25.511387163561086,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.004628142117292183,
+          0.02124290398681087
+        ],
+        "roi_95pct": [
+          -0.10407391819005295,
+          0.05621841849558418
+        ],
+        "event_clusters": 762,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2023,
+      "market": "total",
+      "book": "wynnbet",
+      "quotes": 974,
+      "nonpush": 960,
+      "pushes": 14,
+      "model_conditional_brier": 0.2572656397675403,
+      "same_quote_novig_conditional_brier": 0.24997767321768205,
+      "hypothetical_selected": 320,
+      "hypothetical_net_units_risked": 320,
+      "hypothetical_profit_units": 4.727272727272709,
+      "hypothetical_roi": 0.014772727272727215,
+      "unique_events": 487,
+      "max_drawdown_units": 13.909090909090907,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.003240554414854584,
+          0.016150049647976256
+        ],
+        "roi_95pct": [
+          -0.07834628029203486,
+          0.12687088907526428
+        ],
+        "event_clusters": 487,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "moneyline",
+      "book": "betmgm",
+      "quotes": 1460,
+      "nonpush": 1460,
+      "pushes": 0,
+      "model_conditional_brier": 0.21035701926795572,
+      "same_quote_novig_conditional_brier": 0.19002595539177625,
+      "hypothetical_selected": 459,
+      "hypothetical_net_units_risked": 459,
+      "hypothetical_profit_units": -60.340372404151594,
+      "hypothetical_roi": -0.13146050632712766,
+      "unique_events": 730,
+      "max_drawdown_units": 83.99109472151228,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.011947594228529833,
+          0.02899439408165109
+        ],
+        "roi_95pct": [
+          -0.2676086786495248,
+          0.013877206803361422
+        ],
+        "event_clusters": 730,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "moneyline",
+      "book": "betonlineag",
+      "quotes": 1434,
+      "nonpush": 1434,
+      "pushes": 0,
+      "model_conditional_brier": 0.20780371664823685,
+      "same_quote_novig_conditional_brier": 0.1903581303521538,
+      "hypothetical_selected": 475,
+      "hypothetical_net_units_risked": 475,
+      "hypothetical_profit_units": -31.908911758626274,
+      "hypothetical_roi": -0.06717665633395005,
+      "unique_events": 717,
+      "max_drawdown_units": 68.51302836275703,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.008953118272320808,
+          0.026144813492464794
+        ],
+        "roi_95pct": [
+          -0.19748327861727213,
+          0.08121245081975252
+        ],
+        "event_clusters": 717,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "moneyline",
+      "book": "betrivers",
+      "quotes": 1428,
+      "nonpush": 1428,
+      "pushes": 0,
+      "model_conditional_brier": 0.2120687072690036,
+      "same_quote_novig_conditional_brier": 0.19086044249082293,
+      "hypothetical_selected": 455,
+      "hypothetical_net_units_risked": 455,
+      "hypothetical_profit_units": -81.99684592449567,
+      "hypothetical_roi": -0.18021284818570477,
+      "unique_events": 714,
+      "max_drawdown_units": 96.9925053769244,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.011759743058938564,
+          0.03067776617527331
+        ],
+        "roi_95pct": [
+          -0.30416855055411607,
+          -0.053255152138463664
+        ],
+        "event_clusters": 714,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "moneyline",
+      "book": "betus",
+      "quotes": 1434,
+      "nonpush": 1434,
+      "pushes": 0,
+      "model_conditional_brier": 0.21081706208001633,
+      "same_quote_novig_conditional_brier": 0.1921345075872175,
+      "hypothetical_selected": 474,
+      "hypothetical_net_units_risked": 474,
+      "hypothetical_profit_units": -28.649924633365902,
+      "hypothetical_roi": -0.060442878973345784,
+      "unique_events": 717,
+      "max_drawdown_units": 64.50968013472381,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.00972556138026687,
+          0.02704237232175784
+        ],
+        "roi_95pct": [
+          -0.1831036890673001,
+          0.08263778933480914
+        ],
+        "event_clusters": 717,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "moneyline",
+      "book": "bovada",
+      "quotes": 1480,
+      "nonpush": 1480,
+      "pushes": 0,
+      "model_conditional_brier": 0.2108779370324026,
+      "same_quote_novig_conditional_brier": 0.19080077758701797,
+      "hypothetical_selected": 480,
+      "hypothetical_net_units_risked": 480,
+      "hypothetical_profit_units": -47.09812222680772,
+      "hypothetical_roi": -0.09812108797251608,
+      "unique_events": 740,
+      "max_drawdown_units": 73.41851696560104,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.010738707272638235,
+          0.028800892244823652
+        ],
+        "roi_95pct": [
+          -0.22375637696918063,
+          0.04186052424513512
+        ],
+        "event_clusters": 740,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "moneyline",
+      "book": "draftkings",
+      "quotes": 1476,
+      "nonpush": 1476,
+      "pushes": 0,
+      "model_conditional_brier": 0.20866951120773258,
+      "same_quote_novig_conditional_brier": 0.188069243281959,
+      "hypothetical_selected": 464,
+      "hypothetical_net_units_risked": 464,
+      "hypothetical_profit_units": -63.745668191907384,
+      "hypothetical_roi": -0.1373829055860073,
+      "unique_events": 738,
+      "max_drawdown_units": 81.33835218474034,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.011755261906376657,
+          0.029632796424291244
+        ],
+        "roi_95pct": [
+          -0.28502573651713187,
+          0.04981604890834906
+        ],
+        "event_clusters": 738,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "moneyline",
+      "book": "fanduel",
+      "quotes": 1496,
+      "nonpush": 1496,
+      "pushes": 0,
+      "model_conditional_brier": 0.2089155327800144,
+      "same_quote_novig_conditional_brier": 0.188273089858625,
+      "hypothetical_selected": 485,
+      "hypothetical_net_units_risked": 485,
+      "hypothetical_profit_units": -57.60074348008335,
+      "hypothetical_roi": -0.11876441954656361,
+      "unique_events": 748,
+      "max_drawdown_units": 79.92173553983238,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.012165170407601159,
+          0.02879753535818578
+        ],
+        "roi_95pct": [
+          -0.2669908376767411,
+          0.03996293607599409
+        ],
+        "event_clusters": 748,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "moneyline",
+      "book": "lowvig",
+      "quotes": 1390,
+      "nonpush": 1390,
+      "pushes": 0,
+      "model_conditional_brier": 0.20558704064473324,
+      "same_quote_novig_conditional_brier": 0.18798007895241303,
+      "hypothetical_selected": 460,
+      "hypothetical_net_units_risked": 460,
+      "hypothetical_profit_units": -32.12821163486086,
+      "hypothetical_roi": -0.06984393833665405,
+      "unique_events": 695,
+      "max_drawdown_units": 66.7326908306855,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.009185751106725914,
+          0.026444354444622366
+        ],
+        "roi_95pct": [
+          -0.2061006462141466,
+          0.09050619056534134
+        ],
+        "event_clusters": 695,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "moneyline",
+      "book": "mybookieag",
+      "quotes": 234,
+      "nonpush": 234,
+      "pushes": 0,
+      "model_conditional_brier": 0.21289188026432523,
+      "same_quote_novig_conditional_brier": 0.20296106146348677,
+      "hypothetical_selected": 61,
+      "hypothetical_net_units_risked": 61,
+      "hypothetical_profit_units": 4.805424987198954,
+      "hypothetical_roi": 0.07877745880654023,
+      "unique_events": 117,
+      "max_drawdown_units": 14.174467932194679,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.0059606200114872545,
+          0.02577237913430532
+        ],
+        "roi_95pct": [
+          -0.3192740453089322,
+          0.5679538587044476
+        ],
+        "event_clusters": 117,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "moneyline",
+      "book": "williamhill_us",
+      "quotes": 1478,
+      "nonpush": 1478,
+      "pushes": 0,
+      "model_conditional_brier": 0.21092596919009662,
+      "same_quote_novig_conditional_brier": 0.19121213346272495,
+      "hypothetical_selected": 482,
+      "hypothetical_net_units_risked": 482,
+      "hypothetical_profit_units": -29.714602439835126,
+      "hypothetical_roi": -0.06164855277974093,
+      "unique_events": 739,
+      "max_drawdown_units": 70.87534356814382,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.010700524595164792,
+          0.02704890436778731
+        ],
+        "roi_95pct": [
+          -0.1948330262467072,
+          0.11933745648361636
+        ],
+        "event_clusters": 739,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "spread",
+      "book": "betmgm",
+      "quotes": 1478,
+      "nonpush": 1446,
+      "pushes": 32,
+      "model_conditional_brier": 0.2809827246829481,
+      "same_quote_novig_conditional_brier": 0.24990815284364332,
+      "hypothetical_selected": 537,
+      "hypothetical_net_units_risked": 537,
+      "hypothetical_profit_units": -51.686053077357634,
+      "hypothetical_roi": -0.09624963329116878,
+      "unique_events": 739,
+      "max_drawdown_units": 64.74910596649742,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.019524369223753592,
+          0.04292874043108266
+        ],
+        "roi_95pct": [
+          -0.1817315320482382,
+          -0.01492648971116273
+        ],
+        "event_clusters": 739,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "spread",
+      "book": "betonlineag",
+      "quotes": 1540,
+      "nonpush": 1496,
+      "pushes": 44,
+      "model_conditional_brier": 0.27890206910523463,
+      "same_quote_novig_conditional_brier": 0.24799180655931105,
+      "hypothetical_selected": 555,
+      "hypothetical_net_units_risked": 555,
+      "hypothetical_profit_units": -59.016466898642754,
+      "hypothetical_roi": -0.10633597639395091,
+      "unique_events": 770,
+      "max_drawdown_units": 70.64989444436475,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.019468604227119022,
+          0.04143557326778741
+        ],
+        "roi_95pct": [
+          -0.18508550139015306,
+          -0.023482851973511024
+        ],
+        "event_clusters": 770,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "spread",
+      "book": "betrivers",
+      "quotes": 1504,
+      "nonpush": 1468,
+      "pushes": 36,
+      "model_conditional_brier": 0.28031115995896005,
+      "same_quote_novig_conditional_brier": 0.24987447792298836,
+      "hypothetical_selected": 545,
+      "hypothetical_net_units_risked": 545,
+      "hypothetical_profit_units": -55.999560675621005,
+      "hypothetical_roi": -0.10275148747820367,
+      "unique_events": 752,
+      "max_drawdown_units": 66.3463668715185,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.01862704579304056,
+          0.041525688330253954
+        ],
+        "roi_95pct": [
+          -0.18113724156243213,
+          -0.021703714327124028
+        ],
+        "event_clusters": 752,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "spread",
+      "book": "betus",
+      "quotes": 1532,
+      "nonpush": 1482,
+      "pushes": 50,
+      "model_conditional_brier": 0.2810412126214825,
+      "same_quote_novig_conditional_brier": 0.24963962356984126,
+      "hypothetical_selected": 556,
+      "hypothetical_net_units_risked": 556,
+      "hypothetical_profit_units": -61.08566867583353,
+      "hypothetical_roi": -0.10986631056804592,
+      "unique_events": 766,
+      "max_drawdown_units": 73.43150762281212,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.020835563807086017,
+          0.0425664542514669
+        ],
+        "roi_95pct": [
+          -0.1860229389559305,
+          -0.032871205586985204
+        ],
+        "event_clusters": 766,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "spread",
+      "book": "bovada",
+      "quotes": 1536,
+      "nonpush": 1498,
+      "pushes": 38,
+      "model_conditional_brier": 0.28002179011812983,
+      "same_quote_novig_conditional_brier": 0.24993210429370624,
+      "hypothetical_selected": 553,
+      "hypothetical_net_units_risked": 553,
+      "hypothetical_profit_units": -52.96886881234727,
+      "hypothetical_roi": -0.09578457289755384,
+      "unique_events": 768,
+      "max_drawdown_units": 67.8485977790327,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.01867663102898243,
+          0.040536044033480996
+        ],
+        "roi_95pct": [
+          -0.174259106291252,
+          -0.01353564225267915
+        ],
+        "event_clusters": 768,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "spread",
+      "book": "draftkings",
+      "quotes": 1516,
+      "nonpush": 1476,
+      "pushes": 40,
+      "model_conditional_brier": 0.27991069867946977,
+      "same_quote_novig_conditional_brier": 0.2500739143147247,
+      "hypothetical_selected": 550,
+      "hypothetical_net_units_risked": 550,
+      "hypothetical_profit_units": -51.57193602078521,
+      "hypothetical_roi": -0.09376715640142766,
+      "unique_events": 758,
+      "max_drawdown_units": 65.01486580578654,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.018526409266075607,
+          0.04085782459388431
+        ],
+        "roi_95pct": [
+          -0.17329329007526503,
+          -0.015133820395337554
+        ],
+        "event_clusters": 758,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "spread",
+      "book": "fanduel",
+      "quotes": 1534,
+      "nonpush": 1534,
+      "pushes": 0,
+      "model_conditional_brier": 0.27938151185508897,
+      "same_quote_novig_conditional_brier": 0.2499586791779697,
+      "hypothetical_selected": 546,
+      "hypothetical_net_units_risked": 546,
+      "hypothetical_profit_units": -56.16371575276011,
+      "hypothetical_roi": -0.10286394826512842,
+      "unique_events": 767,
+      "max_drawdown_units": 63.7769667142077,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.017751730590990566,
+          0.041127171780089906
+        ],
+        "roi_95pct": [
+          -0.18620140044639047,
+          -0.018317284465012004
+        ],
+        "event_clusters": 767,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "spread",
+      "book": "lowvig",
+      "quotes": 1490,
+      "nonpush": 1446,
+      "pushes": 44,
+      "model_conditional_brier": 0.2779543341868719,
+      "same_quote_novig_conditional_brier": 0.24818877188314437,
+      "hypothetical_selected": 570,
+      "hypothetical_net_units_risked": 570,
+      "hypothetical_profit_units": -48.27115080596436,
+      "hypothetical_roi": -0.084686229484148,
+      "unique_events": 745,
+      "max_drawdown_units": 61.097515506938436,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.018489194997997324,
+          0.04105735078535361
+        ],
+        "roi_95pct": [
+          -0.1616502273109375,
+          -0.010221764752282876
+        ],
+        "event_clusters": 745,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "spread",
+      "book": "mybookieag",
+      "quotes": 234,
+      "nonpush": 224,
+      "pushes": 10,
+      "model_conditional_brier": 0.26112314005748904,
+      "same_quote_novig_conditional_brier": 0.24943096400925743,
+      "hypothetical_selected": 76,
+      "hypothetical_net_units_risked": 76,
+      "hypothetical_profit_units": -6.178053830227742,
+      "hypothetical_roi": -0.08129018197668081,
+      "unique_events": 117,
+      "max_drawdown_units": 16.22134387351779,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.007920082758581476,
+          0.03159532497416245
+        ],
+        "roi_95pct": [
+          -0.28992757515484785,
+          0.12767268475613808
+        ],
+        "event_clusters": 117,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "spread",
+      "book": "williamhill_us",
+      "quotes": 1534,
+      "nonpush": 1490,
+      "pushes": 44,
+      "model_conditional_brier": 0.27959778996165396,
+      "same_quote_novig_conditional_brier": 0.24976319480180464,
+      "hypothetical_selected": 562,
+      "hypothetical_net_units_risked": 562,
+      "hypothetical_profit_units": -54.912732919254914,
+      "hypothetical_roi": -0.09770948918016889,
+      "unique_events": 767,
+      "max_drawdown_units": 69.40445134575583,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.018045745438246663,
+          0.041075431291322906
+        ],
+        "roi_95pct": [
+          -0.17558146924081763,
+          -0.014715850894507122
+        ],
+        "event_clusters": 767,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "total",
+      "book": "betmgm",
+      "quotes": 1514,
+      "nonpush": 1514,
+      "pushes": 0,
+      "model_conditional_brier": 0.2478894916555688,
+      "same_quote_novig_conditional_brier": 0.24956626377536353,
+      "hypothetical_selected": 386,
+      "hypothetical_net_units_risked": 386,
+      "hypothetical_profit_units": 39.64257481648762,
+      "hypothetical_roi": 0.10270097102716999,
+      "unique_events": 757,
+      "max_drawdown_units": 8.850178806700562,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.008123633944239483,
+          0.00457371116627135
+        ],
+        "roi_95pct": [
+          0.008570592146350677,
+          0.19941975857921238
+        ],
+        "event_clusters": 757,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "total",
+      "book": "betonlineag",
+      "quotes": 1538,
+      "nonpush": 1508,
+      "pushes": 30,
+      "model_conditional_brier": 0.2479036486028003,
+      "same_quote_novig_conditional_brier": 0.2486522982497426,
+      "hypothetical_selected": 398,
+      "hypothetical_net_units_risked": 398,
+      "hypothetical_profit_units": 34.91280383236536,
+      "hypothetical_roi": 0.08772061264413408,
+      "unique_events": 769,
+      "max_drawdown_units": 10.138528138528144,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.007027020442830485,
+          0.005476969503940737
+        ],
+        "roi_95pct": [
+          -0.005129169062259679,
+          0.1805286025347677
+        ],
+        "event_clusters": 769,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "total",
+      "book": "betrivers",
+      "quotes": 1504,
+      "nonpush": 1474,
+      "pushes": 30,
+      "model_conditional_brier": 0.2480415879711082,
+      "same_quote_novig_conditional_brier": 0.24992130307545712,
+      "hypothetical_selected": 379,
+      "hypothetical_net_units_risked": 379,
+      "hypothetical_profit_units": 30.05232082181006,
+      "hypothetical_roi": 0.07929372248498696,
+      "unique_events": 752,
+      "max_drawdown_units": 13.65731272850389,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.00823618311580215,
+          0.0043348633563665626
+        ],
+        "roi_95pct": [
+          -0.017206896504386983,
+          0.17780362996646099
+        ],
+        "event_clusters": 752,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "total",
+      "book": "betus",
+      "quotes": 1532,
+      "nonpush": 1510,
+      "pushes": 22,
+      "model_conditional_brier": 0.24957138517334546,
+      "same_quote_novig_conditional_brier": 0.25015324929272376,
+      "hypothetical_selected": 403,
+      "hypothetical_net_units_risked": 403,
+      "hypothetical_profit_units": 38.72012045925057,
+      "hypothetical_roi": 0.0960797033728302,
+      "unique_events": 766,
+      "max_drawdown_units": 9.865800865800892,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.006804978910815188,
+          0.005257481210947669
+        ],
+        "roi_95pct": [
+          0.010912048263205474,
+          0.19200609910907246
+        ],
+        "event_clusters": 766,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "total",
+      "book": "bovada",
+      "quotes": 1538,
+      "nonpush": 1516,
+      "pushes": 22,
+      "model_conditional_brier": 0.24925310567602083,
+      "same_quote_novig_conditional_brier": 0.24992161331425264,
+      "hypothetical_selected": 402,
+      "hypothetical_net_units_risked": 402,
+      "hypothetical_profit_units": 31.963608130999226,
+      "hypothetical_roi": 0.07951146301243589,
+      "unique_events": 769,
+      "max_drawdown_units": 12.120271033314623,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.00683618461883001,
+          0.0055520257910989515
+        ],
+        "roi_95pct": [
+          -0.009018884071059847,
+          0.16819961370324987
+        ],
+        "event_clusters": 769,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "total",
+      "book": "draftkings",
+      "quotes": 1514,
+      "nonpush": 1488,
+      "pushes": 26,
+      "model_conditional_brier": 0.2492025472364684,
+      "same_quote_novig_conditional_brier": 0.25003828922004667,
+      "hypothetical_selected": 398,
+      "hypothetical_net_units_risked": 398,
+      "hypothetical_profit_units": 36.75452245017456,
+      "hypothetical_roi": 0.09234804635722252,
+      "unique_events": 757,
+      "max_drawdown_units": 13.651996151996158,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.0073393364588811945,
+          0.005580824852319902
+        ],
+        "roi_95pct": [
+          0.0034048879161600403,
+          0.18687920725364326
+        ],
+        "event_clusters": 757,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "total",
+      "book": "fanduel",
+      "quotes": 1534,
+      "nonpush": 1534,
+      "pushes": 0,
+      "model_conditional_brier": 0.24932931263755445,
+      "same_quote_novig_conditional_brier": 0.2498294441503505,
+      "hypothetical_selected": 394,
+      "hypothetical_net_units_risked": 394,
+      "hypothetical_profit_units": 34.91978287350325,
+      "hypothetical_roi": 0.08862889054188643,
+      "unique_events": 767,
+      "max_drawdown_units": 9.848237006865759,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.006645855148653048,
+          0.00575170982832498
+        ],
+        "roi_95pct": [
+          -0.008991395110508704,
+          0.17888045928219423
+        ],
+        "event_clusters": 767,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "total",
+      "book": "lowvig",
+      "quotes": 1488,
+      "nonpush": 1460,
+      "pushes": 28,
+      "model_conditional_brier": 0.2496370398844884,
+      "same_quote_novig_conditional_brier": 0.2489938129924232,
+      "hypothetical_selected": 408,
+      "hypothetical_net_units_risked": 408,
+      "hypothetical_profit_units": 36.418096762570606,
+      "hypothetical_roi": 0.08926004108473187,
+      "unique_events": 744,
+      "max_drawdown_units": 12.029126213592235,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.005983836607837656,
+          0.00696219523394904
+        ],
+        "roi_95pct": [
+          -0.0007953493323495666,
+          0.18852702181169242
+        ],
+        "event_clusters": 744,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "total",
+      "book": "mybookieag",
+      "quotes": 234,
+      "nonpush": 230,
+      "pushes": 4,
+      "model_conditional_brier": 0.24246707618206598,
+      "same_quote_novig_conditional_brier": 0.25,
+      "hypothetical_selected": 53,
+      "hypothetical_net_units_risked": 53,
+      "hypothetical_profit_units": 13.9090909090909,
+      "hypothetical_roi": 0.26243567753001695,
+      "unique_events": 117,
+      "max_drawdown_units": 3.0,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.020809811725344393,
+          0.005694869925242506
+        ],
+        "roi_95pct": [
+          0.012146226415094368,
+          0.5127405303030304
+        ],
+        "event_clusters": 117,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2024,
+      "market": "total",
+      "book": "williamhill_us",
+      "quotes": 1534,
+      "nonpush": 1514,
+      "pushes": 20,
+      "model_conditional_brier": 0.24944709623768938,
+      "same_quote_novig_conditional_brier": 0.24996045291234312,
+      "hypothetical_selected": 396,
+      "hypothetical_net_units_risked": 396,
+      "hypothetical_profit_units": 36.218332392245145,
+      "hypothetical_roi": 0.09146043533395239,
+      "unique_events": 767,
+      "max_drawdown_units": 11.857707509881443,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.006724947214580322,
+          0.005996984552827099
+        ],
+        "roi_95pct": [
+          -0.0028307283429067926,
+          0.18138601598396803
+        ],
+        "event_clusters": 767,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "moneyline",
+      "book": "betmgm",
+      "quotes": 1394,
+      "nonpush": 1394,
+      "pushes": 0,
+      "model_conditional_brier": 0.19679202605032944,
+      "same_quote_novig_conditional_brier": 0.18170035685358316,
+      "hypothetical_selected": 454,
+      "hypothetical_net_units_risked": 454,
+      "hypothetical_profit_units": -50.22019914407812,
+      "hypothetical_roi": -0.1106171787314496,
+      "unique_events": 697,
+      "max_drawdown_units": 57.76358828529337,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.005977337690143429,
+          0.02330731292327247
+        ],
+        "roi_95pct": [
+          -0.23687302698308696,
+          0.04891004373867687
+        ],
+        "event_clusters": 697,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "moneyline",
+      "book": "betonlineag",
+      "quotes": 1444,
+      "nonpush": 1444,
+      "pushes": 0,
+      "model_conditional_brier": 0.19730791297767694,
+      "same_quote_novig_conditional_brier": 0.18415173430258736,
+      "hypothetical_selected": 485,
+      "hypothetical_net_units_risked": 485,
+      "hypothetical_profit_units": -29.79023917975796,
+      "hypothetical_roi": -0.06142317356651126,
+      "unique_events": 722,
+      "max_drawdown_units": 37.66347577810423,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.004238344755350087,
+          0.021217179708674958
+        ],
+        "roi_95pct": [
+          -0.19983299505435104,
+          0.08709216580156716
+        ],
+        "event_clusters": 722,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "moneyline",
+      "book": "betrivers",
+      "quotes": 1450,
+      "nonpush": 1450,
+      "pushes": 0,
+      "model_conditional_brier": 0.1997617685523109,
+      "same_quote_novig_conditional_brier": 0.18664252103492038,
+      "hypothetical_selected": 447,
+      "hypothetical_net_units_risked": 447,
+      "hypothetical_profit_units": -53.67798598176487,
+      "hypothetical_roi": -0.12008497982497733,
+      "unique_events": 725,
+      "max_drawdown_units": 59.431184064285034,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.004492261165981202,
+          0.022045028003557385
+        ],
+        "roi_95pct": [
+          -0.25076282967267716,
+          0.012751870349346555
+        ],
+        "event_clusters": 725,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "moneyline",
+      "book": "betus",
+      "quotes": 1396,
+      "nonpush": 1396,
+      "pushes": 0,
+      "model_conditional_brier": 0.2025462770212688,
+      "same_quote_novig_conditional_brier": 0.18859588581085024,
+      "hypothetical_selected": 460,
+      "hypothetical_net_units_risked": 460,
+      "hypothetical_profit_units": -32.92733560578837,
+      "hypothetical_roi": -0.07158116436040951,
+      "unique_events": 698,
+      "max_drawdown_units": 41.704993079475756,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.005305196378612291,
+          0.022740680505570557
+        ],
+        "roi_95pct": [
+          -0.2121481492629861,
+          0.06965850335909286
+        ],
+        "event_clusters": 698,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "moneyline",
+      "book": "bovada",
+      "quotes": 1446,
+      "nonpush": 1446,
+      "pushes": 0,
+      "model_conditional_brier": 0.2003413095963538,
+      "same_quote_novig_conditional_brier": 0.18864117800103508,
+      "hypothetical_selected": 468,
+      "hypothetical_net_units_risked": 468,
+      "hypothetical_profit_units": -23.241394415107983,
+      "hypothetical_roi": -0.04966109917758116,
+      "unique_events": 723,
+      "max_drawdown_units": 35.557449021280824,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.003454992816718403,
+          0.020168535994919284
+        ],
+        "roi_95pct": [
+          -0.19264243670416448,
+          0.08697158526597083
+        ],
+        "event_clusters": 723,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "moneyline",
+      "book": "draftkings",
+      "quotes": 1500,
+      "nonpush": 1500,
+      "pushes": 0,
+      "model_conditional_brier": 0.1944589079401701,
+      "same_quote_novig_conditional_brier": 0.18166282201124526,
+      "hypothetical_selected": 490,
+      "hypothetical_net_units_risked": 490,
+      "hypothetical_profit_units": -41.56919325328058,
+      "hypothetical_roi": -0.08483508827200119,
+      "unique_events": 750,
+      "max_drawdown_units": 50.59836658959676,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.00455895482845169,
+          0.020860895083056698
+        ],
+        "roi_95pct": [
+          -0.22002909856137784,
+          0.04870489715675049
+        ],
+        "event_clusters": 750,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "moneyline",
+      "book": "fanatics",
+      "quotes": 1062,
+      "nonpush": 1062,
+      "pushes": 0,
+      "model_conditional_brier": 0.19063417343288533,
+      "same_quote_novig_conditional_brier": 0.18009464619986018,
+      "hypothetical_selected": 342,
+      "hypothetical_net_units_risked": 342,
+      "hypothetical_profit_units": -24.068404022877512,
+      "hypothetical_roi": -0.07037545035929098,
+      "unique_events": 531,
+      "max_drawdown_units": 42.784300879970296,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.0014397987077970477,
+          0.020608204384993157
+        ],
+        "roi_95pct": [
+          -0.2362560488171668,
+          0.12013500550952515
+        ],
+        "event_clusters": 531,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "moneyline",
+      "book": "fanduel",
+      "quotes": 1474,
+      "nonpush": 1474,
+      "pushes": 0,
+      "model_conditional_brier": 0.19529053883509173,
+      "same_quote_novig_conditional_brier": 0.18299066000539374,
+      "hypothetical_selected": 481,
+      "hypothetical_net_units_risked": 481,
+      "hypothetical_profit_units": -36.674107983854775,
+      "hypothetical_roi": -0.07624554674398082,
+      "unique_events": 737,
+      "max_drawdown_units": 43.954375370892556,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.003888511741797836,
+          0.020499040893145908
+        ],
+        "roi_95pct": [
+          -0.21311439745503466,
+          0.06699794701814958
+        ],
+        "event_clusters": 737,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "moneyline",
+      "book": "lowvig",
+      "quotes": 1400,
+      "nonpush": 1400,
+      "pushes": 0,
+      "model_conditional_brier": 0.19972371330118097,
+      "same_quote_novig_conditional_brier": 0.18587939039377513,
+      "hypothetical_selected": 466,
+      "hypothetical_net_units_risked": 466,
+      "hypothetical_profit_units": -26.99777862410811,
+      "hypothetical_roi": -0.057935147262034574,
+      "unique_events": 700,
+      "max_drawdown_units": 36.077382350459075,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.004953844022810549,
+          0.02253703547791935
+        ],
+        "roi_95pct": [
+          -0.19125283368258952,
+          0.10118425463349162
+        ],
+        "event_clusters": 700,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "moneyline",
+      "book": "mybookieag",
+      "quotes": 1390,
+      "nonpush": 1390,
+      "pushes": 0,
+      "model_conditional_brier": 0.19563972162788465,
+      "same_quote_novig_conditional_brier": 0.1816391358785505,
+      "hypothetical_selected": 436,
+      "hypothetical_net_units_risked": 436,
+      "hypothetical_profit_units": -36.866990512455764,
+      "hypothetical_roi": -0.08455731768911873,
+      "unique_events": 695,
+      "max_drawdown_units": 36.866990512455786,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.005477768854436541,
+          0.022726339158907746
+        ],
+        "roi_95pct": [
+          -0.2214873271729875,
+          0.06434420749877909
+        ],
+        "event_clusters": 695,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "moneyline",
+      "book": "williamhill_us",
+      "quotes": 1486,
+      "nonpush": 1486,
+      "pushes": 0,
+      "model_conditional_brier": 0.19509873832951877,
+      "same_quote_novig_conditional_brier": 0.18200066595237754,
+      "hypothetical_selected": 475,
+      "hypothetical_net_units_risked": 475,
+      "hypothetical_profit_units": -43.208618127948874,
+      "hypothetical_roi": -0.09096551184831342,
+      "unique_events": 743,
+      "max_drawdown_units": 49.91525866044297,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.004712826548496824,
+          0.021755430969520446
+        ],
+        "roi_95pct": [
+          -0.23199426483229862,
+          0.051249425448462324
+        ],
+        "event_clusters": 743,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "spread",
+      "book": "betmgm",
+      "quotes": 1524,
+      "nonpush": 1502,
+      "pushes": 22,
+      "model_conditional_brier": 0.2649500502597979,
+      "same_quote_novig_conditional_brier": 0.25001501607993115,
+      "hypothetical_selected": 541,
+      "hypothetical_net_units_risked": 541,
+      "hypothetical_profit_units": -15.040415174577916,
+      "hypothetical_roi": -0.027801137106428682,
+      "unique_events": 762,
+      "max_drawdown_units": 31.583201459052162,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.0038418783126225368,
+          0.02585514958326023
+        ],
+        "roi_95pct": [
+          -0.10986705982724095,
+          0.05883958605883355
+        ],
+        "event_clusters": 762,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "spread",
+      "book": "betonlineag",
+      "quotes": 1552,
+      "nonpush": 1522,
+      "pushes": 30,
+      "model_conditional_brier": 0.2648406800566376,
+      "same_quote_novig_conditional_brier": 0.25041797467822535,
+      "hypothetical_selected": 555,
+      "hypothetical_net_units_risked": 555,
+      "hypothetical_profit_units": -7.81091756848297,
+      "hypothetical_roi": -0.014073725348617963,
+      "unique_events": 776,
+      "max_drawdown_units": 30.05707551003671,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.004103042624527214,
+          0.025583312884562434
+        ],
+        "roi_95pct": [
+          -0.09426558929295219,
+          0.0696592338423705
+        ],
+        "event_clusters": 776,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "spread",
+      "book": "betrivers",
+      "quotes": 1552,
+      "nonpush": 1520,
+      "pushes": 32,
+      "model_conditional_brier": 0.26587409682320334,
+      "same_quote_novig_conditional_brier": 0.2500891245281229,
+      "hypothetical_selected": 547,
+      "hypothetical_net_units_risked": 547,
+      "hypothetical_profit_units": -25.90526981707297,
+      "hypothetical_roi": -0.047358811365764114,
+      "unique_events": 776,
+      "max_drawdown_units": 41.13201124168167,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.005203688171249296,
+          0.02664252684797771
+        ],
+        "roi_95pct": [
+          -0.12303040265019742,
+          0.02883226032461398
+        ],
+        "event_clusters": 776,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "spread",
+      "book": "betus",
+      "quotes": 1548,
+      "nonpush": 1518,
+      "pushes": 30,
+      "model_conditional_brier": 0.26378477959431273,
+      "same_quote_novig_conditional_brier": 0.24990021390011166,
+      "hypothetical_selected": 557,
+      "hypothetical_net_units_risked": 557,
+      "hypothetical_profit_units": -11.900280081572484,
+      "hypothetical_roi": -0.02136495526314629,
+      "unique_events": 774,
+      "max_drawdown_units": 31.754658385093194,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.0037849162731788794,
+          0.02446031993905196
+        ],
+        "roi_95pct": [
+          -0.0996273957616666,
+          0.05423549678102749
+        ],
+        "event_clusters": 774,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "spread",
+      "book": "bovada",
+      "quotes": 1552,
+      "nonpush": 1522,
+      "pushes": 30,
+      "model_conditional_brier": 0.2640100473577757,
+      "same_quote_novig_conditional_brier": 0.24982141294728163,
+      "hypothetical_selected": 559,
+      "hypothetical_net_units_risked": 559,
+      "hypothetical_profit_units": -9.493948804818393,
+      "hypothetical_roi": -0.016983808237599988,
+      "unique_events": 776,
+      "max_drawdown_units": 30.960003764351598,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.004042549012637565,
+          0.024882850781433936
+        ],
+        "roi_95pct": [
+          -0.09313233761411314,
+          0.055844283085830816
+        ],
+        "event_clusters": 776,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "spread",
+      "book": "draftkings",
+      "quotes": 1552,
+      "nonpush": 1524,
+      "pushes": 28,
+      "model_conditional_brier": 0.2640155111104846,
+      "same_quote_novig_conditional_brier": 0.2495264093463048,
+      "hypothetical_selected": 562,
+      "hypothetical_net_units_risked": 562,
+      "hypothetical_profit_units": -18.77425189179379,
+      "hypothetical_roi": -0.033406142156216706,
+      "unique_events": 776,
+      "max_drawdown_units": 37.56784460805008,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.004136714242795955,
+          0.025594678475623904
+        ],
+        "roi_95pct": [
+          -0.11106357868894731,
+          0.045006392919389175
+        ],
+        "event_clusters": 776,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "spread",
+      "book": "fanatics",
+      "quotes": 1092,
+      "nonpush": 1072,
+      "pushes": 20,
+      "model_conditional_brier": 0.254118595583117,
+      "same_quote_novig_conditional_brier": 0.2500732197337143,
+      "hypothetical_selected": 382,
+      "hypothetical_net_units_risked": 382,
+      "hypothetical_profit_units": 12.58808582721632,
+      "hypothetical_roi": 0.03295310425972858,
+      "unique_events": 546,
+      "max_drawdown_units": 20.67758328627894,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.006796868138408328,
+          0.015982610859808333
+        ],
+        "roi_95pct": [
+          -0.06501157775055828,
+          0.1233665002914846
+        ],
+        "event_clusters": 546,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "spread",
+      "book": "fanduel",
+      "quotes": 1528,
+      "nonpush": 1528,
+      "pushes": 0,
+      "model_conditional_brier": 0.26343638152570814,
+      "same_quote_novig_conditional_brier": 0.24980959153945947,
+      "hypothetical_selected": 543,
+      "hypothetical_net_units_risked": 543,
+      "hypothetical_profit_units": -9.654680185495158,
+      "hypothetical_roi": -0.01778025816849937,
+      "unique_events": 764,
+      "max_drawdown_units": 29.14909223304018,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.0037018798448583087,
+          0.02423451680262341
+        ],
+        "roi_95pct": [
+          -0.09359107718694216,
+          0.060918038331086624
+        ],
+        "event_clusters": 764,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "spread",
+      "book": "lowvig",
+      "quotes": 1504,
+      "nonpush": 1474,
+      "pushes": 30,
+      "model_conditional_brier": 0.2637781606730754,
+      "same_quote_novig_conditional_brier": 0.250272123063533,
+      "hypothetical_selected": 572,
+      "hypothetical_net_units_risked": 572,
+      "hypothetical_profit_units": 7.451637988315861,
+      "hypothetical_roi": 0.013027339140412344,
+      "unique_events": 752,
+      "max_drawdown_units": 27.439120871047475,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.003254296905431537,
+          0.02370247760186494
+        ],
+        "roi_95pct": [
+          -0.06623490389395548,
+          0.09577991127323834
+        ],
+        "event_clusters": 752,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "spread",
+      "book": "mybookieag",
+      "quotes": 1388,
+      "nonpush": 1356,
+      "pushes": 32,
+      "model_conditional_brier": 0.2670809130124855,
+      "same_quote_novig_conditional_brier": 0.2498796984330047,
+      "hypothetical_selected": 495,
+      "hypothetical_net_units_risked": 495,
+      "hypothetical_profit_units": -28.725202333897993,
+      "hypothetical_roi": -0.058030711785652514,
+      "unique_events": 694,
+      "max_drawdown_units": 40.223037831733436,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.007343437361559303,
+          0.02811618417437329
+        ],
+        "roi_95pct": [
+          -0.14638731225278664,
+          0.023699595415656652
+        ],
+        "event_clusters": 694,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "spread",
+      "book": "williamhill_us",
+      "quotes": 1536,
+      "nonpush": 1506,
+      "pushes": 30,
+      "model_conditional_brier": 0.2642963105628637,
+      "same_quote_novig_conditional_brier": 0.24993405160325344,
+      "hypothetical_selected": 557,
+      "hypothetical_net_units_risked": 557,
+      "hypothetical_profit_units": -17.66714819604601,
+      "hypothetical_roi": -0.031718398915701995,
+      "unique_events": 768,
+      "max_drawdown_units": 34.1057019388492,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          0.0036645215025194753,
+          0.02553895411597298
+        ],
+        "roi_95pct": [
+          -0.11185392098150006,
+          0.04276330383191294
+        ],
+        "event_clusters": 768,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "total",
+      "book": "betmgm",
+      "quotes": 1550,
+      "nonpush": 1550,
+      "pushes": 0,
+      "model_conditional_brier": 0.252627198252125,
+      "same_quote_novig_conditional_brier": 0.2496588327044059,
+      "hypothetical_selected": 372,
+      "hypothetical_net_units_risked": 372,
+      "hypothetical_profit_units": 17.301654325560857,
+      "hypothetical_roi": 0.04650982345580876,
+      "unique_events": 775,
+      "max_drawdown_units": 12.028232636928283,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.002978883417638013,
+          0.008783228406450065
+        ],
+        "roi_95pct": [
+          -0.046615170943684836,
+          0.14791054194296616
+        ],
+        "event_clusters": 775,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "total",
+      "book": "betonlineag",
+      "quotes": 1552,
+      "nonpush": 1544,
+      "pushes": 8,
+      "model_conditional_brier": 0.2538703456157843,
+      "same_quote_novig_conditional_brier": 0.250370450238999,
+      "hypothetical_selected": 400,
+      "hypothetical_net_units_risked": 400,
+      "hypothetical_profit_units": 8.54264661379615,
+      "hypothetical_roi": 0.021356616534490374,
+      "unique_events": 776,
+      "max_drawdown_units": 12.492259461421982,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.002502514095518064,
+          0.00939114193278277
+        ],
+        "roi_95pct": [
+          -0.05889955477950934,
+          0.11224577732863693
+        ],
+        "event_clusters": 776,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "total",
+      "book": "betrivers",
+      "quotes": 1472,
+      "nonpush": 1450,
+      "pushes": 22,
+      "model_conditional_brier": 0.25466497730710125,
+      "same_quote_novig_conditional_brier": 0.2501765942718297,
+      "hypothetical_selected": 335,
+      "hypothetical_net_units_risked": 335,
+      "hypothetical_profit_units": -1.8584017262936574,
+      "hypothetical_roi": -0.005547467839682559,
+      "unique_events": 736,
+      "max_drawdown_units": 13.521151407044638,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.0018037418004832404,
+          0.010732059100258812
+        ],
+        "roi_95pct": [
+          -0.10909240468712811,
+          0.09438824891863916
+        ],
+        "event_clusters": 736,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "total",
+      "book": "betus",
+      "quotes": 1548,
+      "nonpush": 1526,
+      "pushes": 22,
+      "model_conditional_brier": 0.2532353762346549,
+      "same_quote_novig_conditional_brier": 0.250192351105922,
+      "hypothetical_selected": 388,
+      "hypothetical_net_units_risked": 388,
+      "hypothetical_profit_units": 15.191981931112293,
+      "hypothetical_roi": 0.03915459260595952,
+      "unique_events": 774,
+      "max_drawdown_units": 14.043854696028603,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.0028071368397982713,
+          0.008875504198853851
+        ],
+        "roi_95pct": [
+          -0.05105606584764255,
+          0.1275360994780699
+        ],
+        "event_clusters": 774,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "total",
+      "book": "bovada",
+      "quotes": 1552,
+      "nonpush": 1540,
+      "pushes": 12,
+      "model_conditional_brier": 0.25367208124490565,
+      "same_quote_novig_conditional_brier": 0.250072968583891,
+      "hypothetical_selected": 392,
+      "hypothetical_net_units_risked": 392,
+      "hypothetical_profit_units": 15.558535667231283,
+      "hypothetical_roi": 0.03969014200824307,
+      "unique_events": 776,
+      "max_drawdown_units": 12.12667043101826,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.0024303557306116458,
+          0.009446980086226528
+        ],
+        "roi_95pct": [
+          -0.04825355245680665,
+          0.13012848656286755
+        ],
+        "event_clusters": 776,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "total",
+      "book": "draftkings",
+      "quotes": 1552,
+      "nonpush": 1552,
+      "pushes": 0,
+      "model_conditional_brier": 0.25342070090111574,
+      "same_quote_novig_conditional_brier": 0.2500183795393411,
+      "hypothetical_selected": 389,
+      "hypothetical_net_units_risked": 389,
+      "hypothetical_profit_units": 12.218043852423305,
+      "hypothetical_roi": 0.03140885309106248,
+      "unique_events": 776,
+      "max_drawdown_units": 9.288370244891986,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.002402983211742215,
+          0.0090593003226451
+        ],
+        "roi_95pct": [
+          -0.056379593671717146,
+          0.12401254590985152
+        ],
+        "event_clusters": 776,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "total",
+      "book": "fanatics",
+      "quotes": 1092,
+      "nonpush": 1082,
+      "pushes": 10,
+      "model_conditional_brier": 0.2528813794501841,
+      "same_quote_novig_conditional_brier": 0.2501345960365196,
+      "hypothetical_selected": 268,
+      "hypothetical_net_units_risked": 268,
+      "hypothetical_profit_units": 9.899115377376205,
+      "hypothetical_roi": 0.036936997676776884,
+      "unique_events": 546,
+      "max_drawdown_units": 11.169960474308306,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.004287296293719449,
+          0.01001145537072841
+        ],
+        "roi_95pct": [
+          -0.08049731444199341,
+          0.14993792286251775
+        ],
+        "event_clusters": 546,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "total",
+      "book": "fanduel",
+      "quotes": 1528,
+      "nonpush": 1528,
+      "pushes": 0,
+      "model_conditional_brier": 0.2544479484122123,
+      "same_quote_novig_conditional_brier": 0.2498341913929621,
+      "hypothetical_selected": 372,
+      "hypothetical_net_units_risked": 372,
+      "hypothetical_profit_units": 3.8663333792545913,
+      "hypothetical_roi": 0.010393369299071482,
+      "unique_events": 764,
+      "max_drawdown_units": 11.48125385081907,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.0014118779590381555,
+          0.010301204914631426
+        ],
+        "roi_95pct": [
+          -0.08610327601091279,
+          0.10902065289525269
+        ],
+        "event_clusters": 764,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "total",
+      "book": "lowvig",
+      "quotes": 1504,
+      "nonpush": 1496,
+      "pushes": 8,
+      "model_conditional_brier": 0.253324431989042,
+      "same_quote_novig_conditional_brier": 0.25028726445863225,
+      "hypothetical_selected": 408,
+      "hypothetical_net_units_risked": 408,
+      "hypothetical_profit_units": 12.160685855387323,
+      "hypothetical_roi": 0.029805602586733634,
+      "unique_events": 752,
+      "max_drawdown_units": 14.100998903104857,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.0030369340198790297,
+          0.009448551660935393
+        ],
+        "roi_95pct": [
+          -0.06419914347298536,
+          0.12244611395797392
+        ],
+        "event_clusters": 752,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "total",
+      "book": "mybookieag",
+      "quotes": 1406,
+      "nonpush": 1380,
+      "pushes": 26,
+      "model_conditional_brier": 0.2533566961199282,
+      "same_quote_novig_conditional_brier": 0.25,
+      "hypothetical_selected": 339,
+      "hypothetical_net_units_risked": 339,
+      "hypothetical_profit_units": 21.00000000000004,
+      "hypothetical_roi": 0.061946902654867374,
+      "unique_events": 703,
+      "max_drawdown_units": 9.81818181818181,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.0025972134542489155,
+          0.009518358440379494
+        ],
+        "roi_95pct": [
+          -0.03942251535713707,
+          0.15366407403833404
+        ],
+        "event_clusters": 703,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    },
+    {
+      "season": 2025,
+      "market": "total",
+      "book": "williamhill_us",
+      "quotes": 1536,
+      "nonpush": 1522,
+      "pushes": 14,
+      "model_conditional_brier": 0.2536831867621335,
+      "same_quote_novig_conditional_brier": 0.25012552077632555,
+      "hypothetical_selected": 375,
+      "hypothetical_net_units_risked": 375,
+      "hypothetical_profit_units": 9.40595563891213,
+      "hypothetical_roi": 0.025082548370432348,
+      "unique_events": 768,
+      "max_drawdown_units": 11.885505581847676,
+      "confidence_intervals": {
+        "paired_brier_delta_95pct": [
+          -0.002418216276839297,
+          0.01009377991723956
+        ],
+        "roi_95pct": [
+          -0.07461571669605804,
+          0.11557867716798248
+        ],
+        "event_clusters": 768,
+        "replicates": 1000,
+        "seed": 20261109,
+        "interpretation": "descriptive event clusters; not week/season independent confirmation"
+      }
+    }
+  ],
+  "source_coverage": {
+    "2022": {
+      "FBS_FBS_source_games": 734,
+      "matched_unique_games": 722,
+      "missing_by_market": {
+        "moneyline": 14,
+        "spread": 12,
+        "total": 12
+      }
+    },
+    "2023": {
+      "FBS_FBS_source_games": 792,
+      "matched_unique_games": 763,
+      "missing_by_market": {
+        "moneyline": 32,
+        "spread": 29,
+        "total": 29
+      }
+    },
+    "2024": {
+      "FBS_FBS_source_games": 798,
+      "matched_unique_games": 770,
+      "missing_by_market": {
+        "moneyline": 44,
+        "spread": 28,
+        "total": 28
+      }
+    },
+    "2025": {
+      "FBS_FBS_source_games": 808,
+      "matched_unique_games": 776,
+      "missing_by_market": {
+        "moneyline": 53,
+        "spread": 32,
+        "total": 32
+      }
+    }
+  },
+  "model": "Saved chronological architecture folds; not frozen Nov 3 official model applied backward",
+  "elo": "Independent historical_features pregame Elo; winner only. Spread/total distribution unavailable.",
+  "original_quote_authentication": false,
+  "forecast_issuance": "retrospective simulated cutoff, not contemporaneous issuance",
+  "portfolio": "one unit per selected quote, correlated books/sides; drawdown ordered by kickoff, not settlement; diagnostic only",
+  "clv": null,
+  "paid_requests": 0,
+  "production_approved": false
+}
