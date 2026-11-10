@@ -1,0 +1,33 @@
+{
+  "sports": {
+    "NFL": {
+      "registered": 14,
+      "supported": 14,
+      "refused": 0,
+      "reference_pairs": 0,
+      "priced_games": 0,
+      "settled": 0,
+      "outside_initial_seven_day_window_retained": 0
+    },
+    "NCAAF": {
+      "registered": 41,
+      "supported": 40,
+      "refused": 1,
+      "reference_pairs": 16,
+      "priced_games": 5,
+      "settled": 0,
+      "outside_initial_seven_day_window_retained": 5
+    },
+    "NCAAB": {
+      "registered": 511,
+      "supported": 441,
+      "refused": 70,
+      "reference_pairs": 189,
+      "priced_games": 56,
+      "settled": 0,
+      "outside_initial_seven_day_window_retained": 136
+    }
+  },
+  "confirmation_open": false,
+  "approved_risk": 0
+}

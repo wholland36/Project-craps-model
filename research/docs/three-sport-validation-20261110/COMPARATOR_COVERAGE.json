@@ -1,0 +1,26 @@
+{
+  "NFL": {
+    "games": 14,
+    "independent_elo_games": 14,
+    "official_score_reference_games": 14,
+    "exact_official_logistic_winner_games": 0,
+    "reference_pairs": 0,
+    "official_refusals": {}
+  },
+  "NCAAF": {
+    "games": 40,
+    "independent_elo_games": 40,
+    "official_score_reference_games": 40,
+    "exact_official_logistic_winner_games": 0,
+    "reference_pairs": 16,
+    "official_refusals": {}
+  },
+  "NCAAB": {
+    "games": 439,
+    "independent_elo_games": 439,
+    "official_score_reference_games": 439,
+    "exact_official_logistic_winner_games": 439,
+    "reference_pairs": 189,
+    "official_refusals": {}
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "NFL:moneyline": {
+    "settled_games": 0,
+    "reference_pairs": 0,
+    "rows": [],
+    "aggregate": {
+      "score_base": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      },
+      "rest_form": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      },
+      "official_score_reference": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      }
+    },
+    "authenticated_price_coverage": 0,
+    "clv": null,
+    "decision": "NO_GO",
+    "scope": "correlated one-unit-per-selected-quote descriptive diagnostic; not executable portfolio"
+  },
+  "NFL:spread": {
+    "settled_games": 0,
+    "reference_pairs": 0,
+    "rows": [],
+    "aggregate": {
+      "score_base": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      },
+      "rest_form": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      },
+      "official_score_reference": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      }
+    },
+    "authenticated_price_coverage": 0,
+    "clv": null,
+    "decision": "NO_GO",
+    "scope": "correlated one-unit-per-selected-quote descriptive diagnostic; not executable portfolio"
+  },
+  "NFL:total": {
+    "settled_games": 0,
+    "reference_pairs": 0,
+    "rows": [],
+    "aggregate": {
+      "score_base": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      },
+      "rest_form": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      },
+      "official_score_reference": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      }
+    },
+    "authenticated_price_coverage": 0,
+    "clv": null,
+    "decision": "NO_GO",
+    "scope": "correlated one-unit-per-selected-quote descriptive diagnostic; not executable portfolio"
+  },
+  "NCAAF:moneyline": {
+    "settled_games": 0,
+    "reference_pairs": 0,
+    "rows": [],
+    "aggregate": {
+      "score_base": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      },
+      "rest_form": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      },
+      "official_score_reference": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      }
+    },
+    "authenticated_price_coverage": 0,
+    "clv": null,
+    "decision": "NO_GO",
+    "scope": "correlated one-unit-per-selected-quote descriptive diagnostic; not executable portfolio"
+  },
+  "NCAAF:spread": {
+    "settled_games": 0,
+    "reference_pairs": 0,
+    "rows": [],
+    "aggregate": {
+      "score_base": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      },
+      "rest_form": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      },
+      "official_score_reference": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      }
+    },
+    "authenticated_price_coverage": 0,
+    "clv": null,
+    "decision": "NO_GO",
+    "scope": "correlated one-unit-per-selected-quote descriptive diagnostic; not executable portfolio"
+  },
+  "NCAAF:total": {
+    "settled_games": 0,
+    "reference_pairs": 0,
+    "rows": [],
+    "aggregate": {
+      "score_base": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      },
+      "rest_form": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      },
+      "official_score_reference": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      }
+    },
+    "authenticated_price_coverage": 0,
+    "clv": null,
+    "decision": "NO_GO",
+    "scope": "correlated one-unit-per-selected-quote descriptive diagnostic; not executable portfolio"
+  },
+  "NCAAB:moneyline": {
+    "settled_games": 0,
+    "reference_pairs": 0,
+    "rows": [],
+    "aggregate": {
+      "score_base": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      },
+      "rest_form": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      },
+      "official_score_reference": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      }
+    },
+    "authenticated_price_coverage": 0,
+    "clv": null,
+    "decision": "NO_GO",
+    "scope": "correlated one-unit-per-selected-quote descriptive diagnostic; not executable portfolio"
+  },
+  "NCAAB:spread": {
+    "settled_games": 0,
+    "reference_pairs": 0,
+    "rows": [],
+    "aggregate": {
+      "score_base": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      },
+      "rest_form": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      },
+      "official_score_reference": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      }
+    },
+    "authenticated_price_coverage": 0,
+    "clv": null,
+    "decision": "NO_GO",
+    "scope": "correlated one-unit-per-selected-quote descriptive diagnostic; not executable portfolio"
+  },
+  "NCAAB:total": {
+    "settled_games": 0,
+    "reference_pairs": 0,
+    "rows": [],
+    "aggregate": {
+      "score_base": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      },
+      "rest_form": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      },
+      "official_score_reference": {
+        "paired_rows": 0,
+        "selected": 0,
+        "hypothetical_roi": null,
+        "max_drawdown_units": 0,
+        "infinite": 0
+      }
+    },
+    "authenticated_price_coverage": 0,
+    "clv": null,
+    "decision": "NO_GO",
+    "scope": "correlated one-unit-per-selected-quote descriptive diagnostic; not executable portfolio"
+  }
+}

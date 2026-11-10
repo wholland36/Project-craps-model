@@ -1,0 +1,72 @@
+[
+  {
+    "sport": "NFL",
+    "season": 2024,
+    "games": 29,
+    "base_brier": 0.2850825162304955,
+    "rest_form_brier": 0.2730745493164107
+  },
+  {
+    "sport": "NFL",
+    "season": 2025,
+    "games": 285,
+    "base_brier": 0.24341464416714623,
+    "rest_form_brier": 0.2502443531966913
+  },
+  {
+    "sport": "NFL",
+    "season": 2026,
+    "games": 121,
+    "base_brier": 0.23271759180152843,
+    "rest_form_brier": 0.2343363466121518
+  },
+  {
+    "sport": "NCAAF",
+    "season": 2023,
+    "games": 770,
+    "base_brier": 0.1990424628822069,
+    "rest_form_brier": 0.1999638220342459
+  },
+  {
+    "sport": "NCAAF",
+    "season": 2024,
+    "games": 787,
+    "base_brier": 0.2100958944252246,
+    "rest_form_brier": 0.21296923871630666
+  },
+  {
+    "sport": "NCAAF",
+    "season": 2025,
+    "games": 784,
+    "base_brier": 0.19761922600129359,
+    "rest_form_brier": 0.20117043935835402
+  },
+  {
+    "sport": "NCAAF",
+    "season": 2026,
+    "games": 485,
+    "base_brier": 0.18320693230138915,
+    "rest_form_brier": 0.18299710787198264
+  },
+  {
+    "sport": "NCAAB",
+    "season": 2025,
+    "games": 3607,
+    "base_brier": 0.20532140900508097,
+    "rest_form_brier": 0.20985314266194183
+  },
+  {
+    "sport": "NCAAB",
+    "season": 2026,
+    "games": 5841,
+    "base_brier": 0.19177676637988622,
+    "rest_form_brier": 0.19314944832265019
+  },
+  {
+    "sport": "NCAAB",
+    "season": 2027,
+    "games": 373,
+    "base_brier": 0.11217621890823964,
+    "rest_form_brier": 0.11148139434198495
+  }
+]
