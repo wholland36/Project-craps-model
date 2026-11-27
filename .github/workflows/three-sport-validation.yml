@@ -3,6 +3,9 @@ on:
   push:
     paths:
       - 'research/market_audit.py'
+      - 'research/odds_api_ingest.py'
+      - 'requirements*.txt'
+      - 'tests/test_nfl_spread_orientation.py'
       - 'tests/test_market_audit.py'
       - 'models/train_ncaab.py'
       - 'tests/test_ncaab.py'
@@ -19,9 +22,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install -r requirements-research.txt
+      - run: pip install -r requirements-test.txt
       - name: Full regression suite
-        run: python -m unittest discover -s tests -v
+        run: python -m pytest -q
       - name: Audit genuine historical data availability (no fake quotes)
         run: |
           mkdir -p results
